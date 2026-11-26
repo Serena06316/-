@@ -1,20 +1,21 @@
 /* =====================================================================
    db.js —— IndexedDB 封装（数据库结构、版本升级、事务与 CRUD）
    存储结构：
-     folders   { id, name, createdAt }
-     sets      { id, folderId, name, createdAt, sourceName }
-     questions { id, setId, folderId, type, question, options[], answer[], explanation, chapter, order }
+     folders   { id, name, createdAt, origin?('public'表示内置公共题库) }
+     sets      { id, folderId, name, createdAt, sourceName, origin?, publicFile?, publicCount? }
+     questions { id, setId, folderId, type, question, options[], answer[], explanation, chapter, order, origin? }
      records   { id(自增), questionId, setId, folderId, selected[], correct, answeredAt }
      mistakes  { questionId(主键), setId, folderId, addedAt, attempts, correctCount, lastAnsweredAt, mastered }
      favorites { questionId(主键), setId, folderId, addedAt }
-     sessions  { id, scopeKey, scope{...}, questionIds[], currentIndex, answers{}, createdAt, updatedAt, done, originRoute }
+     sessions  { id, scopeKey, scope{...}, questionIds[], currentIndex, answers{}, createdAt, updatedAt, done, originRoute, quizMode? }
+   v2：folders / sets / questions 增加 by-origin 索引，用于区分用户自建数据与内置公共题库。
    ===================================================================== */
 (function () {
   'use strict';
   var T = window.T = window.T || {};
 
   var DB_NAME = 'tiku-db';
-  var DB_VERSION = 1;
+  var DB_VERSION = 2;
   var STORE_LIST = ['folders', 'sets', 'questions', 'records', 'mistakes', 'favorites', 'sessions'];
 
   function pwrap(req) {
@@ -25,7 +26,7 @@
   }
 
   /* 数据库结构定义：[store, keyPath, autoIncrement, [ [索引名, 键路径], ... ]] */
-  function createSchema(inst, oldVersion) {
+  function createSchema(inst, oldVersion, tx) {
     function mk(store, keyPath, autoIncrement, indexes) {
       var os = inst.createObjectStore(store, { keyPath: keyPath, autoIncrement: !!autoIncrement });
       (indexes || []).forEach(function (ix) { os.createIndex(ix[0], ix[1]); });
@@ -39,6 +40,18 @@
       mk('mistakes', 'questionId', false, [['by-set', 'setId'], ['by-folder', 'folderId'], ['by-last', 'lastAnsweredAt']]);
       mk('favorites', 'questionId', false, [['by-set', 'setId'], ['by-folder', 'folderId'], ['by-added', 'addedAt']]);
       mk('sessions', 'id', false, [['by-scope', 'scopeKey'], ['by-updated', 'updatedAt']]);
+    }
+    /* v2：为三个内容仓库补充 origin 索引（区分用户自建 / 内置公共题库）。
+       注意：origin 字段缺失的旧记录不会进入该索引，统计时用「总数 - 索引数」得到用户自建数量。 */
+    if (oldVersion < 2) {
+      function ensureIndex(store, name, path) {
+        if (!inst.objectStoreNames.contains(store)) return;
+        var os = tx.objectStore(store);
+        if (!os.indexNames.contains(name)) os.createIndex(name, path);
+      }
+      ensureIndex('folders', 'by-origin', 'origin');
+      ensureIndex('sets', 'by-origin', 'origin');
+      ensureIndex('questions', 'by-origin', 'origin');
     }
   }
 
@@ -58,7 +71,8 @@
         try { req = indexedDB.open(DB_NAME, DB_VERSION); }
         catch (e) { reject(e); return; }
         req.onupgradeneeded = function (e) {
-          createSchema(req.result, e.oldVersion || 0);
+          var tx = (e.target && e.target.transaction) || req.transaction;
+          createSchema(req.result, e.oldVersion || 0, tx);
         };
         req.onsuccess = function () {
           db._inst = req.result;

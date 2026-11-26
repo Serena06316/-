@@ -16,6 +16,11 @@
     return Promise.all(STORES.map(function (s) { return T.db.getAll(s); })).then(function (list) {
       var data = {};
       STORES.forEach(function (s, i) { data[s] = list[i]; });
+      /* 完整备份不包含内置公共题库本身（可随时从站点重新下载），
+         但保留用户在公共题库上的答题记录 / 错题 / 收藏 / 进度 */
+      ['folders', 'sets', 'questions'].forEach(function (s) {
+        data[s] = (data[s] || []).filter(function (x) { return x.origin !== 'public'; });
+      });
       return data;
     });
   }

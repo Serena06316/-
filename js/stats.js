@@ -50,19 +50,26 @@
   }
 
   T.stats = {
-    /* 全局统计 */
+    /* 全局统计（文件夹/题集/题目仅统计用户自建内容；
+       答题记录、错题、收藏包含用户在内置公共题库上的练习） */
     global: function () {
       return Promise.all([
         T.db.count('folders'),
         T.db.count('sets'),
         T.db.count('questions'),
+        T.db.countByIndex('folders', 'by-origin', 'public'),
+        T.db.countByIndex('sets', 'by-origin', 'public'),
+        T.db.countByIndex('questions', 'by-origin', 'public'),
         T.db.count('mistakes'),
         T.db.count('favorites'),
         T.db.getAll('records')
       ]).then(function (r) {
-        var agg = aggRecords(r[5]);
+        var agg = aggRecords(r[8]);
         var s = summarize(agg);
-        s.folders = r[0]; s.sets = r[1]; s.questions = r[2]; s.mistakes = r[3]; s.favorites = r[4];
+        s.folders = Math.max(0, r[0] - r[3]);
+        s.sets = Math.max(0, r[1] - r[4]);
+        s.questions = Math.max(0, r[2] - r[5]);
+        s.mistakes = r[6]; s.favorites = r[7];
         return s;
       });
     },

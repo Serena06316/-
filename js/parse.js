@@ -226,7 +226,9 @@
     if (!type) {
       if (entries.length === 2 && isJudgePair(entries)) type = 'judge';
       else if (typeof rawAnswer === 'boolean') type = 'judge';
-      else if (typeof rawAnswer === 'string') {
+      else if (typeof rawAnswer === 'string' && entries.length === 0) {
+        /* 仅在没有选项时才根据“正确/错误/T/F”等答案词推断判断题；
+           有选项时答案 "F" 更可能是选项 F 的标签（如 6 选项题） */
         var low = normText(rawAnswer).toLowerCase();
         if (TRUE_WORDS[low] || FALSE_WORDS[low]) type = 'judge';
       }
@@ -371,15 +373,97 @@
     return null;
   }
   var RE_OPT = /^([A-Za-z])\s*[\.、:：)）]\s*(.+)$/;
+  /* 宽松选项格式：单字母 + 空白 + 文本（Word 题库导出常见，如 "A 选项内容"） */
+  var RE_OPT_LOOSE = /^([A-Ha-h])\s+(\S[\s\S]*)$/;
+  /* 题干行首编号（导入时自动剥离）："1."、"12、"、"(3)"、"（三）" 等；(?!")防误剥小数 "1.5ml" */
+  var RE_QNUM = /^(?:\d{1,4}|[（(][\d一二三四五六七八九十]{1,3}[)）]|[一二三四五六七八九十]{1,3})\s*[\.、)）]\s*(?!\d)/;
+  function stripQNum(t) {
+    var rest = t.replace(RE_QNUM, '');
+    return rest.trim() ? rest : t;
+  }
+  function nextLabelOf(l) {
+    var c = l.charCodeAt(0) + 1;
+    return c <= 72 ? String.fromCharCode(c) : null; /* 只认 A–H */
+  }
+
+  /* 把一行里挤在一起的多个选项切开（Word 段落合并常见）。
+     示例："A 甲 B 乙 C 丙" 或 "C xx D yy"（首字母在行首），按“下一个预期标签”贪心切分，
+     不会误切 "DIC"、"AB" 等多字母缩写（只认字母前有空白且恰为上一标签的下一个字母）。 */
+  function splitInlineFromLabel0(body, label0) {
+    var out = [], label = label0;
+    while (true) {
+      var nl = nextLabelOf(label);
+      var m = nl ? body.match(new RegExp('^(\\S[\\s\\S]*?)\\s+' + nl + '\\s+([\\s\\S]+)$', 'i')) : null;
+      if (!m) {
+        if (body.trim()) out.push(label + '. ' + body.trim());
+        break;
+      }
+      out.push(label + '. ' + m[1].trim());
+      label = nl;
+      body = m[2];
+    }
+    return out;
+  }
+
+  /* 行展开：处理 Word 导出的两类不规则行——
+     1) 答案挤在选项行末尾："E 某选项 正确答案： B"
+     2) 多个选项挤在同一行："A 甲 B 乙 C 丙"，或题干行内嵌首选项："23.题干 A 甲"（下一行是 B 时才切） */
+  function expandLine(t, nextLine) {
+    var out = [];
+    var rest = t, ansLine = null;
+    var mA = rest.match(/(?:^|\s)((?:正确答案|答案|answer|key)\s*[:：]\s*\S[\s\S]*)$/i);
+    if (mA && mA.index > 0) {
+      ansLine = rest.slice(mA.index).trim();
+      rest = rest.slice(0, mA.index).trim();
+    }
+    if (rest) {
+      var mF = rest.match(/^([A-Ha-h])\s+(?=\S)/);
+      if (mF) {
+        var subs = splitInlineFromLabel0(rest.slice(mF[0].length), mF[1].toUpperCase());
+        for (var k = 0; k < subs.length; k++) out.push(subs[k]);
+      } else {
+        var mA2 = rest.match(/\s(A)\s+(?=\S)/);
+        if (mA2) {
+          var head = rest.slice(0, mA2.index).trim();
+          var subs2 = splitInlineFromLabel0(rest.slice(mA2.index + mA2[0].length), 'A');
+          var nxt = normText(nextLine || '');
+          var nxtIsOptB = /^[Bb][\s\.、:：)）]/.test(nxt);
+          var nxtIsAns = matchTagLine(nxt, 'answer') != null;
+          /* 行内嵌选项仅在有旁证时切分：后面还有 B/C… 或下一行恰是 B 选项 / 答案行 */
+          if (subs2.length >= 2 || nxtIsOptB || nxtIsAns) {
+            if (head) out.push(head);
+            for (var k2 = 0; k2 < subs2.length; k2++) out.push(subs2[k2]);
+          } else {
+            out.push(rest);
+          }
+        } else {
+          out.push(rest);
+        }
+      }
+    }
+    if (ansLine) out.push(ansLine);
+    return out;
+  }
 
   function splitTxtBlocks(lines, start) {
     var blocks = [], cur = [];
     var sawAnswer = false;
+    var currentChapter = null; /* 粘性章节：从章标题行起，其后所有题目块都携带 [章节] 标签行 */
     function isSep(t) { return /^(-{3,}|\*{3,}|={3,})$/.test(t); }
-    function isNumStem(t) { return /^(?:\d{1,3}|[（(][\d一二三四五六七八九十]+[)）]|[一二三四五六七八九十]{1,3})\s*[\.、)）]/.test(t); }
-    function isOption(t) { return /^[A-Za-z]\s*[\.、:：)）]/.test(t); }
+    function isNumStem(t) { return /^(?:\d{1,4}|[（(][\d一二三四五六七八九十]+[)）]|[一二三四五六七八九十]{1,3})\s*[\.、)）]/.test(t); }
+    function isOption(t) { return /^[A-Za-z]\s*[\.、:：)）]/.test(t) || /^([A-Ha-h])\s+(?=\S)/.test(t); }
+    function isAnyTag(t) {
+      return matchTagLine(t, 'type') != null || matchTagLine(t, 'chapter') != null ||
+        matchTagLine(t, 'answer') != null || matchTagLine(t, 'expl') != null;
+    }
+    function looksLikeChapter(t) {
+      return t.length <= 12 && !/[，。；？！、,.:;?!（）()【】\d\s]/.test(t);
+    }
     function closeBlock() {
-      if (cur.length) blocks.push(cur);
+      if (cur.length) {
+        if (currentChapter) cur = ['[章节] ' + currentChapter].concat(cur);
+        blocks.push(cur);
+      }
       cur = [];
       sawAnswer = false;
     }
@@ -388,11 +472,32 @@
       if (isSep(t)) { closeBlock(); continue; }
       if (!t) { if (sawAnswer) closeBlock(); continue; }
       if (sawAnswer && (isNumStem(t) || isOption(t))) closeBlock();
+      /* 答案之后的 [章节]/[类型] 标签行属于下一题的前导声明：先结束当前题块，避免污染上一题 */
+      if (sawAnswer && (matchTagLine(t, 'chapter') != null || matchTagLine(t, 'type') != null)) closeBlock();
+
+      /* 章节标题行：位于文件开头或上一题答案之后、短且无标点，且下一非空行是编号题干。
+         识别后转为 "[章节] 标题" 标签行，归入其后所有题目（如：水电解质紊乱 / 酸碱失衡 / DIC）。 */
+      if ((cur.length === 0 || sawAnswer) && !isNumStem(t) && !isOption(t) && !isAnyTag(t) && looksLikeChapter(t)) {
+        var k2 = j + 1;
+        while (k2 < lines.length && !lines[k2].trim()) k2++;
+        if (k2 < lines.length && isNumStem(lines[k2].trim())) {
+          closeBlock();
+          currentChapter = t;
+          continue;
+        }
+      }
+
+      /* 显式 "[章节] xxx" 标签行同样更新粘性章节，使其后的题目块自动携带该章节 */
+      var chV = matchTagLine(t, 'chapter');
+      if (chV != null && chV.trim() !== '') currentChapter = chV.trim();
+
       var ansV = matchTagLine(t, 'answer');
-      if (ansV != null && ansV.trim() !== '') sawAnswer = true;
+      /* 答案也可能挤在选项行末尾（"E 某选项 正确答案： B"），同样标记已见答案 */
+      var ansInline = /(?:^|\s)(?:正确答案|答案|answer|key)\s*[:：]\s*\S/i.test(t);
+      if ((ansV != null && ansV.trim() !== '') || ansInline) sawAnswer = true;
       cur.push(lines[j]);
     }
-    if (cur.length) blocks.push(cur);
+    closeBlock();
     return blocks;
   }
 
@@ -400,6 +505,7 @@
     var question = null, chapter = null, type = null, answer = null, explanation = null;
     var options = [];
     var mode = 'stem'; /* stem | options | after-answer | explanation */
+    var lastLabel = null;
     for (var i = 0; i < lines.length; i++) {
       var t = lines[i].trim();
       if (!t) continue;
@@ -408,20 +514,41 @@
       if ((m = matchTagLine(t, 'chapter')) != null) { chapter = m.trim(); continue; }
       if ((m = matchTagLine(t, 'answer')) != null && m.trim() !== '') { answer = m.trim(); mode = 'after-answer'; continue; }
       if ((m = matchTagLine(t, 'expl')) != null) { mode = 'explanation'; explanation = m.trim(); continue; }
-      if ((m = t.match(RE_OPT))) {
-        options.push({ label: m[1], text: m[2].trim() });
-        mode = 'options';
-        continue;
-      }
-      if (mode === 'explanation') {
-        explanation = explanation ? explanation + '\n' + t : t;
-      } else if (mode === 'options' && options.length) {
-        options[options.length - 1].text += '\n' + t;
-      } else if (mode === 'after-answer') {
-        mode = 'explanation';
-        explanation = t;
-      } else {
-        question = question ? question + '\n' + t : t;
+
+      /* 行展开：拆开挤在一行的选项 / 行内答案（Word 导出常见），展开后的子行重新走下方规则 */
+      var sub = expandLine(t, lines[i + 1]);
+      for (var k = 0; k < sub.length; k++) {
+        var st = sub[k].trim();
+        if (!st) continue;
+        if ((m = matchTagLine(st, 'answer')) != null && m.trim() !== '') { answer = m.trim(); mode = 'after-answer'; continue; }
+        if ((m = st.match(RE_OPT))) {
+          options.push({ label: m[1], text: m[2].trim() });
+          mode = 'options';
+          lastLabel = m[1].toUpperCase();
+          continue;
+        }
+        if ((m = st.match(RE_OPT_LOOSE)) && (mode === 'stem' || mode === 'options')) {
+          /* 宽松格式 "A 选项文字"：仅当标签是合法序列（首项为 A，或恰为上一选项的下一个字母）才认选项，
+             防止把正文里 "维生素 A 缺乏" 之类的句子误判为选项 */
+          var lab = m[1].toUpperCase();
+          var seqOk = options.length === 0 ? lab === 'A' : (lastLabel != null && lab === nextLabelOf(lastLabel));
+          if (seqOk) {
+            options.push({ label: lab, text: m[2].trim() });
+            mode = 'options';
+            lastLabel = lab;
+            continue;
+          }
+        }
+        if (mode === 'explanation') {
+          explanation = explanation ? explanation + '\n' + st : st;
+        } else if (mode === 'options' && options.length) {
+          options[options.length - 1].text += '\n' + st;
+        } else if (mode === 'after-answer') {
+          mode = 'explanation';
+          explanation = st;
+        } else {
+          question = question ? question + '\n' + st : stripQNum(st);
+        }
       }
     }
     if (!question && !answer && !options.length) return null;
@@ -456,7 +583,7 @@
       if (raw) raws.push(raw);
     }
     if (!raws.length) {
-      return { ok: false, error: '未能解析出任何题目。TXT 格式要求：题干一行、选项 "A. 文本"、以 "答案:" 标注答案、题目之间用 "---" 分隔', hint: '#/help' };
+      return { ok: false, error: '未能解析出任何题目。TXT 格式要求：题干一行、选项 "A. 文本" 或 "A 文本"、以 "答案:"（或"正确答案："）标注答案、题目之间用 "---" 分隔', hint: '#/help' };
     }
     var warnings = [];
     var bank = normalizeBank(raws, warnings);
@@ -616,11 +743,16 @@
     var paras = xml.split(/<\/w:p>/);
     var lines = [];
     for (var i = 0; i < paras.length; i++) {
-      var chunks = paras[i].match(/<w:t(?:\s[^>]*)?>([\s\S]*?)<\/w:t>/g) || [];
-      var line = chunks.map(function (c) {
-        return decodeXmlEntities(c.replace(/^<w:t(?:\s[^>]*)?>/, '').replace(/<\/w:t>$/, ''));
-      }).join('');
-      if (line.trim()) lines.push(line);
+      /* w:tab → 空格；w:br（软换行）→ 拆为独立行，避免同段多个选项被挤到一行 */
+      var p = paras[i].replace(/<w:tab\b[^>]*\/?>/g, '<w:t xml:space="preserve"> </w:t>');
+      var segs = p.split(/<w:br\b[^>]*\/?>/);
+      for (var k = 0; k < segs.length; k++) {
+        var chunks = segs[k].match(/<w:t(?:\s[^>]*)?>([\s\S]*?)<\/w:t>/g) || [];
+        var line = chunks.map(function (c) {
+          return decodeXmlEntities(c.replace(/^<w:t(?:\s[^>]*)?>/, '').replace(/<\/w:t>$/, ''));
+        }).join('');
+        if (line.trim()) lines.push(line);
+      }
     }
     return lines.join('\n');
   }

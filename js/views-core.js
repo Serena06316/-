@@ -99,14 +99,6 @@
   T.views.home = function () {
     var root = el('div', { class: 'view-home' });
     return T.stats.global().then(function (stats) {
-      /* 快捷入口 */
-      root.appendChild(el('div', { class: 'quick-grid' },
-        quickCard('xCircle', 'is-danger', '错题本', stats.mistakes + ' 题', '#/mistakes'),
-        quickCard('star', 'is-warn', '收藏夹', stats.favorites + ' 题', '#/favorites'),
-        quickCard('database', '', '备份与数据', '导出 / 恢复', '#/data'),
-        quickCard('helpCircle', 'is-ok', '使用说明', '题库格式 · 帮助', '#/help')
-      ));
-
       /* 全局统计 */
       root.appendChild(el('div', { class: 'section-head' }, el('h2', {}, '全局统计')));
       root.appendChild(el('div', { class: 'stat-grid' },
@@ -129,7 +121,9 @@
         el('button', { class: 'btn btn-primary', onClick: createFolder }, T.icon('folderPlus'), '创建文件夹'));
       root.appendChild(head);
 
-      return T.db.getAll('folders').then(function (folders) {
+      return T.db.getAll('folders').then(function (allFolders) {
+        /* 内置公共题库的文件夹不混入「我的文件夹」，在下方单独展示 */
+        var folders = allFolders.filter(function (f) { return f.origin !== 'public'; });
         folders.sort(function (a, b) { return (a.createdAt || 0) - (b.createdAt || 0); });
         if (!folders.length) {
           root.appendChild(el('div', { class: 'card empty-state' },
@@ -137,7 +131,7 @@
             el('h2', {}, '还没有文件夹'),
             el('p', {}, '创建第一个文件夹来管理你的课程题库，例如「病理学」「医学统计学」。文件夹与题集数据保存在本浏览器中。'),
             el('button', { class: 'btn btn-primary btn-lg', onClick: createFolder }, T.icon('folderPlus'), '创建文件夹')));
-          return root;
+          return appendPublicSection(root);
         }
         var grid = el('div', { class: 'folder-grid' });
         var counts = Promise.all(folders.map(function (f) {
@@ -164,19 +158,58 @@
             ));
           });
           root.appendChild(grid);
-          return root;
+          return appendPublicSection(root);
         });
       });
     });
-
-    function quickCard(icon, icoCls, title, sub, hash) {
-      return el('a', { class: 'quick-card', href: hash },
-        el('span', { class: 'quick-ico ' + icoCls }, T.icon(icon)),
-        el('span', {},
-          el('div', { class: 'quick-title' }, title),
-          el('div', { class: 'quick-sub' }, sub)));
-    }
   };
+
+  /* ================= 首页：内置公共题库区（仓库 question-banks/ 目录） ================= */
+  function appendPublicSection(root) {
+    return T.public.sync().then(function (res) {
+      if (res.ok && res.structure && res.structure.length) {
+        var head = el('div', { class: 'section-head' },
+          el('span', { class: 'folder-ico pub' }, T.icon('layers')),
+          el('h2', {}, '内置公共题库'),
+          el('span', { class: 'chip', title: '所有人可见的站点内置题库' }, '公共'),
+          res.stale ? el('span', { class: 'chip chip-warn', title: res.offline ? '网络不可用，展示本地已缓存内容' : '未能拉取最新清单，展示上次缓存' }, res.offline ? '离线缓存' : '缓存') : null,
+          el('span', { class: 'spacer' }),
+          el('button', {
+            class: 'btn btn-ghost btn-sm', title: '重新从站点拉取内置题库清单',
+            onClick: function () {
+              T.toast('正在刷新内置题库清单…', 'info', 1600);
+              T.public.sync(true).then(function () { T.rerender(); });
+            }
+          }, T.icon('refresh'), '刷新'));
+        var grid = el('div', { class: 'folder-grid' });
+        res.structure.forEach(function (f) {
+          var q = 0;
+          f.sets.forEach(function (s) { q += (s.publicCount || 0); });
+          grid.appendChild(el('div', {
+            class: 'folder-card', role: 'button', tabindex: '0',
+            onClick: function () { T.go('#/folder/' + f.record.id); }
+          },
+            el('div', { class: 'folder-card-top' },
+              el('span', { class: 'folder-ico pub' }, T.icon('layers')),
+              el('div', { style: 'flex:1;min-width:0' },
+                el('div', { class: 'folder-name' }, f.record.name),
+                el('div', { class: 'folder-meta' },
+                  f.sets.length + ' 个题集' + (q ? ' · 约 ' + q + ' 道题' : '')))),
+            el('div', { class: 'folder-card-actions' },
+              el('span', { class: 'chip' }, '公共'))));
+        });
+        root.appendChild(head);
+        root.appendChild(grid);
+        root.appendChild(el('p', { style: 'color:var(--muted);font-size:12.5px;margin:8px 0 0' },
+          '内置公共题库由本站维护者统一提供，对所有人可见；首次打开题集时自动下载缓存，你的答题记录、错题与收藏只保存在本地。'));
+      } else if (res.reason === 'offline' || res.reason === 'invalid') {
+        root.appendChild(el('p', { style: 'color:var(--muted);font-size:13px;margin:10px 0 0' },
+          '内置公共题库当前不可用（可能是网络原因），可稍后重试。'));
+      }
+      return root;
+    });
+  };
+
 
   /* ================= 导入流程 ================= */
   function qhash(q) {
@@ -397,16 +430,32 @@
       ]).then(function (r) {
         var sets = r[0].sort(function (a, b) { return (a.createdAt || 0) - (b.createdAt || 0); });
         var fstats = r[1];
+        var isPub = folder.origin === 'public';
 
         root.appendChild(el_('a', { class: 'back-link', href: '#/' }, T.icon('arrowLeft', 'icon-sm'), '返回文件夹列表'));
         root.appendChild(el_('div', { class: 'section-head', style: 'margin-top:0' },
-          el_('span', { class: 'folder-ico' }, T.icon('folder')),
+          el_('span', { class: 'folder-ico' + (isPub ? ' pub' : '') }, T.icon(isPub ? 'layers' : 'folder')),
           el_('h1', { style: 'margin:0;word-break:break-all' }, folder.name),
+          isPub ? el_('span', { class: 'chip', title: '所有人可见的站点内置题库' }, '公共') : null,
           el_('span', { class: 'spacer' }),
           el_('button', { class: 'btn btn-primary', onClick: practiceWholeFolder }, T.icon('play'), '刷整个文件夹'),
-          el_('button', { class: 'icon-btn', title: '重命名文件夹', onClick: function () { renameFolder(folder); } }, T.icon('edit')),
-          el_('button', { class: 'icon-btn', title: '导出文件夹备份', onClick: function () { T.backup.exportFolder(folderId); } }, T.icon('download')),
-          el_('button', { class: 'icon-btn', title: '删除文件夹', onClick: function () { deleteFolderCascade(folder); } }, T.icon('trash'))));
+          isPub ? el_('button', {
+            class: 'icon-btn', title: '同步内置题库清单', onClick: function () {
+              T.toast('正在同步内置题库清单…', 'info', 1600);
+              T.public.sync(true).then(function () { T.rerender(); });
+            }
+          }, T.icon('refresh')) : null,
+          isPub ? null : el_('button', { class: 'icon-btn', title: '重命名文件夹', onClick: function () { renameFolder(folder); } }, T.icon('edit')),
+          isPub ? null : el_('button', { class: 'icon-btn', title: '导出文件夹备份', onClick: function () { T.backup.exportFolder(folderId); } }, T.icon('download')),
+          isPub ? null : el_('button', { class: 'icon-btn', title: '删除文件夹', onClick: function () { deleteFolderCascade(folder); } }, T.icon('trash'))));
+
+        if (isPub) {
+          root.appendChild(el_('div', { class: 'help-notice', style: 'margin-top:14px' },
+            T.icon('info'),
+            el_('div', {},
+              '该文件夹来自站点内置公共题库，内容由维护者在仓库 question-banks/ 目录统一更新，所有人看到的内容一致；此处不能导入或删除。' +
+              '你在这些题集上的练习进度、错题与收藏属于你自己，保存在本地。')));
+        }
 
         root.appendChild(el_('div', { class: 'stat-grid' },
           statCard('题集数', String(fstats.sets)),
@@ -417,24 +466,40 @@
           statCard('收藏数', String(fstats.favorites))));
 
         function practiceWholeFolder() {
-          if (!fstats.questions) { T.toast('该文件夹还没有题目，请先导入题库', 'error'); return; }
-          T.choice({
-            title: '刷整个文件夹',
-            message: '将练习「' + folder.name + '」内全部 ' + fstats.questions + ' 道题目（含所有题集）。',
-            choices: [
-              { key: 'seq', label: '顺序刷题', desc: '按题集导入顺序依次练习' },
-              { key: 'random', label: '随机刷题', desc: '打乱全部题目顺序' }
-            ]
-          }).then(function (pick) {
-            if (!pick) return;
-            T.startQuiz({
-              mode: 'folder', targetId: folderId, order: pick,
-              label: folder.name + '（整个文件夹）', origin: '#/folder/' + folderId
+          var pre = isPub
+            ? (function () {
+                /* 公共文件夹：先把全部题集下载到本地，再统计题量 */
+                T.toast('正在准备内置题库…', 'info', 2000);
+                var chain = Promise.resolve();
+                sets.forEach(function (s) {
+                  chain = chain.then(function () { return T.public.ensureSetLoaded(s); });
+                });
+                return chain;
+              })()
+            : Promise.resolve();
+          pre.then(function () {
+            return T.db.countByIndex('questions', 'by-folder', folderId);
+          }).then(function (cnt) {
+            if (!cnt) { T.toast('该文件夹还没有题目' + (isPub ? '，请先打开一次题集完成下载' : '，请先导入题库'), 'error'); return; }
+            T.choice({
+              title: '刷整个文件夹',
+              message: '将练习「' + folder.name + '」内全部 ' + cnt + ' 道题目（含所有题集）。当前模式：' + T.quizModeLabel(T.quizModeDefault()) + '（进入后可切换）。',
+              choices: [
+                { key: 'seq', label: '顺序刷题', desc: '按题集导入顺序依次练习' },
+                { key: 'random', label: '随机刷题', desc: '打乱全部题目顺序' }
+              ]
+            }).then(function (pick) {
+              if (!pick) return;
+              T.startQuiz({
+                mode: 'folder', targetId: folderId, order: pick,
+                label: folder.name + '（整个文件夹）', origin: '#/folder/' + folderId
+              });
             });
-          });
+          }).catch(function (e) { T.toast('准备失败：' + (e.message || e), 'error'); });
         }
 
-        /* 导入区 */
+        /* 导入区（内置公共文件夹不提供导入） */
+        if (!isPub) {
         var fileInput = el_('input', {
           type: 'file', multiple: true, style: 'display:none',
           accept: '.json,.txt,.csv,.docx,application/json,text/plain'
@@ -483,15 +548,18 @@
             el_('button', { class: 'btn btn-ghost', onClick: function () { pasteImportFlow(folder); } }, T.icon('edit'), '粘贴导入'),
             el_('a', { href: '#/help', class: 'btn btn-ghost' }, T.icon('helpCircle'), '格式说明'),
             el_('span', { class: 'chip', style: 'margin-left:auto' }, '重复导入时会询问：新建 / 合并 / 跳过'))));
+        }
 
         /* 题集列表 */
         root.appendChild(el_('div', { class: 'section-head' }, el_('h2', {}, '题集列表')));
         if (!sets.length) {
           root.appendChild(el_('div', { class: 'card empty-state' },
             T.icon('layers', 'icon-lg'),
-            el_('h3', {}, '该文件夹还没有题集'),
-            el_('p', {}, '导入 JSON / TXT / CSV / DOCX 题库文件后，每个文件会成为一个独立题集，保存在本浏览器中。'),
-            el_('div', {},
+            el_('h3', {}, isPub ? '该公共文件夹暂未提供题集' : '该文件夹还没有题集'),
+            el_('p', {}, isPub
+              ? '内置题库清单中没有属于该文件夹的题集，可点击右上角刷新按钮重新同步。'
+              : '导入 JSON / TXT / CSV / DOCX 题库文件后，每个文件会成为一个独立题集，保存在本浏览器中。'),
+            isPub ? null : el_('div', {},
               el_('button', { class: 'btn btn-primary', onClick: function () { fileInput.click(); } }, T.icon('upload'), '导入题库文件'),
               ' ',
               el_('button', { class: 'btn btn-ghost', onClick: function () { pasteImportFlow(folder); } }, '粘贴导入'))));
@@ -536,19 +604,24 @@
               el_('div', { class: 'set-row-meta', 'data-set-stats': s.id })),
             el_('div', { class: 'set-row-ops' },
               el_('button', { class: 'btn btn-primary btn-sm', onClick: function (e) { e.stopPropagation(); quickPractice(s); } }, T.icon('play'), '刷题'),
-              el_('button', { class: 'icon-btn', title: '重命名题集', onClick: function (e) { e.stopPropagation(); renameSet(s); } }, T.icon('edit')),
-              el_('button', { class: 'icon-btn', title: '导出题集备份', onClick: function (e) { e.stopPropagation(); T.backup.exportSet(s.id); } }, T.icon('download')),
-              el_('button', { class: 'icon-btn', title: '删除题集', onClick: function (e) { e.stopPropagation(); deleteSetCascade(s); } }, T.icon('trash'))),
+              s.origin === 'public' ? null : el_('button', { class: 'icon-btn', title: '重命名题集', onClick: function (e) { e.stopPropagation(); renameSet(s); } }, T.icon('edit')),
+              s.origin === 'public' ? null : el_('button', { class: 'icon-btn', title: '导出题集备份', onClick: function (e) { e.stopPropagation(); T.backup.exportSet(s.id); } }, T.icon('download')),
+              s.origin === 'public' ? null : el_('button', { class: 'icon-btn', title: '删除题集', onClick: function (e) { e.stopPropagation(); deleteSetCascade(s); } }, T.icon('trash'))),
             (function () {
-              /* 异步填充该题集的迷你统计 */
+              /* 异步填充该题集的迷你统计（公共题集未下载时显示清单题量） */
               T.stats.setStats(s.id).then(function (st) {
                 var meta = listWrap.querySelector('[data-set-stats="' + s.id + '"]');
                 if (meta) {
                   meta.textContent = '';
-                  meta.appendChild(el_('span', {}, st.questions + ' 题'));
-                  meta.appendChild(el_('span', {}, '已答 ' + st.answered));
-                  meta.appendChild(el_('span', {}, '正确率 ' + T.pct(st.accuracy)));
-                  if (st.mistakes) meta.appendChild(el_('span', { style: 'color:var(--danger)' }, '错题 ' + st.mistakes));
+                  if (!st.questions && s.publicCount) {
+                    meta.appendChild(el_('span', {}, s.publicCount + ' 题'));
+                    meta.appendChild(el_('span', { class: 'pub-hint' }, '未下载，点击自动获取'));
+                  } else {
+                    meta.appendChild(el_('span', {}, st.questions + ' 题'));
+                    meta.appendChild(el_('span', {}, '已答 ' + st.answered));
+                    meta.appendChild(el_('span', {}, '正确率 ' + T.pct(st.accuracy)));
+                    if (st.mistakes) meta.appendChild(el_('span', { style: 'color:var(--danger)' }, '错题 ' + st.mistakes));
+                  }
                 }
               });
               return null;
@@ -557,20 +630,26 @@
 
         function quickQuizMenu(pick) { return pick; }
         function quickPractice(s) {
-          T.db.countByIndex('questions', 'by-set', s.id).then(function (cnt) {
-            if (!cnt) { T.toast('该题集没有题目', 'error'); return; }
-            return T.choice({
-              title: '刷「' + s.name + '」',
-              message: '该题集共 ' + cnt + ' 道题。',
-              choices: [
-                { key: 'seq', label: '顺序刷题', desc: '按题目原始顺序' },
-                { key: 'random', label: '随机刷题', desc: '打乱顺序练习' }
-              ]
-            }).then(function (pick) {
-              if (!pick) return;
-              T.startQuiz({
-                mode: 'set', targetId: s.id, order: pick,
-                label: s.name, origin: '#/set/' + s.id
+          var pre = s.origin === 'public'
+            ? T.public.ensureSetLoaded(s)
+            : Promise.resolve({ ok: true });
+          pre.then(function (r) {
+            if (r && r.ok === false) { T.toast(r.error || '内置题库下载失败', 'error', 3600); return; }
+            T.db.countByIndex('questions', 'by-set', s.id).then(function (cnt) {
+              if (!cnt) { T.toast('该题集没有题目', 'error'); return; }
+              return T.choice({
+                title: '刷「' + s.name + '」',
+                message: '该题集共 ' + cnt + ' 道题。当前模式：' + T.quizModeLabel(T.quizModeDefault()) + '（进入后可切换）。',
+                choices: [
+                  { key: 'seq', label: '顺序刷题', desc: '按题目原始顺序' },
+                  { key: 'random', label: '随机刷题', desc: '打乱顺序练习' }
+                ]
+              }).then(function (pick) {
+                if (!pick) return;
+                T.startQuiz({
+                  mode: 'set', targetId: s.id, order: pick,
+                  label: s.name, origin: '#/set/' + s.id
+                });
               });
             });
           });
@@ -648,6 +727,22 @@
         T.go('#/');
         return root;
       }
+      var isPub = set.origin === 'public';
+      /* 公共题集：先确保内容已下载到本地（首次打开/清单更新时自动拉取） */
+      var pre = isPub
+        ? T.public.ensureSetLoaded(set).then(function (r) {
+            if (r.ok) return set;
+            root.appendChild(el_('a', { class: 'back-link', href: '#/folder/' + set.folderId }, T.icon('arrowLeft', 'icon-sm'), '返回题集列表'));
+            root.appendChild(el_('div', { class: 'card empty-state', style: 'max-width:560px;margin:40px auto' },
+              T.icon('alertCircle', 'icon-lg'),
+              el_('h2', {}, '内置题库下载失败'),
+              el_('p', { style: 'color:var(--muted)' }, r.error || '请检查网络后重试。'),
+              el_('button', { class: 'btn btn-primary', onClick: function () { T.rerender(); } }, T.icon('refresh'), '重试')));
+            return null;
+          })
+        : Promise.resolve(set);
+      return pre.then(function (set) {
+        if (!set) return root;
       return Promise.all([
         T.db.get('folders', set.folderId),
         T.db.getAllByIndex('questions', 'by-set', setId),
@@ -662,17 +757,33 @@
           el_('span', { class: 'set-ico' }, T.icon('layers')),
           el_('div', {},
             el_('h1', { style: 'margin:0;word-break:break-all' }, set.name),
-            el_('div', { class: 'folder-meta' }, (folder ? '文件夹：' + folder.name + ' · ' : '') + questions.length + ' 道题 · 导入于 ' + T.fmtDate(set.createdAt))),
+            el_('div', { class: 'folder-meta' },
+              (folder ? '文件夹：' + folder.name + ' · ' : '') + questions.length + ' 道题 · ' +
+              (isPub ? '内置公共题库' : '导入于 ' + T.fmtDate(set.createdAt)),
+              isPub ? el_('span', { class: 'chip', title: '所有人可见的站点内置题库' }, '公共') : null)),
           el_('span', { class: 'spacer' }),
-          el_('button', { class: 'icon-btn', title: '重命名题集', onClick: function () {
+          isPub ? el_('button', {
+            class: 'icon-btn', title: '同步更新（重新下载该题库文件）', onClick: function () {
+              T.toast('正在同步「' + set.name + '」…', 'info', 1800);
+              T.public.refreshSet(setId).then(function (r2) {
+                if (r2 && r2.ok) {
+                  T.toast('已同步到最新内容' + (r2.count != null ? '（' + r2.count + ' 题）' : ''), 'success');
+                  T.rerender();
+                } else {
+                  T.toast((r2 && r2.error) || '同步失败，请稍后重试', 'error', 3600);
+                }
+              });
+            }
+          }, T.icon('refresh')) : null,
+          isPub ? null : el_('button', { class: 'icon-btn', title: '重命名题集', onClick: function () {
             T.prompt({ title: '重命名题集', label: '题集名称', value: set.name, confirmText: '保存' }).then(function (name) {
               if (name == null || name === set.name) return;
               set.name = name;
               T.db.put('sets', set).then(function () { T.toast('已重命名', 'success'); T.rerender(); });
             });
           } }, T.icon('edit')),
-          el_('button', { class: 'icon-btn', title: '导出题集备份', onClick: function () { T.backup.exportSet(setId); } }, T.icon('download')),
-          el_('button', { class: 'icon-btn', title: '删除题集', onClick: function () {
+          isPub ? null : el_('button', { class: 'icon-btn', title: '导出题集备份', onClick: function () { T.backup.exportSet(setId); } }, T.icon('download')),
+          isPub ? null : el_('button', { class: 'icon-btn', title: '删除题集', onClick: function () {
             T.confirm({
               title: '删除题集', danger: true, confirmText: '永久删除',
               message: '将永久删除题集「' + set.name + '」及其 ' + questions.length + ' 道题目，以及相关的答题记录、错题、收藏和练习进度。'
@@ -719,11 +830,11 @@
           statCard('尝试正确率', T.pct(st.attemptAccuracy))));
 
         /* 刷题启动器 */
-        root.appendChild(el_('div', { class: 'section-head' }, el_('h2', {}, '开始刷题')));
+        root.appendChild(el_('div', { class: 'section-head' }, el_('h2', {}, '开始练习')));
         root.appendChild(buildLauncher());
 
         function buildLauncher() {
-          var state = { order: 'seq', types: new Set(), chapters: new Set(), onlyWrong: false, onlyFav: false, onlyUnanswered: false };
+          var state = { order: 'seq', quizMode: T.quizModeDefault(), types: new Set(), chapters: new Set(), onlyWrong: false, onlyFav: false, onlyUnanswered: false };
           var typeCounts = {};
           questions.forEach(function (q) { typeCounts[q.type] = (typeCounts[q.type] || 0) + 1; });
           var chapters = {};
@@ -742,6 +853,22 @@
           box.appendChild(el_('div', { class: 'launch-row' },
             el_('span', { class: 'launch-label' }, '顺序'),
             el_('div', { class: 'seg' }, seqBtn, randBtn)));
+
+          /* 练习模式：刷题（即点即判，答对自动下一题） / 做题（选完提交） / 背题（直接看答案） */
+          var modeBtns = {};
+          var modeSeg = el_('div', { class: 'seg' });
+          T.QUIZ_MODES.forEach(function (m) {
+            modeBtns[m.key] = el_('button', { title: m.hint, onClick: function () {
+              state.quizMode = m.key;
+              T.setQuizModeDefault(m.key);
+              refresh();
+            } }, m.label);
+            modeSeg.appendChild(modeBtns[m.key]);
+          });
+          var modeHint = el_('div', { class: 'launch-mode-hint' }, '');
+          box.appendChild(el_('div', { class: 'launch-row launch-row-mode' },
+            el_('span', { class: 'launch-label' }, '模式'),
+            el_('div', { class: 'launch-mode-box' }, modeSeg, modeHint)));
 
           /* 题型筛选 */
           var typeList = el_('div', { class: 'launch-types' });
@@ -792,10 +919,10 @@
           box.appendChild(el_('div', { class: 'launch-row' }, el_('span', { class: 'launch-label' }, '范围'), scopeLine));
 
           var countEl = el_('span', { class: 'launch-count' }, '…');
-          var startBtn = el_('button', { class: 'btn btn-primary btn-lg' }, T.icon('play'), '开始刷题');
+          var startBtn = el_('button', { class: 'btn btn-primary btn-lg' }, T.icon('play'), '开始练习');
           startBtn.addEventListener('click', function () {
             T.startQuiz({
-              mode: 'set', targetId: setId, order: state.order,
+              mode: 'set', targetId: setId, order: state.order, quizMode: state.quizMode,
               filters: buildFilters(), label: set.name, origin: '#/set/' + setId
             });
           });
@@ -815,6 +942,14 @@
           function refresh() {
             seqBtn.classList.toggle('active', state.order === 'seq');
             randBtn.classList.toggle('active', state.order === 'random');
+            var curMode = null;
+            T.QUIZ_MODES.forEach(function (m) {
+              modeBtns[m.key].classList.toggle('active', state.quizMode === m.key);
+              if (state.quizMode === m.key) curMode = m;
+            });
+            if (!curMode) curMode = T.QUIZ_MODES[1];
+            modeHint.textContent = curMode.hint;
+            startBtn.replaceChildren(T.icon('play'), '开始' + curMode.label);
             countEl.textContent = '计算中…';
             if (refreshTimer) clearTimeout(refreshTimer);
             refreshTimer = setTimeout(function () {
@@ -913,6 +1048,7 @@
         }
 
         return root;
+      });
       });
     });
   };

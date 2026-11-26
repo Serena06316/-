@@ -11,6 +11,26 @@
 
   var TYPE_LABELS = { single: '单选题', multiple: '多选题', judge: '判断题' };
 
+  /* ============ 练习模式（刷题 / 做题 / 背题） ============ */
+  T.QUIZ_MODES = [
+    { key: 'swipe', label: '刷题', hint: '即点即判：单选/判断点击选项后立即判题，答对自动进入下一题，答错停留查看解析后再手动下一题；多选题选齐后点“确认”' },
+    { key: 'exam', label: '做题', hint: '选择完成后点击“提交答案”，查看对错与解析（经典模式）' },
+    { key: 'recite', label: '背题', hint: '不判题：直接展示正确答案与解析，逐题浏览记忆，不产生答题记录' }
+  ];
+  var MODE_STORE = 'tiku-quiz-mode';
+  T.quizModeDefault = function () {
+    var m = null;
+    try { m = localStorage.getItem(MODE_STORE); } catch (e) { /* 忽略 */ }
+    return m === 'swipe' || m === 'recite' ? m : 'exam';
+  };
+  T.setQuizModeDefault = function (m) {
+    try { localStorage.setItem(MODE_STORE, m); } catch (e) { /* 忽略 */ }
+  };
+  T.quizModeLabel = function (m) {
+    for (var i = 0; i < T.QUIZ_MODES.length; i++) { if (T.QUIZ_MODES[i].key === m) return T.QUIZ_MODES[i].label; }
+    return T.QUIZ_MODES[1].label;
+  };
+
   /* ============ 题目收集（按范围与筛选条件） ============ */
   T.collectQuestions = function (cfg) {
     var mode = cfg.mode, targetId = cfg.targetId, filters = cfg.filters || {};
@@ -118,9 +138,12 @@
             .sort(function (a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); })[0] || null;
           if (!resumable) return { pick: 'new', list: list };
           var doneCount = Object.keys(resumable.answers || {}).length;
+          var progDesc = resumable.quizMode === 'recite'
+            ? '已背到第 ' + Math.min((resumable.currentIndex || 0) + 1, resumable.questionIds.length) + ' 题'
+            : '已答 ' + doneCount + ' / ' + resumable.questionIds.length + ' 题';
           return T.choice({
             title: '发现未完成的练习',
-            message: '“' + (cfg.label || '练习') + '”有一份未完成的进度（已答 ' + doneCount + ' / ' + resumable.questionIds.length + ' 题），是否继续？',
+            message: '“' + (cfg.label || '练习') + '”有一份未完成的进度（' + progDesc + '），是否继续？',
             choices: [
               { key: 'resume', label: '恢复进度', desc: '从第 ' + (resumable.currentIndex + 1) + ' 题继续' },
               { key: 'new', label: '重新开始', desc: '将清除该范围内旧的练习进度并新建' }
@@ -150,7 +173,10 @@
             createdAt: Date.now(),
             updatedAt: Date.now(),
             done: false,
-            originRoute: cfg.origin || (window.location.hash || '#/')
+            originRoute: cfg.origin || (window.location.hash || '#/'),
+            quizMode: (cfg.quizMode === 'swipe' || cfg.quizMode === 'recite' || cfg.quizMode === 'exam')
+              ? cfg.quizMode
+              : T.quizModeDefault() /* 未指定时沿用上次使用的模式 */
           };
           return T.db.put('sessions', session).then(function () {
             T.go('#/quiz/' + session.id);
@@ -222,6 +248,29 @@
 
           var state = { sel: [] };
           var anscardOpen = window.matchMedia && window.matchMedia('(min-width: 721px)').matches;
+          var autoTimer = null; /* 刷题模式答对后自动下一题的定时器 */
+
+          function curMode() {
+            return sess.quizMode === 'swipe' || sess.quizMode === 'recite' ? sess.quizMode : 'exam';
+          }
+          function setMode(m) {
+            if (sess.quizMode === m) return;
+            sess.quizMode = m;
+            T.setQuizModeDefault(m); /* 记住偏好，下次默认使用 */
+            if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+            save().then(function () { render(false); });
+          }
+          function scheduleAutoNext() {
+            if (autoTimer) clearTimeout(autoTimer);
+            var q0 = currentQ();
+            if (!q0) return;
+            var qid = q0.id, idx = sess.currentIndex;
+            autoTimer = setTimeout(function () {
+              autoTimer = null;
+              var q2 = currentQ();
+              if (q2 && q2.id === qid && sess.currentIndex === idx && !sess.done) next();
+            }, 550);
+          }
 
           function save() {
             sess.updatedAt = Date.now();
@@ -246,10 +295,16 @@
               var i = state.sel.indexOf(label);
               if (i >= 0) state.sel.splice(i, 1);
               else state.sel.push(label);
+              render(false);
             } else {
               state.sel = [label];
+              if (curMode() === 'swipe') {
+                /* 刷题模式：单选/判断点击选项即判题 */
+                submit();
+                return;
+              }
+              render(false);
             }
-            render(false);
           }
 
           function updateMistakeEntry(q, correct) {
@@ -306,6 +361,9 @@
               return save();
             }).then(function () {
               render(false);
+              /* 刷题模式答对：短暂展示后自动进入下一题 */
+              var e2 = sess.answers[q.id];
+              if (curMode() === 'swipe' && e2 && e2.correct) scheduleAutoNext();
             }).catch(function (e) {
               console.error(e);
               T.toast('保存答题结果失败：' + (e.message || e), 'error');
@@ -339,6 +397,7 @@
           }
           function next() {
             if (sess.currentIndex < sess.questionIds.length - 1) goto(sess.currentIndex + 1);
+            else if (curMode() === 'recite') T.go(sess.originRoute || '#/'); /* 背题模式最后一题直接退出 */
             else finishFlow();
           }
           function prev() { goto(sess.currentIndex - 1); }
@@ -352,6 +411,7 @@
           }
 
           function finishFlow() {
+            if (curMode() === 'recite') { T.go(sess.originRoute || '#/'); return; } /* 背题不产生结果页 */
             var unanswered = sess.questionIds.length - answeredCount();
             if (unanswered > 0) {
               T.confirm({
@@ -379,40 +439,58 @@
             var submitted = !!(entry && entry.submitted);
             var m = mistakeMap.get(q.id);
             var fav = favSet.has(q.id);
+            var recite = curMode() === 'recite';
 
             var top = T.el('div', { class: 'quiz-top' },
               T.el('button', { class: 'btn btn-ghost btn-sm', onClick: function () { T.go(sess.originRoute || '#/'); } },
                 T.icon('arrowLeft'), '退出'),
               T.el('div', { class: 'quiz-title' },
                 T.el('div', { class: 'quiz-scope', title: sess.scope && sess.scope.label }, sess.scope ? sess.scope.label : '练习'),
-                T.el('div', { class: 'quiz-counter' }, '第 ' + (idx + 1) + ' / ' + total + ' 题 · 已答 ' + answeredCount() + ' 题')),
+                T.el('div', { class: 'quiz-counter' },
+                  '第 ' + (idx + 1) + ' / ' + total + ' 题' + (recite ? '' : ' · 已答 ' + answeredCount() + ' 题'))),
               T.el('div', { class: 'quiz-top-actions' },
                 m ? T.el('span', { class: 'chip chip-danger', title: '错题：答对 ' + (m.correctCount || 0) + ' 次 / 共答 ' + (m.attempts || 0) + ' 次' },
                   T.icon('xCircle', 'icon-sm'), '错题') : null,
                 m && m.mastered ? T.el('span', { class: 'chip chip-ok' }, T.icon('check', 'icon-sm'), '已答对2次') : null,
+                recite && entry && entry.submitted
+                  ? T.el('span', { class: 'chip ' + (entry.correct ? 'chip-ok' : 'chip-danger') }, entry.correct ? '你曾答对' : '你曾答错') : null,
                 T.el('button', {
                   class: 'icon-btn' + (fav ? ' is-fav' : ''), 'aria-label': '收藏本题',
                   title: fav ? '取消收藏' : '收藏本题',
                   onClick: function () { toggleFavorite(q); }
                 }, T.icon(fav ? 'starFill' : 'star')))
             );
+            var progVal = recite ? (idx + 1) / total : (total ? answeredCount() / total : 0);
             var progress = T.el('div', { class: 'progress' },
-              T.el('div', { class: 'progress-fill', style: 'width:' + (total ? (answeredCount() / total * 100).toFixed(1) : 0) + '%' }));
+              T.el('div', { class: 'progress-fill', style: 'width:' + (progVal * 100).toFixed(1) + '%' }));
+
+            /* 模式切换栏：刷题 / 做题 / 背题 */
+            var modeBar = T.el('div', { class: 'quiz-modebar' });
+            T.QUIZ_MODES.forEach(function (md) {
+              modeBar.appendChild(T.el('button', {
+                class: curMode() === md.key ? 'active' : '',
+                title: md.hint,
+                onClick: function () { setMode(md.key); }
+              }, md.label));
+            });
 
             var meta = T.el('div', { class: 'q-meta' },
               T.el('span', { class: 'chip chip-type' }, TYPE_LABELS[q.type] || q.type),
               q.chapter ? T.el('span', { class: 'chip' }, T.icon('book', 'icon-sm'), q.chapter) : null,
-              q.type === 'multiple' ? T.el('span', { class: 'chip' }, '可选多项') : null
+              q.type === 'multiple' && !recite ? T.el('span', { class: 'chip' }, '可选多项') : null
             );
             var stem = T.el('div', { class: 'q-text' }, q.question || '');
 
             var optionsNode = T.el('div', { class: 'q-options' });
             (q.options || []).forEach(function (opt) {
+              var isAnsOpt = (q.answer || []).indexOf(opt.label) >= 0;
               var cls = 'option';
-              if (submitted) {
-                var isAns = (q.answer || []).indexOf(opt.label) >= 0;
+              if (recite) {
+                /* 背题：正确选项高亮，不可点击 */
+                if (isAnsOpt) cls += ' correct locked';
+              } else if (submitted) {
                 var isSel = (entry.selected || []).indexOf(opt.label) >= 0;
-                if (isAns) cls += ' correct';
+                if (isAnsOpt) cls += ' correct';
                 else if (isSel) cls += ' wrong';
                 cls += ' locked';
               } else if (state.sel.indexOf(opt.label) >= 0) {
@@ -421,19 +499,30 @@
               optionsNode.appendChild(T.el('button', {
                 class: cls, type: 'button',
                 'aria-label': '选项 ' + opt.label,
-                onClick: function () { selectLabel(opt.label); }
+                onClick: recite ? null : function () { selectLabel(opt.label); }
               },
                 T.el('span', { class: 'opt-label' }, opt.label),
                 T.el('span', { class: 'opt-text' }, opt.text),
-                submitted && (q.answer || []).indexOf(opt.label) >= 0
+                (recite || submitted) && isAnsOpt
                   ? T.el('span', { class: 'opt-mark opt-mark-ok' }, T.icon('check')) : null,
-                submitted && (entry.selected || []).indexOf(opt.label) >= 0 && (q.answer || []).indexOf(opt.label) < 0
+                !recite && submitted && (entry.selected || []).indexOf(opt.label) >= 0 && !isAnsOpt
                   ? T.el('span', { class: 'opt-mark opt-mark-bad' }, T.icon('x')) : null
               ));
             });
 
             var feedback = null;
-            if (submitted) {
+            if (recite) {
+              /* 背题：直接展示答案与解析 */
+              feedback = T.el('div', { class: 'q-feedback' },
+                T.el('div', { class: 'q-verdict ok' },
+                  T.icon('checkCircle'),
+                  T.el('span', {}, '正确答案'),
+                  T.el('span', { class: 'q-verdict-ans' }, (q.answer || []).join('、'))),
+                q.explanation
+                  ? T.el('div', { class: 'q-expl' }, T.el('div', { class: 'q-expl-title' }, '解析'), T.el('div', { class: 'q-expl-text' }, q.explanation))
+                  : T.el('div', { class: 'q-expl-empty' }, '本题没有解析')
+              );
+            } else if (submitted) {
               feedback = T.el('div', { class: 'q-feedback' },
                 T.el('div', { class: 'q-verdict ' + (entry.correct ? 'ok' : 'bad') },
                   entry.correct ? T.icon('checkCircle') : T.icon('xCircle'),
@@ -445,15 +534,25 @@
               );
             }
 
-            var actions = T.el('div', { class: 'q-actions' },
-              T.el('button', { class: 'btn btn-ghost', onClick: prev, disabled: idx === 0 }, T.icon('chevronLeft'), '上一题'),
-              submitted
-                ? T.el('button', { class: 'btn btn-primary', onClick: next }, idx === total - 1 ? '查看结果' : '下一题', T.icon('chevronRight'))
-                : T.el('button', { class: 'btn btn-primary', onClick: submit }, '提交答案'),
-              T.el('button', { class: 'btn btn-ghost', onClick: skip, title: '跳过本题，稍后再答' }, '跳过'),
-              submitted ? T.el('button', { class: 'btn btn-ghost', onClick: redo, title: '清除本题作答并重新回答（历史答题记录保留）' }, T.icon('refresh'), '重做') : null,
-              T.el('button', { class: 'btn btn-ghost btn-sm', onClick: finishFlow }, '结束练习')
-            );
+            var actions;
+            if (recite) {
+              /* 背题：只需前后翻页与退出 */
+              actions = T.el('div', { class: 'q-actions' },
+                T.el('button', { class: 'btn btn-ghost', onClick: prev, disabled: idx === 0 }, T.icon('chevronLeft'), '上一题'),
+                T.el('button', { class: 'btn btn-primary', onClick: next }, idx === total - 1 ? '完成' : '下一题', T.icon('chevronRight')),
+                T.el('button', { class: 'btn btn-ghost btn-sm', onClick: finishFlow }, '退出'));
+            } else {
+              actions = T.el('div', { class: 'q-actions' },
+                T.el('button', { class: 'btn btn-ghost', onClick: prev, disabled: idx === 0 }, T.icon('chevronLeft'), '上一题'),
+                submitted
+                  ? T.el('button', { class: 'btn btn-primary', onClick: next }, idx === total - 1 ? '查看结果' : '下一题', T.icon('chevronRight'))
+                  : (curMode() === 'swipe' && q.type === 'multiple'
+                      ? T.el('button', { class: 'btn btn-primary', onClick: submit }, '确认答案')
+                      : T.el('button', { class: 'btn btn-primary', onClick: submit }, '提交答案')),
+                T.el('button', { class: 'btn btn-ghost', onClick: skip, title: '跳过本题，稍后再答' }, '跳过'),
+                submitted ? T.el('button', { class: 'btn btn-ghost', onClick: redo, title: '清除本题作答并重新回答（历史答题记录保留）' }, T.icon('refresh'), '重做') : null,
+                T.el('button', { class: 'btn btn-ghost btn-sm', onClick: finishFlow }, '结束练习'));
+            }
 
             var card = T.el('div', { class: 'card q-card' }, meta, stem, optionsNode, feedback, actions);
 
@@ -479,11 +578,11 @@
                 class: 'anscard-toggle', onClick: function () { anscardOpen = !anscardOpen; render(false); }
               },
                 T.icon('list'), '答题卡',
-                T.el('span', { class: 'chip' }, answeredCount() + '/' + total),
+                T.el('span', { class: 'chip' }, (recite ? idx + 1 : answeredCount()) + '/' + total),
                 T.icon('chevronDown')),
               T.el('div', { class: 'anscard-body' }, legend, grid));
 
-            root.replaceChildren(top, progress, card, anscard);
+            root.replaceChildren(top, progress, modeBar, card, anscard);
             if (scroll !== false) {
               try { window.scrollTo({ top: 0, behavior: 'auto' }); } catch (e) { window.scrollTo(0, 0); }
             }
@@ -574,6 +673,12 @@
             if (sess.done) return;
             var q = currentQ();
             if (!q) return;
+            if (curMode() === 'recite') {
+              /* 背题：只支持翻页 */
+              if (e.key === 'ArrowRight' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); next(); }
+              else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+              return;
+            }
             if (/^[1-9]$/.test(e.key)) {
               var i = parseInt(e.key, 10) - 1;
               if (q.options && i < q.options.length) {
@@ -588,11 +693,17 @@
               e.preventDefault();
               var entry = sess.answers[q.id];
               if (entry && entry.submitted) next();
+              else if (curMode() === 'swipe' && q.type === 'multiple' && !state.sel.length) {
+                T.toast('多选题请先选择选项（可点击选项或按数字键）', 'info');
+              }
               else submit();
             }
           }
           document.addEventListener('keydown', onKey);
-          T.onCleanup(function () { document.removeEventListener('keydown', onKey); });
+          T.onCleanup(function () {
+            document.removeEventListener('keydown', onKey);
+            if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+          });
 
           /* 初始渲染 */
           var initQ = currentQ();

@@ -83,7 +83,8 @@
         var kw = state.kw.trim();
         T.choice({
           title: '练习' + config.title,
-          message: '将按当前筛选条件练习' + (kw ? '（关键词筛选不参与刷题范围）' : '') + '。',
+          message: '将按当前筛选条件练习' + (kw ? '（关键词筛选不参与刷题范围）' : '') +
+            '。当前模式：' + T.quizModeLabel(T.quizModeDefault()) + '（进入后可切换）。',
           choices: [
             { key: 'seq', label: '顺序刷题', desc: '按最近作答时间倒序' },
             { key: 'random', label: '随机刷题', desc: '打乱顺序练习' }
