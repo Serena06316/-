@@ -503,6 +503,25 @@ code.inline { background: var(--surface-2); border-radius: 5px; padding: 1px 6px
 .folder-export-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); }
 .folder-export-row .name { flex: 1; font-weight: 600; }
 
+/* ---------- 内置公共题库 ---------- */
+.folder-ico.pub { background: var(--success-soft); color: var(--success); }
+.pub-hint { color: var(--primary); }
+.folder-card .chip { flex: 0 0 auto; }
+
+/* ---------- 练习模式切换栏（题目上方） ---------- */
+.quiz-modebar { display: flex; justify-content: center; gap: 4px; margin: -6px 0 14px; flex-wrap: wrap; }
+.quiz-modebar button {
+  border: 1px solid var(--border-2); background: var(--surface); color: var(--text-2);
+  border-radius: 999px; padding: 5px 18px; font-size: 13px; font-weight: 600; cursor: pointer;
+  min-height: 30px; transition: all .15s ease;
+}
+.quiz-modebar button:hover { border-color: var(--primary); color: var(--primary); }
+.quiz-modebar button.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ---------- 启动器：模式选择 ---------- */
+.launch-mode-box { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.launch-mode-hint { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+
 /* ---------- 响应式 ---------- */
 @media (max-width: 720px) {
   .container { padding: 14px 12px 72px; }
