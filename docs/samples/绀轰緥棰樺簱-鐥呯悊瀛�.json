@@ -1,0 +1,114 @@
+{
+  "title": "病理学示例题库（炎症与肿瘤）",
+  "questions": [
+    {
+      "id": "q001",
+      "type": "single",
+      "question": "炎症最核心的基本病理变化是？",
+      "options": [
+        { "label": "A", "text": "变质" },
+        { "label": "B", "text": "渗出" },
+        { "label": "C", "text": "增生" },
+        { "label": "D", "text": "坏死" }
+      ],
+      "answer": ["B"],
+      "explanation": "炎症的基本病理变化包括变质、渗出和增生，其中渗出（血管反应）最具特征性，是炎症的核心。",
+      "chapter": "炎症"
+    },
+    {
+      "id": "q002",
+      "type": "single",
+      "question": "急性化脓性炎症中浸润的主要炎细胞是？",
+      "options": [
+        { "label": "A", "text": "中性粒细胞" },
+        { "label": "B", "text": "巨噬细胞" },
+        { "label": "C", "text": "淋巴细胞" },
+        { "label": "D", "text": "浆细胞" },
+        { "label": "E", "text": "嗜酸性粒细胞" }
+      ],
+      "answer": ["A"],
+      "explanation": "急性化脓性炎症以中性粒细胞浸润为主；慢性炎症多以巨噬细胞、淋巴细胞浸润为主。",
+      "chapter": "炎症"
+    },
+    {
+      "id": "q003",
+      "type": "single",
+      "question": "下列哪项属于恶性肿瘤？",
+      "options": [
+        { "label": "A", "text": "脂肪瘤" },
+        { "label": "B", "text": "纤维瘤" },
+        { "label": "C", "text": "脂肪肉瘤" },
+        { "label": "D", "text": "血管瘤" },
+        { "label": "E", "text": "软骨瘤" },
+        { "label": "F", "text": "乳头状瘤" }
+      ],
+      "answer": ["C"],
+      "explanation": "脂肪肉瘤为恶性肿瘤；脂肪瘤、纤维瘤、血管瘤、软骨瘤、乳头状瘤均为良性肿瘤。本题共 6 个选项，用于演示动态选项数量。",
+      "chapter": "肿瘤"
+    },
+    {
+      "id": "q004",
+      "type": "multiple",
+      "question": "炎症的基本病理变化包括下列哪些？",
+      "options": [
+        { "label": "A", "text": "变质" },
+        { "label": "B", "text": "渗出" },
+        { "label": "C", "text": "增生" },
+        { "label": "D", "text": "坏死" },
+        { "label": "E", "text": "钙化" }
+      ],
+      "answer": ["A", "B", "C"],
+      "explanation": "炎症三大基本病变为变质、渗出、增生。坏死与钙化不属于炎症的基本病理变化。",
+      "chapter": "炎症"
+    },
+    {
+      "id": "q005",
+      "type": "multiple",
+      "question": "下列属于良性肿瘤的有？",
+      "options": [
+        { "label": "A", "text": "脂肪瘤" },
+        { "label": "B", "text": "纤维瘤" },
+        { "label": "C", "text": "血管瘤" },
+        { "label": "D", "text": "脂肪肉瘤" },
+        { "label": "E", "text": "鳞状细胞癌" }
+      ],
+      "answer": ["A", "B", "C"],
+      "explanation": "脂肪肉瘤、鳞状细胞癌为恶性肿瘤。",
+      "chapter": "肿瘤"
+    },
+    {
+      "id": "q006",
+      "type": "judge",
+      "question": "转移是恶性肿瘤的重要特征，良性肿瘤不发生转移。",
+      "options": [
+        { "label": "A", "text": "正确" },
+        { "label": "B", "text": "错误" }
+      ],
+      "answer": ["A"],
+      "explanation": "良性肿瘤不转移；恶性肿瘤可通过淋巴道、血道或种植等途径转移。",
+      "chapter": "肿瘤"
+    },
+    {
+      "id": "q007",
+      "type": "judge",
+      "question": "所有的炎症反应都对机体有利。",
+      "answer": ["B"],
+      "explanation": "",
+      "chapter": "炎症"
+    },
+    {
+      "id": "q008",
+      "type": "single",
+      "question": "慢性支气管炎患者，长期炎症刺激使支气管黏膜的假复层纤毛柱状上皮转化为鳞状上皮，\n该变化属于？",
+      "options": [
+        { "label": "A", "text": "肥大" },
+        { "label": "B", "text": "增生" },
+        { "label": "C", "text": "萎缩" },
+        { "label": "D", "text": "鳞状上皮化生（化生）" }
+      ],
+      "answer": ["D"],
+      "explanation": "化生是一种分化成熟的细胞类型被另一种分化成熟的细胞类型所取代的过程，常见于慢性炎症刺激。题干含换行，用于演示多行长题干。",
+      "chapter": "适应与损伤"
+    }
+  ]
+}
