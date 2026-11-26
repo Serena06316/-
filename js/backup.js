@@ -118,6 +118,39 @@
       }).catch(function (e) { T.toast('导出失败：' + (e.message || e), 'error'); });
     },
 
+    /* 导出为题库 JSON（标准题库格式，可直接上传到仓库 question-banks/ 作为内置公共题库） */
+    exportBankJSON: function (setId) {
+      return Promise.all([
+        T.db.get('sets', setId),
+        T.db.getAllByIndex('questions', 'by-set', setId)
+      ]).then(function (r) {
+        var set = r[0], qs = r[1];
+        if (!set) throw new Error('题集不存在');
+        qs.sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+        var bank = {
+          title: set.name,
+          questions: qs.map(function (q) {
+            var id = String(q.id || '');
+            return {
+              id: id.indexOf('::') >= 0 ? id.split('::').slice(1).join('::') : (id || undefined),
+              type: q.type,
+              question: q.question,
+              options: q.options,
+              answer: q.answer,
+              explanation: q.explanation || '',
+              chapter: q.chapter || ''
+            };
+          })
+        };
+        bank.questions.forEach(function (q) {
+          if (q.id === undefined) delete q.id;
+        });
+        if (!bank.questions.length) throw new Error('该题集没有题目，无法导出');
+        T.download(T.sanitizeFileName(set.name) + '.json', JSON.stringify(bank, null, 2));
+        T.toast('已导出题库 JSON（' + qs.length + ' 题），可直接上传到仓库 question-banks/ 目录', 'success', 3600);
+      }).catch(function (e) { T.toast('导出失败：' + (e.message || e), 'error'); });
+    },
+
     /* ---------- 校验 ---------- */
     validateBackup: function (data) {
       if (!data || typeof data !== 'object') return { ok: false, error: '不是有效的备份 JSON' };

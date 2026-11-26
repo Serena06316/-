@@ -201,10 +201,25 @@
         root.appendChild(head);
         root.appendChild(grid);
         root.appendChild(el('p', { style: 'color:var(--muted);font-size:12.5px;margin:8px 0 0' },
-          '内置公共题库由本站维护者统一提供，对所有人可见；首次打开题集时自动下载缓存，你的答题记录、错题与收藏只保存在本地。'));
-      } else if (res.reason === 'offline' || res.reason === 'invalid') {
-        root.appendChild(el('p', { style: 'color:var(--muted);font-size:13px;margin:10px 0 0' },
-          '内置公共题库当前不可用（可能是网络原因），可稍后重试。'));
+          '内置公共题库由本站维护者统一提供，对所有人可见；首次打开题集时自动下载缓存，你的答题记录、错题与收藏只保存在本地。',
+          res.source === 'api' ? '（目录由 GitHub 接口自动发现）' : ''));
+      } else {
+        var hints = {
+          'none': '仓库 question-banks/ 目录下还没有可用的内置题库文件。维护者放入 .json / .txt / .csv 题库文件并等 GitHub Pages 更新（约 1-2 分钟）后，点「刷新」即可看到。',
+          'no-repo': '当前站点不是 *.github.io 域名，无法自动识别仓库地址。维护者可在 js/public.js 顶部 REPO_OVERRIDE 中填入「用户名/仓库名」。',
+          'api-failed': '内置公共题库暂时获取不到（可能是网络原因，无法访问 GitHub 接口）。可稍后点「刷新」重试；若长期如此，可让维护者上传 question-banks/manifest.json 清单文件作为替代。',
+          'api-limited': 'GitHub 接口调用次数已达上限，内置公共题库暂时获取不到。请稍后再点「刷新」，或让维护者上传 question-banks/manifest.json 清单文件作为替代。'
+        };
+        var reasonText = hints[res.reason] || '内置公共题库当前不可用（可能是网络原因），可稍后重试。';
+        root.appendChild(el('div', { class: 'help-notice', style: 'margin-top:6px' },
+          T.icon('info'),
+          el('div', { style: 'flex:1' }, reasonText),
+          el('button', {
+            class: 'btn btn-ghost btn-sm', onClick: function () {
+              T.toast('正在刷新内置题库清单…', 'info', 1600);
+              T.public.sync(true).then(function () { T.rerender(); });
+            }
+          }, T.icon('refresh'), '刷新')));
       }
       return root;
     });
@@ -613,8 +628,8 @@
                 var meta = listWrap.querySelector('[data-set-stats="' + s.id + '"]');
                 if (meta) {
                   meta.textContent = '';
-                  if (!st.questions && s.publicCount) {
-                    meta.appendChild(el_('span', {}, s.publicCount + ' 题'));
+                  if (!st.questions && s.origin === 'public') {
+                    if (s.publicCount) meta.appendChild(el_('span', {}, s.publicCount + ' 题'));
                     meta.appendChild(el_('span', { class: 'pub-hint' }, '未下载，点击自动获取'));
                   } else {
                     meta.appendChild(el_('span', {}, st.questions + ' 题'));
@@ -762,6 +777,10 @@
               (isPub ? '内置公共题库' : '导入于 ' + T.fmtDate(set.createdAt)),
               isPub ? el_('span', { class: 'chip', title: '所有人可见的站点内置题库' }, '公共') : null)),
           el_('span', { class: 'spacer' }),
+          el_('button', {
+            class: 'icon-btn', title: '导出题库 JSON（可直接上传到仓库 question-banks/ 作为内置公共题库）',
+            onClick: function () { T.backup.exportBankJSON(setId); }
+          }, T.icon('file')),
           isPub ? el_('button', {
             class: 'icon-btn', title: '同步更新（重新下载该题库文件）', onClick: function () {
               T.toast('正在同步「' + set.name + '」…', 'info', 1800);
