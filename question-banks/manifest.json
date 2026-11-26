@@ -1,0 +1,16 @@
+{
+  "app": "tiku-public",
+  "generatedAt": 1795678271241,
+  "folders": [
+    {
+      "name": "示例科目",
+      "sets": [
+        {
+          "name": "示例题集",
+          "file": "question-banks/示例科目/示例题集.json",
+          "count": 6
+        }
+      ]
+    }
+  ]
+}
