@@ -1,0 +1,31 @@
+{
+  "app": "tiku-public",
+  "generatedAt": 1795840476680,
+  "folders": [
+    {
+      "name": "病理生理学",
+      "sets": [
+        {
+          "name": "病生选择题（前半）",
+          "file": "question-banks/病理生理学/病生选择题（前半）.json",
+          "count": 511
+        },
+        {
+          "name": "病生选择题（后半）",
+          "file": "question-banks/病理生理学/病生选择题（后半）.json",
+          "count": 207
+        }
+      ]
+    },
+    {
+      "name": "药理学",
+      "sets": [
+        {
+          "name": "药理学期末选择题",
+          "file": "question-banks/药理学/药理学期末选择题.json",
+          "count": 1423
+        }
+      ]
+    }
+  ]
+}
