@@ -1,0 +1,6629 @@
+{
+  "title": "病生选择题（后半）",
+  "questions": [
+    {
+      "id": "bsq-512",
+      "type": "single",
+      "question": "慢性支气管炎、支气管肺炎常引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "C",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "部分肺泡血流不足"
+        },
+        {
+          "label": "E",
+          "text": "部分肺泡通气不足"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性支气管炎时气道狭窄、支气管肺炎时肺泡渗出，使部分肺泡通气减少，VA/Q降低，形成功能性分流，故为部分肺泡通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-513",
+      "type": "single",
+      "question": "慢性阻塞性肺疾病所致Ⅰ型呼吸衰竭最主要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡通气量下降"
+        },
+        {
+          "label": "B",
+          "text": "肺通气/血流比例失衡"
+        },
+        {
+          "label": "C",
+          "text": "肺内分流"
+        },
+        {
+          "label": "D",
+          "text": "肺弥散功能降低"
+        },
+        {
+          "label": "E",
+          "text": "闭塞性通气功能障碍"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "COPD早期以通气/血流比例失调为主，部分肺泡血流相对过多（功能性分流），PaO₂下降而PaCO₂尚可代偿，故多为Ⅰ型呼吸衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-514",
+      "type": "single",
+      "question": "当中央性气道阻塞位于胸外时,例如喉头水肿患者可出现吸气性呼吸困难,其发生机制是吸气时()",
+      "options": [
+        {
+          "label": "A",
+          "text": "气道内压>大气压,气道狭窄加重"
+        },
+        {
+          "label": "B",
+          "text": "等压点上移,气道狭窄加重"
+        },
+        {
+          "label": "C",
+          "text": "胸膜腔内压>气道内压,气道狭窄加重"
+        },
+        {
+          "label": "D",
+          "text": "气道内压<大气压,气道狭窄加重"
+        },
+        {
+          "label": "E",
+          "text": "气道内压>胸膜腔内压,气道狭窄加重"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "胸外中央气道阻塞时，吸气使胸内负压增大，气道内压明显低于大气压，管壁受压塌陷，狭窄加重而出现吸气性呼吸困难。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-515",
+      "type": "single",
+      "question": "肺动脉炎、肺动脉栓塞、肺内DIC常引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "C",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "部分肺泡通气不足，功能性分流增加"
+        },
+        {
+          "label": "E",
+          "text": "部分肺泡血流不足，无效腔样通气增加"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺动脉炎、肺动脉栓塞、肺内DIC使部分肺泡血流减少，VA/Q升高，形成无效腔样通气，故为部分肺泡血流不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-516",
+      "type": "single",
+      "question": "当中央性气道阻塞位于胸内时,例如气管异物患者可出现呼气性呼吸困难,其发生机制是呼气时()",
+      "options": [
+        {
+          "label": "A",
+          "text": "等压点上移,小气道闭合"
+        },
+        {
+          "label": "B",
+          "text": "胸膜腔内压>气道内压,气道狭窄加重"
+        },
+        {
+          "label": "C",
+          "text": "气道内压<大气压,气道狭窄加重"
+        },
+        {
+          "label": "D",
+          "text": "气道内压>大气压,气道狭窄加重"
+        },
+        {
+          "label": "E",
+          "text": "气道内压>胸膜腔内压,气道狭窄加重"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "胸内中央气道阻塞时，呼气使胸膜腔内压升高并超过气道内压，气道受压、狭窄加重，出现呼气性呼吸困难。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-517",
+      "type": "single",
+      "question": "下面哪项不是呼吸衰竭导致右心衰竭的主要原因()",
+      "options": [
+        {
+          "label": "A",
+          "text": "右心的前负荷增加"
+        },
+        {
+          "label": "B",
+          "text": "低氧血症使肺动脉肌化"
+        },
+        {
+          "label": "C",
+          "text": "用力呼气时心脏受压"
+        },
+        {
+          "label": "D",
+          "text": "缺氧、酸中毒导致肺小动脉收缩"
+        },
+        {
+          "label": "E",
+          "text": "肺小动脉炎导致肺动脉压升高"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "呼吸衰竭时缺氧性肺血管收缩、肺小动脉重构使肺循环阻力增高，右心室后负荷增加而衰竭，不是前负荷增加。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-518",
+      "type": "single",
+      "question": "急性肺栓塞发生Ⅰ型呼吸衰竭最重要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "通气/血流比例失调"
+        },
+        {
+          "label": "B",
+          "text": "动静脉分流增加"
+        },
+        {
+          "label": "C",
+          "text": "弥散功能障碍"
+        },
+        {
+          "label": "D",
+          "text": "肺泡耗氧量增加"
+        },
+        {
+          "label": "E",
+          "text": "病区肺泡通气不足"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "急性肺栓塞时部分肺区血流减少、通气相对过多，通气/血流比例严重失调，是发生Ⅰ型呼吸衰竭的最重要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-519",
+      "type": "single",
+      "question": "I型呼吸衰竭的血气诊断标准为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂<30 mmHg"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂<50 mmHg"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂<60 mmHg,PaCO₂>50 mmHg"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂<60 mmHg"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂<40 mmHg"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Ⅰ型呼吸衰竭指PaO₂<60mmHg而PaCO₂正常或降低，即仅有低氧血症。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-520",
+      "type": "single",
+      "question": "伴CO2潴留的呼吸衰竭患者不能采用高浓度氧治疗,是因为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "可能会引起氧中毒"
+        },
+        {
+          "label": "B",
+          "text": "容易诱发肺不张"
+        },
+        {
+          "label": "C",
+          "text": "容易消除低氧对外周化学感受器的兴奋作用"
+        },
+        {
+          "label": "D",
+          "text": "高浓度氧不能与血红蛋白结合"
+        },
+        {
+          "label": "E",
+          "text": "促使CO2排出过快"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "伴CO₂潴留的患者呼吸中枢已受抑制，主要靠低氧刺激外周化学感受器维持通气，高浓度吸氧可解除此刺激，导致通气进一步下降、CO₂麻醉。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-521",
+      "type": "single",
+      "question": "Ⅰ 型呼吸衰竭不会发生()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸性碱中毒"
+        },
+        {
+          "label": "B",
+          "text": "呼吸性酸中毒"
+        },
+        {
+          "label": "C",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "D",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "E",
+          "text": "混合性酸碱平衡紊乱"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Ⅰ型呼吸衰竭PaCO₂不升高，故不会发生呼吸性酸中毒；可因过度通气发生呼吸性碱中毒，或合并代谢性酸中毒。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-522",
+      "type": "single",
+      "question": "声带麻痹、喉头水肿、气道异物、支气管哮喘、肺部肿瘤压迫气道可引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "功能性死腔增加"
+        },
+        {
+          "label": "B",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "C",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "E",
+          "text": "限制性通气不足"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "声带麻痹、喉头水肿、气道异物、支气管哮喘、肿瘤压迫均使气道口径变小、气流阻力增大，属阻塞性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-523",
+      "type": "single",
+      "question": "男,70岁。咳嗽、咳痰、喘息10余年,再发加重2周。查体:双肺底部可闻及少许湿啰音。动脉血气分析:pH 7.30,PaCO2 70mmHg,PaO2 46mmHg。入院后立即给予持续低流量鼻导管吸氧。采取此吸氧方式最重要的目的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "保持低氧对颈动脉体化学感受器的刺激"
+        },
+        {
+          "label": "B",
+          "text": "保持CO2对呼吸中枢的刺激"
+        },
+        {
+          "label": "C",
+          "text": "保持CO2对颈动脉体化学感受器的刺激"
+        },
+        {
+          "label": "D",
+          "text": "保持低氧及CO2对呼吸中枢的刺激"
+        },
+        {
+          "label": "E",
+          "text": "保持低氧对呼吸中枢的刺激"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "持续低流量吸氧可使PaO₂升至50~60mmHg，既改善缺氧，又保留低氧对颈动脉体化学感受器的刺激，避免呼吸抑制加重CO₂潴留。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-524",
+      "type": "single",
+      "question": "严重慢性阻塞性肺气肿常导致()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂↓,PaCO₂↑,两者成一定比例关系"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂↓,PaCO₂变化不大"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂↑,PaCO₂↑↑"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂↓,PaCO₂↓↓"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂↓,PaCO₂↑,两者不成一定比例关系"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "严重慢性阻塞性肺气肿时通气与血流比例严重失调并存肺泡通气不足，PaO₂降低与PaCO₂升高的程度不成比例。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-525",
+      "type": "single",
+      "question": "患者,男,57岁。慢性阻塞性肺疾病12年,近1周咳喘加重,发绀明显,烦躁,血气分析:pH 7.39,PaO2 40mmHg,PaCO2 70mmHg。该患者发生呼吸衰竭的主要机制是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "通气/血流比例失调"
+        },
+        {
+          "label": "B",
+          "text": "氧耗量增加"
+        },
+        {
+          "label": "C",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "D",
+          "text": "通气障碍"
+        },
+        {
+          "label": "E",
+          "text": "肺内分流"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "COPD患者以气道阻塞、肺泡通气不足为主，PaCO₂ 70mmHg明显升高，故呼吸衰竭主要机制是通气障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-526",
+      "type": "single",
+      "question": "解剖分流,又称真性分流,是指()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡完全无血流但仍有通气"
+        },
+        {
+          "label": "B",
+          "text": "肺泡完全不通气但有血流"
+        },
+        {
+          "label": "C",
+          "text": "部分肺泡通气不足"
+        },
+        {
+          "label": "D",
+          "text": "部分肺泡血流不足"
+        },
+        {
+          "label": "E",
+          "text": "肺泡通气和血流都不足"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "解剖分流（真性分流）指部分肺泡完全不通气但有血流，静脉血未经氧合直接进入动脉血。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-527",
+      "type": "single",
+      "question": "下列对“无效腔样通气”的描述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "健康肺泡VA/Q比例降低,PaO₂和血氧含量均显著降低"
+        },
+        {
+          "label": "B",
+          "text": "见于部分肺泡血流不足"
+        },
+        {
+          "label": "C",
+          "text": "全肺PaO₂明显降低"
+        },
+        {
+          "label": "D",
+          "text": "见于肺动-静脉短路开放"
+        },
+        {
+          "label": "E",
+          "text": "病变肺泡VA/Q比例升高,PaO₂明显升高,血氧含量增加却很少"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肺动-静脉短路开放属解剖分流（真性分流），不是无效腔样通气；无效腔样通气见于部分肺泡血流不足，病变区VA/Q升高。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-528",
+      "type": "single",
+      "question": "胸膜炎、胸水、张力性气胸可引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "功能性死腔增加"
+        },
+        {
+          "label": "C",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "E",
+          "text": "阻塞性通气不足"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "胸膜炎、胸腔积液、张力性气胸限制肺扩张，使肺泡通气量减少，属限制性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-529",
+      "type": "single",
+      "question": "患者,男,72 岁,有慢性阻塞性肺病史 20 年。近 2 周来咳嗽脓痰加剧,2 天来神志不清,胡言乱语,动脉血气分析:pH 7.2,PaO₂ 50mmHg,PaCO₂ 92mmHg。应考虑为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "急性呼吸窘迫综合征"
+        },
+        {
+          "label": "B",
+          "text": "Ⅰ 型呼吸衰竭"
+        },
+        {
+          "label": "C",
+          "text": "Ⅱ 型呼吸衰竭"
+        },
+        {
+          "label": "D",
+          "text": "Ⅱ 型呼吸衰竭伴肺性脑病"
+        },
+        {
+          "label": "E",
+          "text": "Ⅰ 型呼吸衰竭伴肺性脑病"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "PaO₂ 50mmHg、PaCO₂ 92mmHg符合Ⅱ型呼吸衰竭；神志不清、胡言乱语提示CO₂潴留所致肺性脑病。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-530",
+      "type": "single",
+      "question": "患儿,男,2岁,因噎食果冻突然憋气,面色青紫,在送医途中昏迷。此时患儿可能出现的血气变化为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂降低,PaCO₂降低"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂降低,PaCO₂正常"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂升高,PaCO₂升高"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂正常,PaCO₂升高"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂降低,PaCO₂升高"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "果冻完全阻塞气道使肺泡通气严重不足，故PaO₂降低、PaCO₂升高，为急性Ⅱ型呼吸衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-531",
+      "type": "single",
+      "question": "病变部位肺泡VA/Q比例<0.8,可见于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性支气管炎"
+        },
+        {
+          "label": "B",
+          "text": "肺动脉栓塞"
+        },
+        {
+          "label": "C",
+          "text": "肺内DIC"
+        },
+        {
+          "label": "D",
+          "text": "肺血管收缩"
+        },
+        {
+          "label": "E",
+          "text": "肺动脉炎"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性支气管炎时部分肺泡通气不足，VA/Q小于0.8，形成功能性分流。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-532",
+      "type": "single",
+      "question": "患者,女,30岁,因喘息、气促、胸闷、咳嗽1周入院,既往有哮喘史。血气分析(吸空气):pH 7.45,PaO₂ 58 mmHg,PaCO₂ 32 mmHg,SaO₂ 90%。该患者PaO₂变化的机制可能是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "B",
+          "text": "真性分流减少"
+        },
+        {
+          "label": "C",
+          "text": "部分肺泡血流不足"
+        },
+        {
+          "label": "D",
+          "text": "无效腔样通气减少"
+        },
+        {
+          "label": "E",
+          "text": "功能性分流增加"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "哮喘发作时部分气道阻塞使肺泡通气不足而血流正常，VA/Q降低，功能性分流增加，故PaO₂降低。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-533",
+      "type": "single",
+      "question": "患者,男,57岁。慢性阻塞性肺疾病12年,近1周咳喘加重,发绀明显,烦躁。血气分析:pH 7.39,PaO2 40mmHg,PaCO2 70mmHg。本病例最可能的诊断是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ⅱ型呼吸衰竭"
+        },
+        {
+          "label": "B",
+          "text": "急性呼吸窘迫综合征"
+        },
+        {
+          "label": "C",
+          "text": "自发性气胸"
+        },
+        {
+          "label": "D",
+          "text": "Ⅰ型呼吸衰竭"
+        },
+        {
+          "label": "E",
+          "text": "慢性肺源性心脏病"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "PaO₂ 40mmHg、PaCO₂ 70mmHg，同时存在低氧血症和高碳酸血症，为Ⅱ型呼吸衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-534",
+      "type": "single",
+      "question": "某患者PaO₂ 53 mmHg,吸氧30分钟后仍无明显变化,其原因可能是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "存在弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "存在通气不足"
+        },
+        {
+          "label": "C",
+          "text": "存在肺泡VA/Q失调"
+        },
+        {
+          "label": "D",
+          "text": "存在功能分流增加"
+        },
+        {
+          "label": "E",
+          "text": "存在真性分流增加"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "吸氧后低氧血症无改善，提示存在真性分流（解剖分流），吸入氧不能进入该部分肺泡，氧疗效果差。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-535",
+      "type": "single",
+      "question": "患者,男,57岁。慢性支气管炎、肺气肿病史10余年。近1个月活动后心慌、气促加重,伴下肢水肿。查体:口唇发绀,颈静脉轻度充盈,双肺呼吸音减弱,散在干啰音,肝肋下刚触及,双下肢轻度凹陷性水肿。血气分析示低氧血症伴CO₂潴留;胸片示肺气肿、肺动脉段突出。该患者最可能的诊断是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "风湿性心脏瓣膜病"
+        },
+        {
+          "label": "B",
+          "text": "慢性支气管炎急性发作"
+        },
+        {
+          "label": "C",
+          "text": "冠状动脉粥样硬化性心脏病"
+        },
+        {
+          "label": "D",
+          "text": "慢性肺源性心脏病"
+        },
+        {
+          "label": "E",
+          "text": "支气管哮喘"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "慢支、肺气肿病史，发绀、颈静脉充盈、下肢水肿、肺动脉段突出，符合慢性肺源性心脏病。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-536",
+      "type": "single",
+      "question": "Ⅱ型呼吸衰竭病人常引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸性碱中毒"
+        },
+        {
+          "label": "B",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "C",
+          "text": "呼吸性酸中毒"
+        },
+        {
+          "label": "D",
+          "text": "混合型酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "代谢性碱中毒"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Ⅱ型呼吸衰竭时CO₂潴留引起呼吸性酸中毒，同时缺氧致乳酸增多引起代谢性酸中毒，故常为混合型酸中毒。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-537",
+      "type": "single",
+      "question": "慢性肺源性心脏病最常见的病因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性阻塞性肺疾病"
+        },
+        {
+          "label": "B",
+          "text": "支气管哮喘"
+        },
+        {
+          "label": "C",
+          "text": "肺结核"
+        },
+        {
+          "label": "D",
+          "text": "支气管扩张"
+        },
+        {
+          "label": "E",
+          "text": "肺间质纤维化"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肺源性心脏病最常见的病因是慢性阻塞性肺疾病，长期缺氧性肺动脉高压致右心衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-538",
+      "type": "single",
+      "question": "重度慢性 Ⅱ 型呼吸衰竭时,呼吸的冲动主要来自()",
+      "options": [
+        {
+          "label": "A",
+          "text": "中枢化学感受器"
+        },
+        {
+          "label": "B",
+          "text": "肺牵张感受器"
+        },
+        {
+          "label": "C",
+          "text": "外周化学感受器"
+        },
+        {
+          "label": "D",
+          "text": "J-感受器"
+        },
+        {
+          "label": "E",
+          "text": "压力感受器"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "重度慢性Ⅱ型呼吸衰竭时呼吸中枢受高CO₂抑制，呼吸冲动主要来自低氧对外周化学感受器的刺激。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-539",
+      "type": "single",
+      "question": "肺泡通气与血流的关系中,下列阐述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "无效腔样通气增加时,病变肺区VA/Q升高"
+        },
+        {
+          "label": "B",
+          "text": "VA/Q失调可见于急性呼吸窘迫综合征"
+        },
+        {
+          "label": "C",
+          "text": "生理条件下,肺内各部VA/Q均等于0.8"
+        },
+        {
+          "label": "D",
+          "text": "静脉血掺杂时,病变肺区VA/Q比例下降"
+        },
+        {
+          "label": "E",
+          "text": "VA/Q正常是有效换气的必要条件"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "生理条件下肺内各部位VA/Q并不均等于0.8，而是存在区域性差异（上肺高、下肺低），故C不正确。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-540",
+      "type": "single",
+      "question": "慢性Ⅱ型呼吸衰竭病人输氧的原则是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "快速输入高浓度纯氧,使PaO₂迅速达到60 mmHg"
+        },
+        {
+          "label": "B",
+          "text": "持续低流量低浓度给氧,使PaO₂缓慢达到50~60 mmHg"
+        },
+        {
+          "label": "C",
+          "text": "正压给高浓度氧,使PaO₂迅速达60 mmHg"
+        },
+        {
+          "label": "D",
+          "text": "持续高流量高浓度给氧,使PaO₂迅速达到60 mmHg"
+        },
+        {
+          "label": "E",
+          "text": "间歇性给低浓度氧,使PaO₂缓慢达到50~60 mmHg"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "慢性Ⅱ型呼吸衰竭应持续低流量低浓度吸氧，使PaO₂缓慢升至50~60mmHg，既纠正缺氧又保留外周化学感受器驱动。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-541",
+      "type": "single",
+      "question": "下列对功能性分流的描述中正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "B",
+          "text": "病区肺泡VA/Q升高"
+        },
+        {
+          "label": "C",
+          "text": "病区肺泡VA/Q减少"
+        },
+        {
+          "label": "D",
+          "text": "肺动-静脉短路开放是原因之一"
+        },
+        {
+          "label": "E",
+          "text": "无效腔样气量增加"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "功能性分流指部分肺泡通气不足而血流正常，病变区VA/Q降低，故C正确。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-542",
+      "type": "single",
+      "question": "急性呼吸窘迫综合征患者发生呼吸衰竭的主要发病机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "通气/血流比例失调"
+        },
+        {
+          "label": "B",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "C",
+          "text": "气体弥散障碍"
+        },
+        {
+          "label": "D",
+          "text": "阻塞性通气障碍"
+        },
+        {
+          "label": "E",
+          "text": "限制性通气障碍"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "ARDS时肺水肿、肺不张使部分肺泡通气减少而血流存在，通气/血流比例失调是其主要发病机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-543",
+      "type": "single",
+      "question": "下列哪项不是 Ⅱ 型呼吸衰竭患者发生肺性脑病的主要机制()",
+      "options": [
+        {
+          "label": "A",
+          "text": "脑部血流减少"
+        },
+        {
+          "label": "B",
+          "text": "高碳酸血症"
+        },
+        {
+          "label": "C",
+          "text": "脑水肿"
+        },
+        {
+          "label": "D",
+          "text": "酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "神经元功能障碍"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "肺性脑病时CO₂潴留使脑血管扩张、脑血流增多，而非减少，故A不是其机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-544",
+      "type": "single",
+      "question": "肺泡膜病变导致呼吸衰竭的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡气PO₂下降"
+        },
+        {
+          "label": "B",
+          "text": "肺泡VA/Q比值升高"
+        },
+        {
+          "label": "C",
+          "text": "O₂溶解度降低"
+        },
+        {
+          "label": "D",
+          "text": "肺泡VA/Q比值降低"
+        },
+        {
+          "label": "E",
+          "text": "弥散障碍"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺泡膜病变（增厚、面积减少）使气体弥散受阻，主要引起弥散障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-545",
+      "type": "single",
+      "question": "下列哪项易发生无效腔样通气()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性阻塞性肺疾患"
+        },
+        {
+          "label": "B",
+          "text": "肺纤维化"
+        },
+        {
+          "label": "C",
+          "text": "支气管哮喘"
+        },
+        {
+          "label": "D",
+          "text": "肺水肿"
+        },
+        {
+          "label": "E",
+          "text": "肺动脉炎、肺动脉栓塞"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺动脉炎、肺动脉栓塞使部分肺泡血流减少，VA/Q升高，最易发生无效腔样通气。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-546",
+      "type": "single",
+      "question": "肺泡总通气不足时的血气特征是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂正常,PaCO₂升高"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂正常,PaCO₂正常"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂下降,PaCO₂升高"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂下降,PaCO₂下降"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂下降,PaCO₂正常"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肺泡总通气不足时肺泡氧分压降低、CO₂排出减少，故PaO₂下降、PaCO₂升高。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-547",
+      "type": "single",
+      "question": "男性,71岁吸烟患者。反复咳嗽、咳痰、气促40余年,胸闷、心悸2年,加重伴发热1周,昏睡3小时入院。入院后查体:BP 140/90mmHg,嗜睡状,呼之能应,瞳孔等大等圆,对光反射存在,口唇发绀,双肺可闻及湿啰音,心率120次/分,早搏3次/分,下肢凹陷性水肿。该导致该患者心功能不全的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "右心室前负荷增高"
+        },
+        {
+          "label": "B",
+          "text": "右心室后负荷增高"
+        },
+        {
+          "label": "C",
+          "text": "低氧血症"
+        },
+        {
+          "label": "D",
+          "text": "肺动脉高压形成"
+        },
+        {
+          "label": "E",
+          "text": "酸中毒"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "慢性肺心病时缺氧性肺动脉高压使右心室后负荷增加、右心衰竭，肺动脉高压形成是心功能不全的主要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-548",
+      "type": "single",
+      "question": "呼吸衰竭的诊断主要依靠动脉血气分析,用于区分 Ⅰ 型呼吸衰竭与 Ⅱ 型呼吸衰竭的指标是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡气氧分压"
+        },
+        {
+          "label": "B",
+          "text": "血钾"
+        },
+        {
+          "label": "C",
+          "text": "动脉血 pH 值"
+        },
+        {
+          "label": "D",
+          "text": "PaCO₂"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Ⅰ型与Ⅱ型呼吸衰竭均以PaO₂<60mmHg为共同标准，区别在于PaCO₂是否>50mmHg，故PaCO₂是分型指标。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-549",
+      "type": "single",
+      "question": "呼吸衰竭时,合并下列哪一种酸碱失衡易发生肺性脑病()",
+      "options": [
+        {
+          "label": "A",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "C",
+          "text": "呼吸性碱中毒"
+        },
+        {
+          "label": "D",
+          "text": "混合型碱中毒"
+        },
+        {
+          "label": "E",
+          "text": "呼吸性酸中毒"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "呼吸衰竭合并呼吸性酸中毒时CO₂潴留使脑血管扩张、脑水肿，最易发生肺性脑病。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-550",
+      "type": "single",
+      "question": "呼吸中枢抑制、麻醉剂镇静剂服用过量、重症肌无力、呼吸肌麻痹、气管异物时()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂下降,PaCO₂改变不大"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂下降,PaCO₂升高,两者不呈比例"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂下降,PaCO₂变化不一定"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂下降,PaCO₂下降"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂下降,PaCO₂升高,两者呈比例"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "呼吸中枢抑制、呼吸肌麻痹、气道异物等使肺泡通气量均匀减少，PaO₂下降与PaCO₂升高呈一定比例。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-551",
+      "type": "single",
+      "question": "Ⅱ型呼吸衰竭的诊断标准为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂<60 mmHg;PaCO₂>60 mmHg"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂<60 mmHg;PaCO₂>50 mmHg"
+        },
+        {
+          "label": "C",
+          "text": "PaCO₂>60 mmHg"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂<80 mmHg"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂<80 mmHg;PaCO₂>50 mmHg"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Ⅱ型呼吸衰竭的诊断标准为PaO₂<60mmHg伴PaCO₂>50mmHg。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-552",
+      "type": "single",
+      "question": "呼吸衰竭导致右心衰竭的早期机制主要是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "外周血管扩张和阻力降低导致静脉回心血量减少"
+        },
+        {
+          "label": "B",
+          "text": "肺小动脉壁增厚使管腔狭窄"
+        },
+        {
+          "label": "C",
+          "text": "血液黏滞性增加"
+        },
+        {
+          "label": "D",
+          "text": "慢性缺氧导致血液容量增加"
+        },
+        {
+          "label": "E",
+          "text": "肺泡 PO₂降低致使肺血管收缩"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "呼吸衰竭早期缺氧使肺小动脉收缩、肺循环阻力增高，是右心衰竭的早期机制；肺血管重构、血液黏滞度增高等为后期因素。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-553",
+      "type": "single",
+      "question": "引起Ⅰ型呼吸衰竭的常见病因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺部广泛炎症"
+        },
+        {
+          "label": "B",
+          "text": "慢性支气管炎"
+        },
+        {
+          "label": "C",
+          "text": "上呼吸道阻塞"
+        },
+        {
+          "label": "D",
+          "text": "慢性阻塞性肺疾病"
+        },
+        {
+          "label": "E",
+          "text": "肺源性心脏病"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "肺部广泛炎症（如肺炎）主要引起肺泡通气/血流比例失调和弥散障碍，多发生Ⅰ型呼吸衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-554",
+      "type": "single",
+      "question": "严重胸膜病变导致呼吸衰竭的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "C",
+          "text": "肺泡表面活性物质受破坏"
+        },
+        {
+          "label": "D",
+          "text": "死腔气量增加"
+        },
+        {
+          "label": "E",
+          "text": "限制性通气不足"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "严重胸膜病变限制肺扩张，肺泡通气量减少，属限制性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-555",
+      "type": "single",
+      "question": "肺叶切除、肺实变可引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "B",
+          "text": "功能性死腔增加"
+        },
+        {
+          "label": "C",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "D",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "E",
+          "text": "弥散障碍"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺叶切除使弥散面积减少，肺实变使肺泡膜增厚、弥散距离加大，均引起弥散障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-556",
+      "type": "single",
+      "question": "慢性阻塞性肺疾病发生单纯低氧血症最主要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡通气量下降"
+        },
+        {
+          "label": "B",
+          "text": "通气/血流比例失衡"
+        },
+        {
+          "label": "C",
+          "text": "肺内分流"
+        },
+        {
+          "label": "D",
+          "text": "膈肌疲劳"
+        },
+        {
+          "label": "E",
+          "text": "弥散功能障碍"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "COPD早期以通气/血流比例失调为主，表现为单纯低氧血症（Ⅰ型呼吸衰竭）。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-557",
+      "type": "single",
+      "question": "下列关于呼吸衰竭病理过程的描述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸衰竭可分为低氧血症型和高碳酸血症型"
+        },
+        {
+          "label": "B",
+          "text": "呼吸衰竭是由于外呼吸功能严重障碍,导致 PaO₂低于正常或伴有 PaCO₂升高的病理过程"
+        },
+        {
+          "label": "C",
+          "text": "根据病程经过不同可分为急性和慢性呼吸衰竭"
+        },
+        {
+          "label": "D",
+          "text": "呼吸衰竭患者(未经治疗时),可以只有 PaCO₂升高而没有 PaO₂降低"
+        },
+        {
+          "label": "E",
+          "text": "判断呼吸衰竭的血气标准一般为 PaO₂<60mmHg或伴有PaCO₂>50mmHg"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "PaCO₂升高必然伴PaO₂降低（肺泡通气不足时两者同时发生），不会只有PaCO₂升高而无PaO₂降低。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-558",
+      "type": "single",
+      "question": "下列哪一项不是呼吸衰竭发病的基本机制()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺内真性分流增加"
+        },
+        {
+          "label": "B",
+          "text": "肺泡通气与血流比例失调"
+        },
+        {
+          "label": "C",
+          "text": "组织利用氧障碍"
+        },
+        {
+          "label": "D",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "E",
+          "text": "肺通气功能严重障碍"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "组织利用氧障碍属内呼吸障碍，不是呼吸衰竭（外呼吸障碍）的基本发病机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-559",
+      "type": "single",
+      "question": "因通气/血流比例失调所致呼吸衰竭时,患者血气变化特点是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂下降;PaCO₂升高或下降"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂下降;PaCO₂升高或正常"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂下降;PaCO₂下降或正常"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂下降;PaCO₂升高或下降或正常"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂下降;PaCO₂升高"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "通气/血流比例失调时PaO₂必然下降，而PaCO₂可因代偿性通气增强而升高、下降或正常。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-560",
+      "type": "single",
+      "question": "肺泡弥散功能障碍一般不引起 CO₂潴留的主要原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "气道阻力降低"
+        },
+        {
+          "label": "B",
+          "text": "CO₂溶解度>O₂溶解度"
+        },
+        {
+          "label": "C",
+          "text": "通气增加"
+        },
+        {
+          "label": "D",
+          "text": "碳酸酐酶活性增加"
+        },
+        {
+          "label": "E",
+          "text": "CO₂弥散力>O₂弥散力"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "CO₂在血浆中的溶解度约为O₂的24倍，弥散能力远大于O₂，故弥散障碍时一般只引起低氧血症而不致CO₂潴留。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-561",
+      "type": "single",
+      "question": "患者,男,有 30 年吸烟史,咳嗽咳痰 20 年,近 2 周出现双下肢水肿。查体:桶状胸,双肺呼吸音减弱,颈静脉充盈,双下肢轻度水肿。超声心动图:右心室扩大,室壁增厚,估测肺动脉压升高。该患者其发生肺动脉高压的最主要机制是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺毛细血管静水压升高"
+        },
+        {
+          "label": "B",
+          "text": "肺小动脉原位血栓形成"
+        },
+        {
+          "label": "C",
+          "text": "血红蛋白浓度升高"
+        },
+        {
+          "label": "D",
+          "text": "肺小动脉收缩与重构"
+        },
+        {
+          "label": "E",
+          "text": "肺循环淤血、水肿"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "COPD时缺氧和酸中毒使肺小动脉收缩，加之长期肺血管重构，是肺动脉高压的最主要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-562",
+      "type": "single",
+      "question": "下列哪项是急性呼吸窘迫综合征时产生无效腔样通气的主要因素()",
+      "options": [
+        {
+          "label": "A",
+          "text": "小气道阻塞"
+        },
+        {
+          "label": "B",
+          "text": "肺水肿"
+        },
+        {
+          "label": "C",
+          "text": "部分肺泡通气不足"
+        },
+        {
+          "label": "D",
+          "text": "肺不张"
+        },
+        {
+          "label": "E",
+          "text": "肺血管收缩"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "ARDS时缺氧、炎症介质使肺血管收缩，部分肺泡血流减少，VA/Q升高，形成无效腔样通气。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-563",
+      "type": "single",
+      "question": "肺部疾患引起呼吸衰竭的最常见和最重要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "B",
+          "text": "呼吸抑制"
+        },
+        {
+          "label": "C",
+          "text": "气道阻塞"
+        },
+        {
+          "label": "D",
+          "text": "肺和胸壁顺应性降低"
+        },
+        {
+          "label": "E",
+          "text": "肺泡通气血流比例失调"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺部疾患引起呼吸衰竭最常见、最重要的机制是肺泡通气与血流比例失调。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-564",
+      "type": "single",
+      "question": "患者,男,44 岁。因 “反复肢体乏力 2 年,加重 1 天,意识不清半小时” 急诊入院。查体:昏迷,R 12 次 /min,P 137 次 /min,呼吸浅慢,腹软,肠鸣音减弱,四肢肌张力减弱。血气分析:PaO₂ 53.6mmHg,PaCO₂ 56.3mmHg,HCO₃⁻ 17.4mmol/L,pH 7.1,K⁺ 1.5mmol/L。该患者呼吸衰竭的发生机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散功能障碍"
+        },
+        {
+          "label": "B",
+          "text": "限制性通气障碍"
+        },
+        {
+          "label": "C",
+          "text": "肺泡通气与血流比例失调"
+        },
+        {
+          "label": "D",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "E",
+          "text": "阻塞性通气障碍"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "血钾1.5mmol/L致呼吸肌无力、呼吸浅慢，肺泡通气量减少，属限制性通气障碍（呼吸肌活动障碍）。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-565",
+      "type": "single",
+      "question": "PaCO₂升高时一定会合并低氧血症的原因和机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "功能性分流量增加"
+        },
+        {
+          "label": "B",
+          "text": "弥散障碍加重"
+        },
+        {
+          "label": "C",
+          "text": "无效腔样通气增加"
+        },
+        {
+          "label": "D",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "E",
+          "text": "肺泡通气减少"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "PaCO₂升高源于肺泡通气减少，肺泡氧分压同时降低，故必然合并低氧血症。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-566",
+      "type": "single",
+      "question": "患者,男,58 岁,患肺心病5年,长期应用利尿剂治疗,血气分析及电解质测定结果如下:pH 7.30,PaCO₂ 85.8mmHg,HCO₃⁻41mmol/L,Cl⁻90mmol/L,Na⁺140mmol/L,可诊断为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "代谢性碱中毒合并代谢性酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "呼吸性碱中毒合并代谢性酸中毒"
+        },
+        {
+          "label": "C",
+          "text": "呼吸性酸中毒合并代谢性碱中毒"
+        },
+        {
+          "label": "D",
+          "text": "呼吸性碱中毒合并代谢性碱中毒"
+        },
+        {
+          "label": "E",
+          "text": "呼吸性酸中毒合并代谢性酸中毒"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "PaCO₂ 85.8mmHg原发性升高为呼吸性酸中毒；长期利尿剂致低氯、低钾，HCO₃⁻ 41mmol/L超过代偿限度，合并代谢性碱中毒。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-567",
+      "type": "single",
+      "question": "阻塞性通气不足可见于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "低钾血症"
+        },
+        {
+          "label": "B",
+          "text": "胸腔积液"
+        },
+        {
+          "label": "C",
+          "text": "慢性支气管炎"
+        },
+        {
+          "label": "D",
+          "text": "化脓性脑膜炎"
+        },
+        {
+          "label": "E",
+          "text": "多发性神经炎"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "慢性支气管炎时气道狭窄、阻力增大，属阻塞性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-568",
+      "type": "single",
+      "question": "呼吸衰竭伴发右心衰竭最主要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "酸中毒抑制心肌功能"
+        },
+        {
+          "label": "B",
+          "text": "外周血管扩张,静脉回流增加"
+        },
+        {
+          "label": "C",
+          "text": "血液黏滞性增高"
+        },
+        {
+          "label": "D",
+          "text": "肺动脉高压"
+        },
+        {
+          "label": "E",
+          "text": "慢性缺氧血量增多"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "呼吸衰竭时缺氧性肺动脉高压使右心室后负荷增加，是伴发右心衰竭的最主要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-569",
+      "type": "single",
+      "question": "引起二氧化碳潴留的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "通气不足"
+        },
+        {
+          "label": "B",
+          "text": "无效腔通气"
+        },
+        {
+          "label": "C",
+          "text": "通气与血流比例失调"
+        },
+        {
+          "label": "D",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "E",
+          "text": "动静脉分流"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "CO₂潴留的主要机制是肺泡通气不足，CO₂排出减少。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-570",
+      "type": "single",
+      "question": "肺泡膜弥散障碍时,血气变化特点是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂下降,PaCO₂下降"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂下降,PaCO₂正常或升高"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂下降,PaCO₂正常或下降"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂下降,PaCO₂升高"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂下降,PaCO₂正常"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肺泡膜弥散障碍主要使PaO₂下降，因代偿性通气增强PaCO₂可正常或下降，一般不升高。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-571",
+      "type": "single",
+      "question": "外周气道阻塞导致呼气性呼吸困难的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "气道内压>胸膜腔内压"
+        },
+        {
+          "label": "B",
+          "text": "气道内压<大气压"
+        },
+        {
+          "label": "C",
+          "text": "胸膜腔内压<大气压"
+        },
+        {
+          "label": "D",
+          "text": "等压点上移至小气道"
+        },
+        {
+          "label": "E",
+          "text": "气道内压>大气压"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "外周气道阻塞时用力呼气使等压点上移至小气道，小气道受压闭合，出现呼气性呼吸困难。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-572",
+      "type": "single",
+      "question": "病变部位肺泡VA/Q值>0.8可见于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺水肿"
+        },
+        {
+          "label": "B",
+          "text": "慢性支气管炎"
+        },
+        {
+          "label": "C",
+          "text": "肺动脉炎或栓塞"
+        },
+        {
+          "label": "D",
+          "text": "大叶性肺炎"
+        },
+        {
+          "label": "E",
+          "text": "肺不张"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肺动脉炎或栓塞使部分肺泡血流减少，VA/Q升高（大于0.8）。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-573",
+      "type": "single",
+      "question": "下列关于限制性通气障碍的描述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "因呼吸道阻塞,气体进入肺泡受限制引起"
+        },
+        {
+          "label": "B",
+          "text": "因胸廓或肺顺应性降低引起"
+        },
+        {
+          "label": "C",
+          "text": "因神经系统或呼吸肌病变引起呼吸肌活动障碍引起"
+        },
+        {
+          "label": "D",
+          "text": "是呼吸衰竭的发病机制之一"
+        },
+        {
+          "label": "E",
+          "text": "吸气时肺泡扩张受限引起肺泡通气不足"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "限制性通气障碍是吸气时肺泡扩张受限，不是呼吸道阻塞所致；呼吸道阻塞属阻塞性通气障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-574",
+      "type": "single",
+      "question": "过量服用镇静剂或麻醉剂、脑外伤、脑血管意外、脑炎可引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "B",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "C",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "功能性死腔增加"
+        },
+        {
+          "label": "E",
+          "text": "弥散障碍"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "镇静剂、麻醉剂过量及脑外伤、脑血管意外、脑炎抑制呼吸中枢，使肺泡通气量减少，属限制性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-575",
+      "type": "single",
+      "question": "下列关于呼吸衰竭发生机制的描述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "真性分流增加主要导致 PaO₂下降"
+        },
+        {
+          "label": "B",
+          "text": "肺泡通气量减少时 PaCO₂增高"
+        },
+        {
+          "label": "C",
+          "text": "通气与血流比例失调的结果多为 PaO₂下降"
+        },
+        {
+          "label": "D",
+          "text": "弥散功能障碍的结果多为 PaO₂下降"
+        },
+        {
+          "label": "E",
+          "text": "部分肺泡通气血流比例失调时,健侧肺代偿后不会出现 PaO₂下降"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "部分肺泡通气/血流比例失调时，健侧肺代偿仍不能完全纠正，因氧离曲线特性，PaO₂仍下降，故E不正确。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-576",
+      "type": "single",
+      "question": "肺性脑病主要的发生机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性缺氧使脑细胞坏死"
+        },
+        {
+          "label": "B",
+          "text": "高二氧化碳抑制脑细胞能量代谢"
+        },
+        {
+          "label": "C",
+          "text": "脑脊液PH增高导致中枢抑制"
+        },
+        {
+          "label": "D",
+          "text": "高二氧化碳和缺氧导致脑细胞水肿"
+        },
+        {
+          "label": "E",
+          "text": "高二氧化碳使脑血管扩张"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肺性脑病的主要机制是CO₂潴留和缺氧使脑血管扩张、通透性增高，导致脑细胞水肿、颅内压升高。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-577",
+      "type": "single",
+      "question": "慢性阻塞性肺病患者用力呼气时,产生呼气性呼吸困难的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "小气道管壁张力降低"
+        },
+        {
+          "label": "B",
+          "text": "小气道壁顺应性增高"
+        },
+        {
+          "label": "C",
+          "text": "呼气时胸膜腔内压等于大气压"
+        },
+        {
+          "label": "D",
+          "text": "气道内压降低"
+        },
+        {
+          "label": "E",
+          "text": "等压点上移导致小气道闭合"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "COPD用力呼气时等压点上移至小气道，小气道受压闭合，气体排出受阻，出现呼气性呼吸困难。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-578",
+      "type": "single",
+      "question": "患者,女,82岁,长期卧床,2周前出现明显胸闷气短,加重1天入院,心率120次/分,血压160/100 mmHg,血气分析:PaO₂ 49 mmHg,PaCO₂ 35 mmHg。肺部CT:右上肺动脉分支、左上肺动脉内血栓。该患者呼吸衰竭的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散膜厚度增加"
+        },
+        {
+          "label": "B",
+          "text": "限制性通气功能障碍"
+        },
+        {
+          "label": "C",
+          "text": "弥散面积减少"
+        },
+        {
+          "label": "D",
+          "text": "阻塞性通气功能障碍"
+        },
+        {
+          "label": "E",
+          "text": "无效腔样通气增大"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺动脉分支血栓使部分肺泡血流阻断、通气仍存，VA/Q升高，无效腔样通气增大，故PaO₂降低而PaCO₂不高。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-579",
+      "type": "single",
+      "question": "慢性阻塞性肺疾病发生Ⅱ型呼吸衰竭最主要的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "总肺泡通气量不足"
+        },
+        {
+          "label": "B",
+          "text": "动静脉分流增加"
+        },
+        {
+          "label": "C",
+          "text": "肺泡耗氧量增加"
+        },
+        {
+          "label": "D",
+          "text": "通气/血流比例失调"
+        },
+        {
+          "label": "E",
+          "text": "弥散功能障碍"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "COPD发生Ⅱ型呼吸衰竭的主要机制是总肺泡通气量不足，CO₂排出减少而潴留。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-580",
+      "type": "single",
+      "question": "以下描述不正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "当吸入气的氧浓度不足 20% 时,用呼吸衰竭指数作为诊断呼吸衰竭的标准"
+        },
+        {
+          "label": "B",
+          "text": "呼吸衰竭发生时,必定有肺通气或者肺换气功能的严重障碍"
+        },
+        {
+          "label": "C",
+          "text": "呼吸衰竭缺乏特异性的临床表现"
+        },
+        {
+          "label": "D",
+          "text": "动脉血气是判断呼吸衰竭的重要指标"
+        },
+        {
+          "label": "E",
+          "text": "只要 PaO₂低于 60mmHg,就可以诊断为呼吸衰竭"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "诊断呼吸衰竭须在海平面、静息状态、吸空气条件下PaO₂<60mmHg，并非任何情况下PaO₂低于60mmHg即可诊断。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-581",
+      "type": "single",
+      "question": "下列哪种情况引起的呼吸衰竭氧疗无效()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺动静脉瘘"
+        },
+        {
+          "label": "B",
+          "text": "功能性分流"
+        },
+        {
+          "label": "C",
+          "text": "无效腔样通气"
+        },
+        {
+          "label": "D",
+          "text": "气体弥散障碍"
+        },
+        {
+          "label": "E",
+          "text": "通气障碍"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "肺动静脉瘘属解剖分流（真性分流），静脉血未接触肺泡，吸氧不能提高其氧分压，故氧疗无效。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-582",
+      "type": "single",
+      "question": "下列哪种情况可导致限制性通气障碍()",
+      "options": [
+        {
+          "label": "A",
+          "text": "气管肿瘤"
+        },
+        {
+          "label": "B",
+          "text": "支气管痉挛"
+        },
+        {
+          "label": "C",
+          "text": "声带麻痹"
+        },
+        {
+          "label": "D",
+          "text": "肺纤维化"
+        },
+        {
+          "label": "E",
+          "text": "气管异物"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肺纤维化使肺顺应性降低、肺泡扩张受限，属限制性通气障碍；其余为阻塞性因素。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-583",
+      "type": "single",
+      "question": "慢性阻塞性肺疾病引起呼吸衰竭的中心环节是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸膜面积减少"
+        },
+        {
+          "label": "B",
+          "text": "外周小气道阻塞"
+        },
+        {
+          "label": "C",
+          "text": "肺组织弹性下降"
+        },
+        {
+          "label": "D",
+          "text": "肺泡膜炎性增厚"
+        },
+        {
+          "label": "E",
+          "text": "支气管黏膜水肿"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "COPD时外周小气道阻塞、气流阻力增大，导致肺泡通气不足，是呼吸衰竭的中心环节。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-584",
+      "type": "single",
+      "question": "导致慢性呼吸衰竭最常见的病因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "过量使用麻醉药、镇静药"
+        },
+        {
+          "label": "B",
+          "text": "肺栓塞"
+        },
+        {
+          "label": "C",
+          "text": "上呼吸道急性感染"
+        },
+        {
+          "label": "D",
+          "text": "异物吸入"
+        },
+        {
+          "label": "E",
+          "text": "慢性阻塞性肺疾病"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性呼吸衰竭最常见的病因是慢性阻塞性肺疾病。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-585",
+      "type": "single",
+      "question": "慢性阻塞性肺病导致肺动脉高压的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "心输出量增加"
+        },
+        {
+          "label": "B",
+          "text": "肺小静脉收缩"
+        },
+        {
+          "label": "C",
+          "text": "肺微血栓形成"
+        },
+        {
+          "label": "D",
+          "text": "缺氧和血液氢离子浓度增加"
+        },
+        {
+          "label": "E",
+          "text": "血液黏度增高"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "COPD时缺氧和H⁺浓度升高使肺小动脉收缩，是肺动脉高压的主要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-586",
+      "type": "single",
+      "question": "慢性呼吸衰竭 CO₂潴留和缺氧可引起中枢神经的损伤,特别是当PaCO2 超过()可引起 CO₂麻醉。",
+      "options": [
+        {
+          "label": "A",
+          "text": "70mmHg"
+        },
+        {
+          "label": "B",
+          "text": "80mmHg"
+        },
+        {
+          "label": "C",
+          "text": "60mmHg"
+        },
+        {
+          "label": "D",
+          "text": "40mmHg"
+        },
+        {
+          "label": "E",
+          "text": "50mmHg"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "PaCO₂超过80mmHg时可出现CO₂麻醉，表现为头痛、嗜睡、昏迷等中枢抑制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-587",
+      "type": "single",
+      "question": "肺性脑病是指()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡通气不足所致脑功能障碍"
+        },
+        {
+          "label": "B",
+          "text": "肺换气不足所致脑功能障碍"
+        },
+        {
+          "label": "C",
+          "text": "肺内毒素蓄积致所致脑功能障碍"
+        },
+        {
+          "label": "D",
+          "text": "呼吸衰竭所致脑功能障碍"
+        },
+        {
+          "label": "E",
+          "text": "弥散障碍所致脑功能障碍"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肺性脑病是指呼吸衰竭（CO₂潴留和缺氧）所致的中枢神经系统功能障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-588",
+      "type": "single",
+      "question": "呼吸衰竭是指()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺内不同部位肺泡之间气体交换障碍的病理过程"
+        },
+        {
+          "label": "B",
+          "text": "血液携带、释放、运输氧障碍的病理过程"
+        },
+        {
+          "label": "C",
+          "text": "细胞利用氧障碍的病理过程"
+        },
+        {
+          "label": "D",
+          "text": "具有呼吸困难症状的病理过程"
+        },
+        {
+          "label": "E",
+          "text": "肺通气和 / 或换气功能严重障碍引起的病理过程"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "呼吸衰竭是肺通气和/或换气功能严重障碍，以致PaO₂降低或伴PaCO₂升高的病理过程。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-589",
+      "type": "single",
+      "question": "阻塞性通气不足是由于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "气道口径变小，非弹性阻力增加"
+        },
+        {
+          "label": "B",
+          "text": "肺泡通气血流比例失调"
+        },
+        {
+          "label": "C",
+          "text": "肺顺应性降低"
+        },
+        {
+          "label": "D",
+          "text": "肺泡扩张受限制"
+        },
+        {
+          "label": "E",
+          "text": "肺循环短路增加"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "阻塞性通气不足是气道口径变小、非弹性阻力（气道阻力）增加所致的通气障碍。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-590",
+      "type": "single",
+      "question": "声带炎症或麻痹时产生吸气性呼吸困难的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "吸气时气流经病灶部位引起气道内压降低"
+        },
+        {
+          "label": "B",
+          "text": "吸气时胸膜腔内压降低"
+        },
+        {
+          "label": "C",
+          "text": "吸气时气道内压等于胸膜腔内压"
+        },
+        {
+          "label": "D",
+          "text": "吸气时气道内压大于胸膜腔内压"
+        },
+        {
+          "label": "E",
+          "text": "吸气时气道内压明显低于大气压"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "声带炎症或麻痹时，吸气使气道内压明显低于大气压，病变处管壁塌陷，出现吸气性呼吸困难。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-591",
+      "type": "single",
+      "question": "下述疾病最易出现Ⅱ型呼吸衰竭的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性阻塞性肺疾病"
+        },
+        {
+          "label": "B",
+          "text": "哮喘急性发作"
+        },
+        {
+          "label": "C",
+          "text": "肺血栓栓塞"
+        },
+        {
+          "label": "D",
+          "text": "重症肺炎"
+        },
+        {
+          "label": "E",
+          "text": "糖尿病酮症酸中毒"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性阻塞性肺疾病因长期通气不足，最易出现Ⅱ型呼吸衰竭。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-592",
+      "type": "single",
+      "question": "急性呼吸窘迫综合症常导致()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PaO₂↓,PaCO₂↑,两者不成一定比例关系"
+        },
+        {
+          "label": "B",
+          "text": "PaO₂↑,PaCO₂↑↑"
+        },
+        {
+          "label": "C",
+          "text": "PaO₂↓,PaCO₂变化不大"
+        },
+        {
+          "label": "D",
+          "text": "PaO₂↓,PaCO₂↓↓"
+        },
+        {
+          "label": "E",
+          "text": "PaO₂↓,PaCO₂↑,两者成一定比例关系"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "ARDS早期肺水肿、肺不张致严重低氧血症，同时因代偿性过度通气使PaCO₂降低，故PaO₂↓、PaCO₂↓↓。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-593",
+      "type": "single",
+      "question": "支气管扩张症、肺不张、肺动静脉瘘可引起()",
+      "options": [
+        {
+          "label": "A",
+          "text": "阻塞性通气不足"
+        },
+        {
+          "label": "B",
+          "text": "功能性死腔增加"
+        },
+        {
+          "label": "C",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "D",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "E",
+          "text": "限制性通气不足"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "支气管扩张症、肺不张、肺动静脉瘘使部分静脉血未经气体交换直接入动脉，属解剖分流增加。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-594",
+      "type": "single",
+      "question": "喉头水肿引起急性呼吸衰竭的主要原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺泡膜面积减少"
+        },
+        {
+          "label": "B",
+          "text": "肺泡膜厚度增加"
+        },
+        {
+          "label": "C",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "D",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "E",
+          "text": "阻塞性通气不足"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "喉头水肿使上气道阻塞、通气受阻，主要引起阻塞性通气不足。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-595",
+      "type": "single",
+      "question": "肺性脑病最重要的治疗措施是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "吸氧"
+        },
+        {
+          "label": "B",
+          "text": "静脉推注袢利尿剂"
+        },
+        {
+          "label": "C",
+          "text": "静脉滴注呼吸兴奋剂"
+        },
+        {
+          "label": "D",
+          "text": "小剂量镇静剂"
+        },
+        {
+          "label": "E",
+          "text": "机械通气"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肺性脑病最重要的治疗措施是机械通气，改善肺泡通气、排出CO₂。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-596",
+      "type": "single",
+      "question": "I型呼吸衰竭最常见的发病机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散功能障碍"
+        },
+        {
+          "label": "B",
+          "text": "通气血流比例失衡"
+        },
+        {
+          "label": "C",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "D",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "E",
+          "text": "阻塞性通气不足"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Ⅰ型呼吸衰竭最常见的发病机制是通气/血流比例失衡。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-597",
+      "type": "single",
+      "question": "女,50岁。2天前因肺炎入院,给予吸氧、静脉滴注抗生素、止咳、化痰等治疗。1天来出现呼吸困难,烦躁,呼吸急促。动脉血气分析:pH 7.44,PaO2 55mmHg,PaCO2 30mmHg,BE -3mmol/L。目前对血气分析的判断,最准确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "Ⅰ型呼吸衰竭"
+        },
+        {
+          "label": "C",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "D",
+          "text": "呼吸性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "Ⅱ型呼吸衰竭"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "肺炎致PaO₂ 55mmHg低于60mmHg，PaCO₂ 30mmHg不升高，为Ⅰ型呼吸衰竭（pH偏高为代偿性通气增强）。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-598",
+      "type": "single",
+      "question": "关于总肺泡通气量不足的描述,下列哪项是错误的()",
+      "options": [
+        {
+          "label": "A",
+          "text": "临床上常见于慢性阻塞性肺病"
+        },
+        {
+          "label": "B",
+          "text": "可引起 Ⅰ 型呼吸衰竭"
+        },
+        {
+          "label": "C",
+          "text": "可合并通气与血流比例失调"
+        },
+        {
+          "label": "D",
+          "text": "可因限制性通气不足引起"
+        },
+        {
+          "label": "E",
+          "text": "可因阻塞性通气不足引起"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "总肺泡通气量不足时CO₂潴留，引起Ⅱ型而非Ⅰ型呼吸衰竭，故B错误。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-599",
+      "type": "single",
+      "question": "男,71岁。间断咳嗽、咳痰20余年,加重 伴喘憋1周。近2天出现嗜睡。查体:意识模糊,口唇发绀,球结膜水肿,双肺满布哮鸣音,双下肢水肿。该患者出现意识障碍最可能的原因是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "心源性休克"
+        },
+        {
+          "label": "B",
+          "text": "电解质紊乱"
+        },
+        {
+          "label": "C",
+          "text": "中毒性脑病"
+        },
+        {
+          "label": "D",
+          "text": "肺性脑病"
+        },
+        {
+          "label": "E",
+          "text": "脑出血"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "COPD患者出现嗜睡、意识模糊、球结膜水肿，提示CO₂潴留致肺性脑病。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-600",
+      "type": "single",
+      "question": "慢性阻塞性肺疾病导致呼吸衰竭的机制,以下哪项除外()",
+      "options": [
+        {
+          "label": "A",
+          "text": "限制性通气障碍"
+        },
+        {
+          "label": "B",
+          "text": "阻塞性通气障碍"
+        },
+        {
+          "label": "C",
+          "text": "解剖分流增加"
+        },
+        {
+          "label": "D",
+          "text": "弥散障碍"
+        },
+        {
+          "label": "E",
+          "text": "通气/血流比例失调"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "COPD所致呼吸衰竭的机制包括阻塞性和限制性通气障碍、弥散障碍、通气/血流比例失调，解剖分流增加不是其主要机制。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-601",
+      "type": "single",
+      "question": "病变部位肺泡VA/Q值增大见于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "弥散面积减小"
+        },
+        {
+          "label": "B",
+          "text": "限制性通气不足"
+        },
+        {
+          "label": "C",
+          "text": "阻塞性通气障碍"
+        },
+        {
+          "label": "D",
+          "text": "无效腔样通气"
+        },
+        {
+          "label": "E",
+          "text": "功能分流增加"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "无效腔样通气时病变肺泡血流减少、VA/Q升高，故D正确。",
+      "chapter": "呼衰"
+    },
+    {
+      "id": "bsq-602",
+      "type": "single",
+      "question": "引起肝性脑病发生的中心学说是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "氨基酸失衡学说"
+        },
+        {
+          "label": "B",
+          "text": "氨中毒学说"
+        },
+        {
+          "label": "C",
+          "text": "神经毒质学说"
+        },
+        {
+          "label": "D",
+          "text": "假性神经递质学说"
+        },
+        {
+          "label": "E",
+          "text": "GABA学说"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "氨中毒学说是肝性脑病发病机制的中心学说，其他学说均以氨代谢障碍为基础或与之相联系。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-603",
+      "type": "single",
+      "question": "使氨生成谷氨酰胺而治疗肝性脑病的药物是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "复方氨基酸溶液"
+        },
+        {
+          "label": "B",
+          "text": "乳果糖"
+        },
+        {
+          "label": "C",
+          "text": "精氨酸"
+        },
+        {
+          "label": "D",
+          "text": "谷氨酸"
+        },
+        {
+          "label": "E",
+          "text": "左旋多巴"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "谷氨酸可与氨结合生成谷氨酰胺，从而降低血氨，故用于治疗肝性脑病。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-604",
+      "type": "single",
+      "question": "肝性脑病患者血氨升高的最主要原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肠道产氨增多"
+        },
+        {
+          "label": "B",
+          "text": "肾小管向血液弥散氨增多"
+        },
+        {
+          "label": "C",
+          "text": "肌肉产氨增多"
+        },
+        {
+          "label": "D",
+          "text": "血中NH₄⁺向NH₃转化增多"
+        },
+        {
+          "label": "E",
+          "text": "氨的清除不足"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肝性脑病患者血氨升高的最主要原因是肝功能障碍使氨的清除不足（鸟氨酸循环障碍），而非单纯产氨增多。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-605",
+      "type": "single",
+      "question": "患者,男,71岁。排黑便伴神志模糊、嗜睡1天。患者1天前排黑色糊状便1次,随后逐渐出现神志模糊、嗜睡。既往“酒精性肝硬化”病史20年。查体:T 36.9℃,P 95次/分,R 20次/分,BP 100/65mmHg。嗜睡状态,全身皮肤及巩膜黄染,胸前散在蜘蛛痣。腹部膨隆,全腹无压痛,肝脾触诊不满意,移动性浊音(+),肠鸣音6次/分。根据上述临床表现,该患者最可能的诊断及其主要诱发因素是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "细菌性腹膜炎;肠道感染"
+        },
+        {
+          "label": "B",
+          "text": "肝性脑病;消化道出血"
+        },
+        {
+          "label": "C",
+          "text": "失血性休克;血容量不足"
+        },
+        {
+          "label": "D",
+          "text": "原发性肝癌;肿瘤破裂"
+        },
+        {
+          "label": "E",
+          "text": "酒精戒断综合征;突然停酒"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "酒精性肝硬化患者出现黑便（消化道出血）后神志模糊、嗜睡、扑翼样震颤，最可能是消化道出血诱发肝性脑病。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-606",
+      "type": "single",
+      "question": "肝性脑病是指()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肝功能衰竭合并脑水肿"
+        },
+        {
+          "label": "B",
+          "text": "昏迷合并颅内压增高"
+        },
+        {
+          "label": "C",
+          "text": "神经精神综合征合并肝病"
+        },
+        {
+          "label": "D",
+          "text": "肝功能衰竭所致的精神紊乱性疾病"
+        },
+        {
+          "label": "E",
+          "text": "肝功能衰竭所致的神经精神综合征"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肝性脑病是肝功能衰竭所致、以代谢紊乱为基础的神经精神综合征。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-607",
+      "type": "single",
+      "question": "假性神经递质引起肝性脑病的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "与正常递质竞争受体,但其效应远较正常递质为弱"
+        },
+        {
+          "label": "B",
+          "text": "引起血浆氨基酸失衡"
+        },
+        {
+          "label": "C",
+          "text": "使脑细胞产生抑制性突触后电位"
+        },
+        {
+          "label": "D",
+          "text": "干扰脑的能量代谢"
+        },
+        {
+          "label": "E",
+          "text": "干扰脑细胞膜的功能"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "假性神经递质（苯乙醇胺、羟苯乙醇胺）与正常递质竞争受体，但其生理效应远弱于去甲肾上腺素和多巴胺。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-608",
+      "type": "single",
+      "question": "氨对脑的毒性作用不包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "使脑内抑制性递质产生增多"
+        },
+        {
+          "label": "B",
+          "text": "使脑的敏感性增高"
+        },
+        {
+          "label": "C",
+          "text": "抑制脑细胞膜的功能"
+        },
+        {
+          "label": "D",
+          "text": "使脑内兴奋性递质产生减少"
+        },
+        {
+          "label": "E",
+          "text": "干扰脑的能量代谢"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "氨对脑的毒性不包括使脑敏感性增高；氨使抑制性递质增多、兴奋性递质减少、干扰能量代谢并抑制细胞膜功能。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-609",
+      "type": "single",
+      "question": "抑制肠道氨吸收的主要因素是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "胆汁分泌↓"
+        },
+        {
+          "label": "B",
+          "text": "肠内pH↓"
+        },
+        {
+          "label": "C",
+          "text": "肠内pH↑"
+        },
+        {
+          "label": "D",
+          "text": "胰液分泌↓"
+        },
+        {
+          "label": "E",
+          "text": "肠细菌受抑"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "肠道内pH降低时，NH₃与H⁺结合成NH₄⁺不易吸收，故酸化肠道可减少氨吸收。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-610",
+      "type": "single",
+      "question": "肝功能严重损害时血浆芳香族氨基酸含量增加的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "芳香族氨基酸合成加速"
+        },
+        {
+          "label": "B",
+          "text": "芳香族氨基酸排出减少"
+        },
+        {
+          "label": "C",
+          "text": "芳香族氨基酸利用减少"
+        },
+        {
+          "label": "D",
+          "text": "芳香族氨基酸生成增多"
+        },
+        {
+          "label": "E",
+          "text": "芳香族氨基酸异生增多"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肝功能严重损害时蛋白质分解代谢增强、芳香族氨基酸生成增多，同时肝内代谢清除减少，使血中浓度升高。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-611",
+      "type": "single",
+      "question": "血氨增高对脑组织神经递质的影响表现为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "乙酰胆碱↑,谷氨酸↓早期,GABA↑,谷氨酰胺↑"
+        },
+        {
+          "label": "B",
+          "text": "乙酰胆碱↓,谷氨酸↑早期,GABA↓,谷氨酰胺↓"
+        },
+        {
+          "label": "C",
+          "text": "乙酰胆碱↑,谷氨酸↓早期,GABA↑,谷氨酰胺↓"
+        },
+        {
+          "label": "D",
+          "text": "乙酰胆碱↓,谷氨酸↓晚期,GABA↑,谷氨酰胺↑"
+        },
+        {
+          "label": "E",
+          "text": "乙酰胆碱↓,谷氨酸↑晚期,GABA↓,谷氨酰胺↑"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "血氨增高使乙酰胆碱减少、谷氨酸晚期减少、GABA增多、谷氨酰胺增多，故D正确。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-612",
+      "type": "single",
+      "question": "肝性脑病治疗措施哪一项不妥当()",
+      "options": [
+        {
+          "label": "A",
+          "text": "给予鸟氨酸制剂"
+        },
+        {
+          "label": "B",
+          "text": "口服抗生素"
+        },
+        {
+          "label": "C",
+          "text": "给予碱性药物"
+        },
+        {
+          "label": "D",
+          "text": "口服乳果糖"
+        },
+        {
+          "label": "E",
+          "text": "给予左旋多巴"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "给予碱性药物可使血NH₃增多、易透过血脑屏障进入脑内，加重肝性脑病，属不妥当措施。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-613",
+      "type": "single",
+      "question": "下列哪项不是肝性脑病的特点()",
+      "options": [
+        {
+          "label": "A",
+          "text": "主要以代谢障碍为主"
+        },
+        {
+          "label": "B",
+          "text": "典型的神经精神变化"
+        },
+        {
+          "label": "C",
+          "text": "出现扑翼样震颤"
+        },
+        {
+          "label": "D",
+          "text": "大脑形态学有特异性改变"
+        },
+        {
+          "label": "E",
+          "text": "可发生于肝功能衰竭的晚期"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肝性脑病以代谢障碍为主，无特异性大脑形态学改变，故D不是其特点。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-614",
+      "type": "single",
+      "question": "肝性脑病患者芳香族氨基酸入脑增多的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血浆短链脂肪酸浓度↑"
+        },
+        {
+          "label": "B",
+          "text": "血氨浓度↑"
+        },
+        {
+          "label": "C",
+          "text": "血-脑屏障破坏"
+        },
+        {
+          "label": "D",
+          "text": "血中芳香族氨基酸浓度↑"
+        },
+        {
+          "label": "E",
+          "text": "血浆白蛋白浓度↑"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "芳香族氨基酸入脑增多是因为血中浓度升高，与支链氨基酸竞争同一转运载体，AAA/BCAA比值升高使其入脑增加。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-615",
+      "type": "single",
+      "question": "肝性脑病患者氨清除不足的原因主要见于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "谷氨酸合成障碍"
+        },
+        {
+          "label": "B",
+          "text": "肾小管分泌氨减少"
+        },
+        {
+          "label": "C",
+          "text": "三羟酸循环障碍"
+        },
+        {
+          "label": "D",
+          "text": "谷氨酰胺合成障碍"
+        },
+        {
+          "label": "E",
+          "text": "鸟氨酸循环障碍"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "氨清除不足主要见于肝功能严重障碍时鸟氨酸循环（尿素合成）障碍。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-616",
+      "type": "single",
+      "question": "患者,男,72岁,肝性脑病入院救治,下列哪项措施可减少肠内氨生成()",
+      "options": [
+        {
+          "label": "A",
+          "text": "给氧"
+        },
+        {
+          "label": "B",
+          "text": "补碱"
+        },
+        {
+          "label": "C",
+          "text": "输液"
+        },
+        {
+          "label": "D",
+          "text": "利尿剂"
+        },
+        {
+          "label": "E",
+          "text": "酸性液灌肠"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "酸性液灌肠可酸化肠道，使NH₃转为NH₄⁺排出，减少肠内氨的吸收和生成。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-617",
+      "type": "single",
+      "question": "肝性脑病患者用于促进正常递质生成、加强正常递质竞争作用的药物是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "乳果糖"
+        },
+        {
+          "label": "B",
+          "text": "精氨酸"
+        },
+        {
+          "label": "C",
+          "text": "谷氨酸"
+        },
+        {
+          "label": "D",
+          "text": "谷氨酸钠"
+        },
+        {
+          "label": "E",
+          "text": "左旋多巴"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "左旋多巴可透过血脑屏障转变为多巴胺、去甲肾上腺素，补充正常递质并加强其竞争作用。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-618",
+      "type": "single",
+      "question": "根据GABA学说,γ-氨基丁酸通过哪种离子导致神经元超级化()",
+      "options": [
+        {
+          "label": "A",
+          "text": "Ca²⁺"
+        },
+        {
+          "label": "B",
+          "text": "Cl⁻"
+        },
+        {
+          "label": "C",
+          "text": "K⁺"
+        },
+        {
+          "label": "D",
+          "text": "HCO₃⁻"
+        },
+        {
+          "label": "E",
+          "text": "Na⁺"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "GABA与突触后膜受体结合，使Cl⁻通道开放、Cl⁻内流，引起神经元超极化而抑制。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-619",
+      "type": "single",
+      "question": "假性神经递质的作用部位是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "丘脑"
+        },
+        {
+          "label": "B",
+          "text": "间质"
+        },
+        {
+          "label": "C",
+          "text": "脑干网状结构"
+        },
+        {
+          "label": "D",
+          "text": "小脑"
+        },
+        {
+          "label": "E",
+          "text": "大脑皮质"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "假性神经递质主要作用于脑干网状结构，使其功能活动障碍，导致意识障碍。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-620",
+      "type": "single",
+      "question": "肝性脑病时,患者氨生成过多的最常见原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "脑产氨增多"
+        },
+        {
+          "label": "B",
+          "text": "肾产氨增多、并向血液弥散增多"
+        },
+        {
+          "label": "C",
+          "text": "肌肉产氨增多"
+        },
+        {
+          "label": "D",
+          "text": "肠道产氨增多"
+        },
+        {
+          "label": "E",
+          "text": "血液NH₄⁺向NH₃转化增多"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肝性脑病时氨生成过多最常见的原因是肠道产氨增多（肠道细菌分解蛋白质、尿素）。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-621",
+      "type": "single",
+      "question": "患者,男,56岁,肝硬化10年。本次因大量呕血入院。急诊胃镜示食管静脉曲张破裂出血,行套扎术止血。术后第2天患者出现嗜睡、言语不清,查体可见扑翼样震颤。实验室检查示血氨显著升高。该患者血氨升高的主要来源是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾脏谷氨酰胺酶活性增强产氨"
+        },
+        {
+          "label": "B",
+          "text": "骨骼肌细胞氨基酸脱氨基作用增强"
+        },
+        {
+          "label": "C",
+          "text": "肝脏尿素循环酶系活性代偿性增强"
+        },
+        {
+          "label": "D",
+          "text": "脑内谷氨酰胺合成酶活性异常升高"
+        },
+        {
+          "label": "E",
+          "text": "肠道内的积血经细菌分解产氨"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "食管静脉曲张破裂出血后，肠道内积血经细菌分解产氨明显增多，是血氨升高的主要来源。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-622",
+      "type": "single",
+      "question": "肝性脑病的假性神经递质有()",
+      "options": [
+        {
+          "label": "A",
+          "text": "苯乙胺和乙酸等"
+        },
+        {
+          "label": "B",
+          "text": "苯乙醇胺和羟苯乙醇胺"
+        },
+        {
+          "label": "C",
+          "text": "苯乙胺、酪胺和5-羟色胺"
+        },
+        {
+          "label": "D",
+          "text": "苯乙醇胺、羟乙醇胺和5-羟色胺"
+        },
+        {
+          "label": "E",
+          "text": "苯乙胺、酪胺和GABA"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "假性神经递质为苯乙醇胺和羟苯乙醇胺（来自苯乙胺、酪胺在脑内羟化）。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-623",
+      "type": "single",
+      "question": "血浆氨基酸失衡学说中所说的支链氨基酸包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "苯丙氨酸、色氨酸和缬氨酸"
+        },
+        {
+          "label": "B",
+          "text": "苯丙氨酸和酪氨酸"
+        },
+        {
+          "label": "C",
+          "text": "亮氨酸、缬氨酸和色氨酸"
+        },
+        {
+          "label": "D",
+          "text": "苯丙氨酸、酪氨酸和色氨酸"
+        },
+        {
+          "label": "E",
+          "text": "亮氨酸、异亮氨酸和缬氨酸"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "支链氨基酸包括亮氨酸、异亮氨酸和缬氨酸。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-624",
+      "type": "single",
+      "question": "最容易诱发肝性脑病的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "胃肠蠕动增强"
+        },
+        {
+          "label": "B",
+          "text": "胃肠道出血"
+        },
+        {
+          "label": "C",
+          "text": "糖类摄入增多"
+        },
+        {
+          "label": "D",
+          "text": "脂肪摄入减少"
+        },
+        {
+          "label": "E",
+          "text": "肠道内细菌活动减弱"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "胃肠道出血使肠道产氨骤增，是最易诱发肝性脑病的因素。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-625",
+      "type": "single",
+      "question": "引起血浆芳香族氨基酸增多的最主要激素代谢异常是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肝灭活ADH作用↓"
+        },
+        {
+          "label": "B",
+          "text": "肝细胞灭活皮质醇作用↓"
+        },
+        {
+          "label": "C",
+          "text": "肝灭活胰高血糖素作用↓"
+        },
+        {
+          "label": "D",
+          "text": "肝灭活胰岛素作用↓"
+        },
+        {
+          "label": "E",
+          "text": "肝灭活醛固酮作用↓"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肝功能障碍时对胰高血糖素的灭活减少，血中胰高血糖素升高，促进肌肉蛋白质分解、芳香族氨基酸生成增多。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-626",
+      "type": "single",
+      "question": "氨中毒患者脑内能量产生减少的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "磷酸肌酸分解障碍"
+        },
+        {
+          "label": "B",
+          "text": "三羧酸循环障碍"
+        },
+        {
+          "label": "C",
+          "text": "脂肪氧化障碍"
+        },
+        {
+          "label": "D",
+          "text": "氧化磷酸化障碍"
+        },
+        {
+          "label": "E",
+          "text": "鸟氨酸循环障碍"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "氨与α-酮戊二酸结合生成谷氨酸，消耗三羧酸循环中间产物，使三羧酸循环障碍、ATP生成减少。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-627",
+      "type": "single",
+      "question": "肝性脑病患者服用肠道抗生素的主要目的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "防治肝胆系统感染"
+        },
+        {
+          "label": "B",
+          "text": "防治腹水感染"
+        },
+        {
+          "label": "C",
+          "text": "促进肠道对钾钠吸收"
+        },
+        {
+          "label": "D",
+          "text": "防治脑内感染"
+        },
+        {
+          "label": "E",
+          "text": "抑制肠道细菌产氨"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "口服肠道抗生素抑制肠道细菌，减少氨和假性神经递质的生成与吸收。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-628",
+      "type": "single",
+      "question": "过量蛋白饮食诱发肝性脑病的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "脑的敏感性增高"
+        },
+        {
+          "label": "B",
+          "text": "经肠道细菌作用产氨增加"
+        },
+        {
+          "label": "C",
+          "text": "脑组织缺血缺氧"
+        },
+        {
+          "label": "D",
+          "text": "血脑屏障通透性增强"
+        },
+        {
+          "label": "E",
+          "text": "血液苯乙胺和酪胺增加"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "过量蛋白饮食使肠道细菌分解产氨增多，血氨升高而诱发肝性脑病。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-629",
+      "type": "single",
+      "question": "通过维持鸟氨酸循环、促进尿素合成治疗肝性脑病的药物是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "乳果糖"
+        },
+        {
+          "label": "B",
+          "text": "复方氨基酸溶液"
+        },
+        {
+          "label": "C",
+          "text": "左旋多巴"
+        },
+        {
+          "label": "D",
+          "text": "精氨酸"
+        },
+        {
+          "label": "E",
+          "text": "谷氨酸"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "精氨酸可促进鸟氨酸循环、加速尿素合成，从而降低血氨。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-630",
+      "type": "single",
+      "question": "假性神经递质引起意识障碍的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "抑制去甲肾上腺素的合成"
+        },
+        {
+          "label": "B",
+          "text": "取代去甲肾上腺素和多巴胺"
+        },
+        {
+          "label": "C",
+          "text": "假性神经递质是抑制性递质"
+        },
+        {
+          "label": "D",
+          "text": "抑制多巴胺的合成"
+        },
+        {
+          "label": "E",
+          "text": "取代乙酰胆碱"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "假性神经递质取代去甲肾上腺素和多巴胺，使脑干网状结构神经冲动传导障碍，引起意识障碍。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-631",
+      "type": "single",
+      "question": "下列哪项因素不会诱发肝性脑病()",
+      "options": [
+        {
+          "label": "A",
+          "text": "酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "电解质紊乱"
+        },
+        {
+          "label": "C",
+          "text": "感染"
+        },
+        {
+          "label": "D",
+          "text": "消化道出血"
+        },
+        {
+          "label": "E",
+          "text": "便秘"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "酸中毒时NH₃不易透过血脑屏障，反而减少氨入脑，不会诱发肝性脑病；碱中毒才易诱发。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-632",
+      "type": "single",
+      "question": "肝性脑病患者血中支链氨基酸浓度降低的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "支链氨基酸经肠道排出"
+        },
+        {
+          "label": "B",
+          "text": "支链氨基酸经肾脏排出"
+        },
+        {
+          "label": "C",
+          "text": "支链氨基酸进入中枢组织"
+        },
+        {
+          "label": "D",
+          "text": "肌肉等组织摄取、分解、利用支链氨基酸增加"
+        },
+        {
+          "label": "E",
+          "text": "支链氨基酸合成蛋白质"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肝功能障碍时胰岛素灭活减少，高胰岛素血症促进肌肉摄取、分解和利用支链氨基酸，使其血浓度降低。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-633",
+      "type": "single",
+      "question": "肝性脑病时芳香族氨基酸入脑的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血支链氨基酸/芳香族氨基酸比值降低"
+        },
+        {
+          "label": "B",
+          "text": "血氨浓度增加"
+        },
+        {
+          "label": "C",
+          "text": "血短链脂肪酸增加"
+        },
+        {
+          "label": "D",
+          "text": "血脑屏障破坏"
+        },
+        {
+          "label": "E",
+          "text": "血硫醇含量增加"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "血中支链氨基酸/芳香族氨基酸比值降低，使芳香族氨基酸竞争转运载体入脑增多。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-634",
+      "type": "single",
+      "question": "血浆氨基酸失衡学说中所说的芳香族氨基酸是指()",
+      "options": [
+        {
+          "label": "A",
+          "text": "苯丙氨酸、酪氨酸和色氨酸"
+        },
+        {
+          "label": "B",
+          "text": "苯乙醇胺、羟苯乙醇胺和5-羟色胺"
+        },
+        {
+          "label": "C",
+          "text": "谷氨酸和乙酰胆碱"
+        },
+        {
+          "label": "D",
+          "text": "GABA和谷氨酰胺"
+        },
+        {
+          "label": "E",
+          "text": "亮氨酸、异亮氨酸和缬氨酸"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "芳香族氨基酸包括苯丙氨酸、酪氨酸和色氨酸。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-635",
+      "type": "single",
+      "question": "乳果糖治疗肝性脑病的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "促进肾脏排氨"
+        },
+        {
+          "label": "B",
+          "text": "酸透析作用,减少肠道产氨"
+        },
+        {
+          "label": "C",
+          "text": "促进三羧酸循环"
+        },
+        {
+          "label": "D",
+          "text": "促进鸟氨酸循环"
+        },
+        {
+          "label": "E",
+          "text": "直接向机体提供ATP"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "乳果糖在肠道被细菌分解为乳酸、醋酸，酸化肠道（酸透析），使NH₃转为NH₄⁺排出，减少吸收。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-636",
+      "type": "single",
+      "question": "肝性脑病患者血液中芳香族氨基酸含量增多可引起脑内的()",
+      "options": [
+        {
+          "label": "A",
+          "text": "假性神经递质增多"
+        },
+        {
+          "label": "B",
+          "text": "乙酰胆碱增多"
+        },
+        {
+          "label": "C",
+          "text": "多巴胺增多"
+        },
+        {
+          "label": "D",
+          "text": "去甲肾上腺素增多"
+        },
+        {
+          "label": "E",
+          "text": "γ-氨基丁酸增多"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "芳香族氨基酸（苯丙氨酸、酪氨酸）入脑增多，在脑内转化为苯乙醇胺、羟苯乙醇胺等假性神经递质。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-637",
+      "type": "single",
+      "question": "患者,男,67岁,慢性肝炎15年。近3个月全身乏力、食欲缺乏,常有鼻出血。4小时前发生呕血,继而烦躁不安、情绪激动而入院。该患者最可能的诊断为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肺性脑病"
+        },
+        {
+          "label": "B",
+          "text": "肝性脑病"
+        },
+        {
+          "label": "C",
+          "text": "肝豆状核变性"
+        },
+        {
+          "label": "D",
+          "text": "酒精性肝病"
+        },
+        {
+          "label": "E",
+          "text": "低钠综合征"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "慢性肝炎、呕血后出现烦躁不安、情绪激动，最可能是消化道出血诱发的肝性脑病。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-638",
+      "type": "single",
+      "question": "肝性脑病患者血浆支链氨基酸减少的主要原因是",
+      "options": [
+        {
+          "label": "A",
+          "text": "肝对支链氨基酸灭活减少"
+        },
+        {
+          "label": "B",
+          "text": "高胰岛素血症所致"
+        },
+        {
+          "label": "C",
+          "text": "血浆芳香族氨基酸增多引起"
+        },
+        {
+          "label": "D",
+          "text": "支链氨基酸合成来源减少"
+        },
+        {
+          "label": "E",
+          "text": "血浆胰高血糖素浓度升高所致"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "肝功能障碍时胰岛素灭活减少，高胰岛素血症促使肌肉摄取和分解支链氨基酸，使其血浆浓度降低。",
+      "chapter": "肝性脑病"
+    },
+    {
+      "id": "bsq-639",
+      "type": "single",
+      "question": "非少尿型ARF,尿量相对较多的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "GFR下降"
+        },
+        {
+          "label": "B",
+          "text": "渗透性利尿"
+        },
+        {
+          "label": "C",
+          "text": "尿浓缩稀释功能障碍"
+        },
+        {
+          "label": "D",
+          "text": "尿稀释功能障碍"
+        },
+        {
+          "label": "E",
+          "text": "尿浓缩功能障碍"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "非少尿型急性肾衰竭时肾小管浓缩功能障碍，不能将尿液浓缩，故尿量相对较多而尿渗透压接近血浆。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-640",
+      "type": "single",
+      "question": "慢性肾衰合并高钾血症主要是因为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "严重呕吐腹泻"
+        },
+        {
+          "label": "B",
+          "text": "健存肾单位过少"
+        },
+        {
+          "label": "C",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "D",
+          "text": "长期使用排钾利尿剂"
+        },
+        {
+          "label": "E",
+          "text": "原尿生成过多"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "慢性肾衰竭时健存肾单位过少，排钾能力显著下降，加之酸中毒、少尿，易发生高钾血症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-641",
+      "type": "single",
+      "question": "输尿管结石引起肾后性急性肾衰竭,其GFR下降是因为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "原尿反流"
+        },
+        {
+          "label": "B",
+          "text": "肾小球滤过面积下降"
+        },
+        {
+          "label": "C",
+          "text": "肾小球囊内压升高"
+        },
+        {
+          "label": "D",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "E",
+          "text": "肾小球毛细血管血压下降"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "输尿管结石使尿路梗阻、肾盂内压升高，逆传至肾小球囊内压升高，有效滤过压下降，GFR降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-642",
+      "type": "single",
+      "question": "以下哪项不是肾后性急性肾衰竭的病因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "双侧输尿管结石"
+        },
+        {
+          "label": "B",
+          "text": "前列腺肥大"
+        },
+        {
+          "label": "C",
+          "text": "双侧肾结石"
+        },
+        {
+          "label": "D",
+          "text": "盆腔肿瘤"
+        },
+        {
+          "label": "E",
+          "text": "挤压综合征"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "挤压综合征引起肾性（肾小管坏死）急性肾衰竭，不属肾后性病因；其余均为尿路梗阻因素。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-643",
+      "type": "single",
+      "question": "慢性肾衰竭患者在快速纠正酸中毒后会发生手足搐搦,是由于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "促进肠道形成磷酸钙"
+        },
+        {
+          "label": "B",
+          "text": "肠道黏膜损害,钙吸收减少"
+        },
+        {
+          "label": "C",
+          "text": "游离钙降低"
+        },
+        {
+          "label": "D",
+          "text": "抑制骨骼脱钙"
+        },
+        {
+          "label": "E",
+          "text": "促进血磷浓度升高"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "快速纠正酸中毒使血浆游离钙降低（钙向骨和细胞内转移、蛋白结合增加），神经-肌肉兴奋性升高，出现手足搐搦。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-644",
+      "type": "single",
+      "question": "肾缺血或肾中毒时,下列何种因子释放可引起肾小球系膜细胞收缩,从而降低肾小球滤过系数Kf,导致GFR降低()",
+      "options": [
+        {
+          "label": "A",
+          "text": "前列腺素E2"
+        },
+        {
+          "label": "B",
+          "text": "组胺"
+        },
+        {
+          "label": "C",
+          "text": "血栓素A2"
+        },
+        {
+          "label": "D",
+          "text": "缓激肽"
+        },
+        {
+          "label": "E",
+          "text": "腺苷"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "血栓素A₂使肾小球系膜细胞收缩、滤过面积减少，滤过系数Kf降低，GFR下降。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-645",
+      "type": "single",
+      "question": "关于急性肾衰竭多尿期的病理改变,下列哪项是错误的()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管上皮细胞功能未完全恢复正常"
+        },
+        {
+          "label": "B",
+          "text": "易发生水中毒"
+        },
+        {
+          "label": "C",
+          "text": "肾小管阻塞解除"
+        },
+        {
+          "label": "D",
+          "text": "血中NPN导致渗透性利尿"
+        },
+        {
+          "label": "E",
+          "text": "肾小球滤过率逐渐恢复正常"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "多尿期大量排尿，易发生脱水、低钾血症和低钠血症，而不是水中毒，故B错误。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-646",
+      "type": "single",
+      "question": "患者,男,28岁,参加马拉松比赛后出现少尿、酱油色尿。实验室检查:血肌酐、尿素氮增加,尿肌红蛋白(+)。该患者发生少尿的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小球滤过膜损伤"
+        },
+        {
+          "label": "B",
+          "text": "肾小管堵塞"
+        },
+        {
+          "label": "C",
+          "text": "急性肾间质损伤"
+        },
+        {
+          "label": "D",
+          "text": "肾脏缺血"
+        },
+        {
+          "label": "E",
+          "text": "肾结石位置移动"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "马拉松运动致横纹肌溶解，大量肌红蛋白经肾排出形成管型阻塞肾小管，是少尿的主要机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-647",
+      "type": "single",
+      "question": "下列哪一项是器质性肾衰竭时尿液的改变()",
+      "options": [
+        {
+          "label": "A",
+          "text": "尿钠减少"
+        },
+        {
+          "label": "B",
+          "text": "尿蛋白增加"
+        },
+        {
+          "label": "C",
+          "text": "尿渗透压增加"
+        },
+        {
+          "label": "D",
+          "text": "尿比重增加"
+        },
+        {
+          "label": "E",
+          "text": "尿肌酐浓度增加"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "器质性肾衰竭时肾小管受损，蛋白重吸收障碍，尿蛋白增加；而尿钠增多、尿比重和渗透压降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-648",
+      "type": "single",
+      "question": "急性肾小管坏死患者恢复得最慢的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管浓缩功能"
+        },
+        {
+          "label": "B",
+          "text": "肾小管分泌功能"
+        },
+        {
+          "label": "C",
+          "text": "肾血流量"
+        },
+        {
+          "label": "D",
+          "text": "集合管分泌功能"
+        },
+        {
+          "label": "E",
+          "text": "肾小球滤过功能"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "急性肾小管坏死恢复过程中，肾小管浓缩功能恢复最慢，常需数月。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-649",
+      "type": "single",
+      "question": "原尿回漏可造成下列现象,除外()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管阻塞加重"
+        },
+        {
+          "label": "B",
+          "text": "肾间质水肿"
+        },
+        {
+          "label": "C",
+          "text": "渗透性利尿"
+        },
+        {
+          "label": "D",
+          "text": "肾小球滤过率下降"
+        },
+        {
+          "label": "E",
+          "text": "原尿流速缓慢"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "原尿回漏使肾间质水肿、压迫肾小管、原尿流速减慢，并反流至间质引起炎症，但不引起渗透性利尿。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-650",
+      "type": "single",
+      "question": "急性肾衰竭少尿期,最危险的电解质紊乱是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高钠血症"
+        },
+        {
+          "label": "B",
+          "text": "低钾血症"
+        },
+        {
+          "label": "C",
+          "text": "低钠血症"
+        },
+        {
+          "label": "D",
+          "text": "高钾血症"
+        },
+        {
+          "label": "E",
+          "text": "低氯血症"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "少尿期钾排出减少、细胞内钾释放、酸中毒，高钾血症可致心室颤动，是最危险的电解质紊乱。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-651",
+      "type": "single",
+      "question": "下列哪项是肾性急性肾衰竭的病因()",
+      "options": [
+        {
+          "label": "A",
+          "text": "低钾血症"
+        },
+        {
+          "label": "B",
+          "text": "横纹肌溶解综合征"
+        },
+        {
+          "label": "C",
+          "text": "严重肾盂肾炎"
+        },
+        {
+          "label": "D",
+          "text": "高血磷,低血钙"
+        },
+        {
+          "label": "E",
+          "text": "前列腺肥大"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "横纹肌溶解综合征时肌红蛋白阻塞肾小管并损伤上皮细胞，属肾性急性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-652",
+      "type": "single",
+      "question": "急性肾功能衰竭的发生机制中,原尿返漏 是由于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾间质水肿"
+        },
+        {
+          "label": "B",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "C",
+          "text": "管球反馈机制失调"
+        },
+        {
+          "label": "D",
+          "text": "肾小管上皮细胞坏死脱落"
+        },
+        {
+          "label": "E",
+          "text": "原尿流速缓慢"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "原尿返漏是由于肾小管上皮细胞坏死脱落，管壁完整性破坏，原尿反流入肾间质。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-653",
+      "type": "single",
+      "question": "挤压综合征引起急性肾衰竭的核心机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "B",
+          "text": "系膜细胞收缩"
+        },
+        {
+          "label": "C",
+          "text": "肾脏缺血与低灌注"
+        },
+        {
+          "label": "D",
+          "text": "肾小球滤过膜损伤"
+        },
+        {
+          "label": "E",
+          "text": "肾小管上皮细胞凋亡"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "挤压综合征时肌红蛋白等形成管型阻塞肾小管，是急性肾衰竭的核心机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-654",
+      "type": "single",
+      "question": "慢性肾衰竭患者常出现()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血磷降低,血钙降低"
+        },
+        {
+          "label": "B",
+          "text": "血磷升高,血钙降低"
+        },
+        {
+          "label": "C",
+          "text": "血磷降低,血钙升高"
+        },
+        {
+          "label": "D",
+          "text": "血磷升高,血钙升高"
+        },
+        {
+          "label": "E",
+          "text": "血磷正常,血钙升高"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "慢性肾衰竭时GFR下降致磷排出减少、血磷升高，血磷升高使血钙降低，故血磷升高、血钙降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-655",
+      "type": "single",
+      "question": "导致肾性骨营养不良的发生机制不包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "PTH增加"
+        },
+        {
+          "label": "B",
+          "text": "甲基胍增多"
+        },
+        {
+          "label": "C",
+          "text": "维生素D3代谢障碍"
+        },
+        {
+          "label": "D",
+          "text": "高磷,低钙"
+        },
+        {
+          "label": "E",
+          "text": "铝积聚"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "肾性骨营养不良与PTH增多、维生素D₃代谢障碍、高磷低钙、铝积聚有关；甲基胍增多与骨病无关。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-656",
+      "type": "single",
+      "question": "慢性肾衰竭患者,临床出现高血磷和低血钙表现,其始发机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "消化道排磷减少"
+        },
+        {
+          "label": "B",
+          "text": "PTH分泌增加导致骨钙释放"
+        },
+        {
+          "label": "C",
+          "text": "维生素D3活化减少导致肠道吸收钙减少"
+        },
+        {
+          "label": "D",
+          "text": "代谢性酸中导致骨钙释放增加"
+        },
+        {
+          "label": "E",
+          "text": "肾脏GFR降低导致肾脏排磷减少"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭时GFR降低使肾脏排磷减少，血磷升高是启动环节，继而血钙降低、PTH分泌增多。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-657",
+      "type": "single",
+      "question": "肾性骨营养不良多是因为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "汞中毒"
+        },
+        {
+          "label": "B",
+          "text": "严重肾盂肾炎"
+        },
+        {
+          "label": "C",
+          "text": "高血磷,低血钙"
+        },
+        {
+          "label": "D",
+          "text": "低钾血症"
+        },
+        {
+          "label": "E",
+          "text": "前列腺肥大"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "肾性骨营养不良主要由高血磷、低血钙及继发性甲状旁腺功能亢进引起。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-658",
+      "type": "single",
+      "question": "慢性肾衰竭晚期,患者常发生胃肠道出血倾向,主要是由于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血小板功能异常"
+        },
+        {
+          "label": "B",
+          "text": "红细胞数量减少"
+        },
+        {
+          "label": "C",
+          "text": "凝血因子减少"
+        },
+        {
+          "label": "D",
+          "text": "血小板数量轻度减少"
+        },
+        {
+          "label": "E",
+          "text": "凝血因子活性下降"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肾衰竭晚期出血倾向主要由于血小板功能异常（尿毒症毒素抑制血小板聚集），血小板数量可轻度减少。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-659",
+      "type": "single",
+      "question": "下列哪项不是肾性急性肾衰竭的病因()",
+      "options": [
+        {
+          "label": "A",
+          "text": "急性间质性肾炎"
+        },
+        {
+          "label": "B",
+          "text": "急性肾小管坏死"
+        },
+        {
+          "label": "C",
+          "text": "肾血管疾病"
+        },
+        {
+          "label": "D",
+          "text": "肾小球病变"
+        },
+        {
+          "label": "E",
+          "text": "尿路梗阻"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "尿路梗阻引起肾后性急性肾衰竭，不属肾性病因。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-660",
+      "type": "single",
+      "question": "肾性高血压产生的主要机制不包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血液黏稠度增加"
+        },
+        {
+          "label": "B",
+          "text": "钠水潴留"
+        },
+        {
+          "label": "C",
+          "text": "激肽减少"
+        },
+        {
+          "label": "D",
+          "text": "肾素增加"
+        },
+        {
+          "label": "E",
+          "text": "前列腺素减少"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "肾性高血压的机制包括钠水潴留、肾素增多、激肽和前列腺素等降压物质减少；血液黏稠度增加不属其机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-661",
+      "type": "single",
+      "question": "严重肾功能不全时,病人易出现的酸碱平衡紊乱类型是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "AG正常性代谢性酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "呼吸性酸中毒"
+        },
+        {
+          "label": "C",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "D",
+          "text": "AG增高型代谢性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "呼吸性碱中毒"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "严重肾功能不全时固定酸排出障碍、HCO₃⁻丢失，酸性代谢产物蓄积，AG增大，为AG增高型代谢性酸中毒。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-662",
+      "type": "single",
+      "question": "患者,男,21岁,因车祸外伤发生休克,神志淡漠,少尿。其少尿的发病机制主要是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "输尿管收缩"
+        },
+        {
+          "label": "B",
+          "text": "肾内DIC"
+        },
+        {
+          "label": "C",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "D",
+          "text": "肾素分泌减少"
+        },
+        {
+          "label": "E",
+          "text": "肾小球滤过率降低"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "休克时肾血流量减少、GFR降低，是少尿的主要发病机制（属肾前性因素）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-663",
+      "type": "single",
+      "question": "急性肾衰竭少尿期,水电解质平衡紊乱的主要表现是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高渗性脱水"
+        },
+        {
+          "label": "B",
+          "text": "盐中毒"
+        },
+        {
+          "label": "C",
+          "text": "等渗性脱水"
+        },
+        {
+          "label": "D",
+          "text": "低渗性脱水"
+        },
+        {
+          "label": "E",
+          "text": "水中毒"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "少尿期水排出障碍，入水过多则水潴留、稀释性低钠，主要表现是水中毒。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-664",
+      "type": "single",
+      "question": "慢性肾衰患者出现血尿的机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾脏微血管病变"
+        },
+        {
+          "label": "B",
+          "text": "毒物引起的溶血"
+        },
+        {
+          "label": "C",
+          "text": "肾小球基底膜断裂"
+        },
+        {
+          "label": "D",
+          "text": "血小板功能异常"
+        },
+        {
+          "label": "E",
+          "text": "肾小管损伤"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "慢性肾衰竭时肾小球基底膜断裂，红细胞漏出，出现血尿。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-665",
+      "type": "single",
+      "question": "慢性肾衰晚期可出现的变化为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "血钾↑,血钙↓"
+        },
+        {
+          "label": "B",
+          "text": "血钠↓,血钙↑"
+        },
+        {
+          "label": "C",
+          "text": "血钾↑,血氯↓"
+        },
+        {
+          "label": "D",
+          "text": "血钙↑,血磷↓"
+        },
+        {
+          "label": "E",
+          "text": "血尿素氮↓,血钙↑"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肾衰竭晚期肾排钾减少、酸中毒致血钾升高，同时高磷、维生素D₃不足致血钙降低，故血钾升高、血钙降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-666",
+      "type": "single",
+      "question": "患者,男,45岁。因“双下肢水肿伴血压升高1个月”就诊。既往有“慢性肾小球肾炎”病史10年。查体:BP 160/95mmHg,双下肢凹陷性水肿。实验室检查:尿蛋白(+++),血肌酐 220μmol/L。该患者发生高血压的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾脏产生的降压物质(如前列腺素)减少"
+        },
+        {
+          "label": "B",
+          "text": "肾动脉主干粥样硬化导致管腔狭窄"
+        },
+        {
+          "label": "C",
+          "text": "交感神经系统兴奋性原发性增高"
+        },
+        {
+          "label": "D",
+          "text": "肾单位大量破坏导致水钠潴留、血容量增加"
+        },
+        {
+          "label": "E",
+          "text": "肾素-血管紧张素-醛固酮系统过度激活"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "慢性肾小球肾炎致大量肾单位破坏，钠水潴留、血容量增加，是肾性高血压的主要机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-667",
+      "type": "single",
+      "question": "下列哪项不是少尿型急性肾衰竭的发生机制()",
+      "options": [
+        {
+          "label": "A",
+          "text": "管-球反馈机制失调"
+        },
+        {
+          "label": "B",
+          "text": "肾小球滤过系数升高"
+        },
+        {
+          "label": "C",
+          "text": "原尿返漏"
+        },
+        {
+          "label": "D",
+          "text": "肾灌流量减少"
+        },
+        {
+          "label": "E",
+          "text": "肾小管阻塞"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "少尿型急性肾衰竭时肾小球滤过系数降低而非升高，故B不是其发生机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-668",
+      "type": "single",
+      "question": "引起慢性肾衰竭最常见的原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "慢性肾盂肾炎"
+        },
+        {
+          "label": "B",
+          "text": "肾结核"
+        },
+        {
+          "label": "C",
+          "text": "尿路梗阻"
+        },
+        {
+          "label": "D",
+          "text": "慢性肾小球肾炎"
+        },
+        {
+          "label": "E",
+          "text": "糖尿病性肾小球硬化"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "慢性肾衰竭最常见的病因是慢性肾小球肾炎。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-669",
+      "type": "single",
+      "question": "患者,男,32岁,因“突发右侧腰部疼痛”,尿量减少就诊。有肾结石病史。该患者可能是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "急性肾前性肾衰竭"
+        },
+        {
+          "label": "B",
+          "text": "尿毒症"
+        },
+        {
+          "label": "C",
+          "text": "急性肾性肾衰竭"
+        },
+        {
+          "label": "D",
+          "text": "慢性肾衰竭"
+        },
+        {
+          "label": "E",
+          "text": "急性肾后性肾衰竭"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肾结石引起尿路梗阻、突发腰痛伴尿量减少，属急性肾后性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-670",
+      "type": "single",
+      "question": "下述哪项因素与肾性骨营养不良的发病机制无关()",
+      "options": [
+        {
+          "label": "A",
+          "text": "继发性甲状旁腺机能亢进"
+        },
+        {
+          "label": "B",
+          "text": "酸中毒使骨质脱钙"
+        },
+        {
+          "label": "C",
+          "text": "高磷血症和低钙血症"
+        },
+        {
+          "label": "D",
+          "text": "血尿素氮加速溶骨活性"
+        },
+        {
+          "label": "E",
+          "text": "1,25-(OH)2D3生成减少"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肾性骨营养不良与继发性甲旁亢、酸中毒、高磷低钙、1,25-(OH)₂D₃生成减少有关；血尿素氮加速溶骨不是其机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-671",
+      "type": "single",
+      "question": "下列哪项指标提示慢性肾衰竭病情加重()",
+      "options": [
+        {
+          "label": "A",
+          "text": "等渗尿"
+        },
+        {
+          "label": "B",
+          "text": "大量蛋白尿"
+        },
+        {
+          "label": "C",
+          "text": "肾性糖尿"
+        },
+        {
+          "label": "D",
+          "text": "高渗尿"
+        },
+        {
+          "label": "E",
+          "text": "低渗尿"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "等渗尿提示肾小管浓缩稀释功能严重障碍，见于慢性肾衰竭晚期，标志病情加重。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-672",
+      "type": "single",
+      "question": "慢性肾衰竭患者尿量变化的特点是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "早期多尿、夜尿,晚期少尿"
+        },
+        {
+          "label": "B",
+          "text": "早期多尿、血尿,晚期少尿"
+        },
+        {
+          "label": "C",
+          "text": "早期夜尿,晚期多尿"
+        },
+        {
+          "label": "D",
+          "text": "早期多尿,晚期夜尿"
+        },
+        {
+          "label": "E",
+          "text": "早期少尿,晚期多尿"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肾衰竭早期肾小管浓缩功能受损出现多尿、夜尿，晚期肾单位大量破坏则少尿。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-673",
+      "type": "single",
+      "question": "慢性肾功能衰竭时,继发性 PTH 分泌过多的始动原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "低钙血症"
+        },
+        {
+          "label": "B",
+          "text": "肠吸收钙↓"
+        },
+        {
+          "label": "C",
+          "text": "磷血症"
+        },
+        {
+          "label": "D",
+          "text": "1,25-(OH)₂D₃生成↓"
+        },
+        {
+          "label": "E",
+          "text": "骨营养不良"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肾衰竭时血钙降低刺激甲状旁腺，使PTH分泌增多，低钙血症是继发性甲旁亢的始动原因。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-674",
+      "type": "single",
+      "question": "下列哪项可引起急性肾小管上皮细胞坏死()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾结石"
+        },
+        {
+          "label": "B",
+          "text": "前列腺肥大"
+        },
+        {
+          "label": "C",
+          "text": "低钾血症"
+        },
+        {
+          "label": "D",
+          "text": "高血磷,低血钙"
+        },
+        {
+          "label": "E",
+          "text": "横纹肌溶解综合征"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "横纹肌溶解综合征时肌红蛋白等损伤肾小管上皮细胞，引起急性肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-675",
+      "type": "single",
+      "question": "氨基糖甙类抗生素如庆大霉素等引起急性肾损伤的发生机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "前列腺素E合成减少"
+        },
+        {
+          "label": "B",
+          "text": "肾间质纤维化"
+        },
+        {
+          "label": "C",
+          "text": "肾脏炎症反应"
+        },
+        {
+          "label": "D",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "E",
+          "text": "收缩肾血管"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "庆大霉素等氨基糖苷类抗生素可直接损伤肾小管上皮细胞，引起急性肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-676",
+      "type": "single",
+      "question": "引起肾前性急性肾衰竭的常见原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "重金属中毒"
+        },
+        {
+          "label": "B",
+          "text": "各型休克晚期"
+        },
+        {
+          "label": "C",
+          "text": "挤压综合征"
+        },
+        {
+          "label": "D",
+          "text": "各型休克早期"
+        },
+        {
+          "label": "E",
+          "text": "泌尿道结石"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "各型休克早期有效循环血量减少、肾血流量下降，引起肾前性急性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-677",
+      "type": "single",
+      "question": "慢性肾功能不全早期容易发生()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高钙血症"
+        },
+        {
+          "label": "B",
+          "text": "血尿素氮降低"
+        },
+        {
+          "label": "C",
+          "text": "高钠血症"
+        },
+        {
+          "label": "D",
+          "text": "高钾血症"
+        },
+        {
+          "label": "E",
+          "text": "低钾血症"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾功能不全早期肾小管浓缩功能受损致多尿，钾随尿丢失增多，加之摄入不足，易发生低钾血症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-678",
+      "type": "single",
+      "question": "慢性肾功能衰竭不易出现下列哪项并发症()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高血压"
+        },
+        {
+          "label": "B",
+          "text": "骨折"
+        },
+        {
+          "label": "C",
+          "text": "贫血"
+        },
+        {
+          "label": "D",
+          "text": "出血"
+        },
+        {
+          "label": "E",
+          "text": "心脏骤停"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭常见高血压、肾性骨病（骨折）、贫血和出血倾向；心脏骤停不是其常见并发症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-679",
+      "type": "single",
+      "question": "急性肾衰竭少尿期,输入大量葡萄糖溶液可导致()",
+      "options": [
+        {
+          "label": "A",
+          "text": "低渗性脱水"
+        },
+        {
+          "label": "B",
+          "text": "等渗性脱水"
+        },
+        {
+          "label": "C",
+          "text": "高渗性脱水"
+        },
+        {
+          "label": "D",
+          "text": "水肿"
+        },
+        {
+          "label": "E",
+          "text": "水中毒"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "少尿期输入大量葡萄糖液使水潴留，血浆渗透压降低，发生水中毒（稀释性低钠血症）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-680",
+      "type": "single",
+      "question": "患者,男,70岁,前列腺肥大10年,突发无尿1天。血液生化检查显示:血清钾6.0mmol/L,氮质血症,请问该患者可能出现了()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾后性急性肾衰竭"
+        },
+        {
+          "label": "B",
+          "text": "肾前性急性肾衰竭"
+        },
+        {
+          "label": "C",
+          "text": "肾小管堵塞"
+        },
+        {
+          "label": "D",
+          "text": "急性肾小管坏死"
+        },
+        {
+          "label": "E",
+          "text": "急性肾性肾衰竭"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "前列腺肥大引起尿路梗阻、突发无尿，属肾后性急性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-681",
+      "type": "single",
+      "question": "慢性肾衰竭导致肾性贫血发生的主要原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "维生素D3减少"
+        },
+        {
+          "label": "C",
+          "text": "PTH增多"
+        },
+        {
+          "label": "D",
+          "text": "氮质血症"
+        },
+        {
+          "label": "E",
+          "text": "EPO减少"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭时肾脏产生促红细胞生成素减少，是肾性贫血的主要原因。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-682",
+      "type": "single",
+      "question": "功能性急性肾衰竭时,尿改变为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "尿比重正常,尿钠含量低"
+        },
+        {
+          "label": "B",
+          "text": "尿比重低,尿钠含量高"
+        },
+        {
+          "label": "C",
+          "text": "尿比重低,尿钠含量低"
+        },
+        {
+          "label": "D",
+          "text": "尿比重高,尿钠含量高"
+        },
+        {
+          "label": "E",
+          "text": "尿比重高,尿钠含量低"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "功能性肾衰竭时肾小管功能尚好，浓缩功能保留，故尿比重高、尿钠含量低（小于20mmol/L）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-683",
+      "type": "single",
+      "question": "急性肾衰竭少尿期,患者最常见的酸碱平衡紊乱类型是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸性酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "代谢性碱中毒"
+        },
+        {
+          "label": "C",
+          "text": "肾小管性酸中毒"
+        },
+        {
+          "label": "D",
+          "text": "呼吸性碱中毒"
+        },
+        {
+          "label": "E",
+          "text": "代谢性酸中毒"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "少尿期酸性代谢产物排出障碍、HCO₃⁻丢失，最常见代谢性酸中毒。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-684",
+      "type": "single",
+      "question": "急性肾衰竭少尿期,最常见的电解质紊乱是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高钠血症"
+        },
+        {
+          "label": "B",
+          "text": "高磷血症"
+        },
+        {
+          "label": "C",
+          "text": "低钙血症"
+        },
+        {
+          "label": "D",
+          "text": "高钾血症"
+        },
+        {
+          "label": "E",
+          "text": "低钾血症"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "少尿期钾排出减少、组织分解和酸中毒使钾外移，最常见且最危险的是高钾血症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-685",
+      "type": "single",
+      "question": "患者,男,24岁,急性肾衰竭,明显少尿,入院第4天出现无尿并于当晚发生心室纤颤,抢救无效死亡。该患者很可能死于",
+      "options": [
+        {
+          "label": "A",
+          "text": "水中毒"
+        },
+        {
+          "label": "B",
+          "text": "高钾血症"
+        },
+        {
+          "label": "C",
+          "text": "氮质血症"
+        },
+        {
+          "label": "D",
+          "text": "酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "水肿"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "少尿4天后无尿，血钾急剧升高致心室颤动而死亡，故最可能死于高钾血症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-686",
+      "type": "single",
+      "question": "失血性休克早期引起急性肾衰竭的主要发病机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "前列腺素增多"
+        },
+        {
+          "label": "B",
+          "text": "肾血流量减少，GFR降低"
+        },
+        {
+          "label": "C",
+          "text": "原尿返漏"
+        },
+        {
+          "label": "D",
+          "text": "白细胞流变特性改变"
+        },
+        {
+          "label": "E",
+          "text": "肾小管阻塞"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "失血性休克早期肾血流量减少、GFR降低，引起少尿，属功能性（肾前性）肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-687",
+      "type": "single",
+      "question": "功能性肾衰竭转变为器质性肾衰竭的主要原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "系膜细胞舒张"
+        },
+        {
+          "label": "B",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "C",
+          "text": "肾小球滤过系数增加"
+        },
+        {
+          "label": "D",
+          "text": "肾小球滤过膜通透性增高"
+        },
+        {
+          "label": "E",
+          "text": "肾小管重吸收功能降低"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "功能性肾衰竭持续缺血缺氧，肾小管上皮细胞坏死，即转变为器质性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-688",
+      "type": "single",
+      "question": "下列哪项不是急性肾衰竭少尿的发生机制()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾血管扩张"
+        },
+        {
+          "label": "B",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "C",
+          "text": "原尿返漏"
+        },
+        {
+          "label": "D",
+          "text": "管-球反馈机制失调"
+        },
+        {
+          "label": "E",
+          "text": "肾小球滤过系数降低"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "少尿型急性肾衰竭时肾血管收缩而非扩张，故A不是少尿的发生机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-689",
+      "type": "single",
+      "question": "下列不属于急性肾衰竭临床表现的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "水中毒"
+        },
+        {
+          "label": "B",
+          "text": "高磷低钙血症"
+        },
+        {
+          "label": "C",
+          "text": "氮质血症"
+        },
+        {
+          "label": "D",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "高钾血症"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "高磷低钙血症主要见于慢性肾衰竭；急性肾衰竭少尿期以水中毒、氮质血症、代谢性酸中毒和高钾血症为突出表现。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-690",
+      "type": "single",
+      "question": "某患者,因车祸引起严重组织损伤和肢体多处骨折,入院后出现少尿,氮质血症,尿肌红蛋白(+)。请问该患者肾脏功能损伤的原因可能是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾间质纤维化"
+        },
+        {
+          "label": "B",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "C",
+          "text": "肾小球病变"
+        },
+        {
+          "label": "D",
+          "text": "肾间质水肿"
+        },
+        {
+          "label": "E",
+          "text": "肾血管损害"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "严重创伤致横纹肌溶解，肌红蛋白管型阻塞并损伤肾小管，引起肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-691",
+      "type": "single",
+      "question": "少尿型急性肾功能不全少尿期,采用严格控制补液量和输液速度的目的是为了防止()",
+      "options": [
+        {
+          "label": "A",
+          "text": "酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "高镁血症"
+        },
+        {
+          "label": "C",
+          "text": "水中毒"
+        },
+        {
+          "label": "D",
+          "text": "氮质血症"
+        },
+        {
+          "label": "E",
+          "text": "高钾血症"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "少尿期严格控制补液量和速度，目的是防止水潴留和水中毒（稀释性低钠血症）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-692",
+      "type": "single",
+      "question": "慢性肾功能不全,患者出现等渗尿标志着()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管重吸收钠减少"
+        },
+        {
+          "label": "B",
+          "text": "肾小管浓缩和稀释功能均丧失"
+        },
+        {
+          "label": "C",
+          "text": "健全肾单位极度减少"
+        },
+        {
+          "label": "D",
+          "text": "肾血流量明显降低"
+        },
+        {
+          "label": "E",
+          "text": "肾小管泌钾减少"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "等渗尿表明肾小管浓缩和稀释功能均丧失，尿渗透压接近血浆。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-693",
+      "type": "single",
+      "question": "肾前性急性肾衰竭最常见的原因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "尿路梗阻"
+        },
+        {
+          "label": "B",
+          "text": "肾盂肾炎"
+        },
+        {
+          "label": "C",
+          "text": "肾内血栓形成"
+        },
+        {
+          "label": "D",
+          "text": "四氯化碳中毒"
+        },
+        {
+          "label": "E",
+          "text": "有效循环血量减少"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肾前性急性肾衰竭最常见的原因是有效循环血量减少（失血、失液、休克）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-694",
+      "type": "single",
+      "question": "下列哪项不是慢性肾衰竭发生低钙血症的原因()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肠内形成较多的磷酸钙"
+        },
+        {
+          "label": "B",
+          "text": "血磷增高"
+        },
+        {
+          "label": "C",
+          "text": "胃肠黏膜受损,使钙的吸收减少"
+        },
+        {
+          "label": "D",
+          "text": "1,25-(OH)2-D3减少"
+        },
+        {
+          "label": "E",
+          "text": "PTH减少"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭时低钙血症与高磷、肠钙吸收减少、1,25-(OH)₂D₃减少有关，而PTH是增多而非减少。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-695",
+      "type": "single",
+      "question": "肾前性急性肾衰竭的主要发病机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "儿茶酚胺增多"
+        },
+        {
+          "label": "B",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "C",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "D",
+          "text": "GFR显著降低"
+        },
+        {
+          "label": "E",
+          "text": "原尿返漏"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肾前性急性肾衰竭的主要发病机制是肾血流量减少致GFR显著降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-696",
+      "type": "single",
+      "question": "急性肾衰竭多尿期的发病机制不包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小球滤过功能逐渐恢复"
+        },
+        {
+          "label": "B",
+          "text": "肾小管阻塞解除"
+        },
+        {
+          "label": "C",
+          "text": "渗透性利尿的作用"
+        },
+        {
+          "label": "D",
+          "text": "抗利尿激素分泌减少"
+        },
+        {
+          "label": "E",
+          "text": "新生肾小管上皮浓缩功能低下"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "多尿期发病机制包括GFR恢复、肾小管阻塞解除、渗透性利尿和新生肾小管浓缩功能低下，与ADH分泌减少无关。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-697",
+      "type": "single",
+      "question": "患者,女,55岁。左侧肋部阵发性疼痛20余天就诊。既往史:终末期肾病9年。入院检查:血清甲状旁腺激素(PTH)水平增高,X光检测发现肋骨骨质疏松。下述哪种机制是导致该患者病变的主要因素()",
+      "options": [
+        {
+          "label": "A",
+          "text": "维生素D缺乏"
+        },
+        {
+          "label": "B",
+          "text": "血钙降低"
+        },
+        {
+          "label": "C",
+          "text": "血磷升高"
+        },
+        {
+          "label": "D",
+          "text": "酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "PTH溶骨的作用"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "终末期肾病继发甲状旁腺功能亢进，PTH升高，其溶骨作用增强导致骨质疏松、骨痛，是骨病变的主要因素。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-698",
+      "type": "single",
+      "question": "急性肾小管坏死引起的肾衰少尿期不会发生()",
+      "options": [
+        {
+          "label": "A",
+          "text": "尿钠含量低"
+        },
+        {
+          "label": "B",
+          "text": "氮质血症"
+        },
+        {
+          "label": "C",
+          "text": "高钾血症"
+        },
+        {
+          "label": "D",
+          "text": "水中毒"
+        },
+        {
+          "label": "E",
+          "text": "代谢性酸中毒"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "急性肾小管坏死少尿期肾小管重吸收钠障碍，尿钠含量增高而非降低。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-699",
+      "type": "single",
+      "question": "少尿型急性肾衰竭最危险阶段是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "恢复期"
+        },
+        {
+          "label": "B",
+          "text": "移行期"
+        },
+        {
+          "label": "C",
+          "text": "多尿后期"
+        },
+        {
+          "label": "D",
+          "text": "多尿早期"
+        },
+        {
+          "label": "E",
+          "text": "少尿期"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "少尿期水电解质和酸碱紊乱最严重，高钾血症、水中毒等可致死亡，是最危险阶段。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-700",
+      "type": "single",
+      "question": "肾性急性肾衰竭最常见的病因是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "急性肾小球肾炎"
+        },
+        {
+          "label": "B",
+          "text": "慢性肾小球肾炎"
+        },
+        {
+          "label": "C",
+          "text": "尿路梗阻"
+        },
+        {
+          "label": "D",
+          "text": "急性肾小管坏死"
+        },
+        {
+          "label": "E",
+          "text": "急性肾盂肾炎"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "肾性急性肾衰竭最常见的病因是急性肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-701",
+      "type": "single",
+      "question": "下述哪项不是慢性肾衰竭的临床表现()",
+      "options": [
+        {
+          "label": "A",
+          "text": "低钠血症"
+        },
+        {
+          "label": "B",
+          "text": "氮质血症"
+        },
+        {
+          "label": "C",
+          "text": "高钙血症"
+        },
+        {
+          "label": "D",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "贫血"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "慢性肾衰竭因磷排出减少、钙吸收障碍，表现为低钙血症而非高钙血症。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-702",
+      "type": "single",
+      "question": "患者,男,54岁,因误服百草枯引起急性肾衰竭,请问该患者肾脏损害的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾间质水肿"
+        },
+        {
+          "label": "B",
+          "text": "肾小球病变"
+        },
+        {
+          "label": "C",
+          "text": "肾间质纤维化"
+        },
+        {
+          "label": "D",
+          "text": "肾血管损害"
+        },
+        {
+          "label": "E",
+          "text": "肾小管坏死"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "百草枯等毒物直接损伤肾小管上皮细胞，引起肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-703",
+      "type": "single",
+      "question": "糖尿病肾病和高血压肾病导致慢性肾衰竭,其共同的发病环节是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾血管阻塞"
+        },
+        {
+          "label": "B",
+          "text": "肾小管阻塞"
+        },
+        {
+          "label": "C",
+          "text": "肾小管间质水肿"
+        },
+        {
+          "label": "D",
+          "text": "肾单位广泛破坏"
+        },
+        {
+          "label": "E",
+          "text": "肾缺血"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "糖尿病肾病和高血压肾病均使肾单位广泛破坏，是导致慢性肾衰竭的共同发病环节。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-704",
+      "type": "single",
+      "question": "患者,男,27岁。因车祸致严重组织损伤及多处肢体骨折入院。入院后出现少尿、氮质血症,尿肌红蛋白(+)。该患者肾功能损伤的主要机制是",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小球病变"
+        },
+        {
+          "label": "B",
+          "text": "肾小管坏死"
+        },
+        {
+          "label": "C",
+          "text": "肾血管损害"
+        },
+        {
+          "label": "D",
+          "text": "肾间质纤维化"
+        },
+        {
+          "label": "E",
+          "text": "肾间质水肿"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "严重创伤致横纹肌溶解、肌红蛋白阻塞肾小管并损伤上皮，主要机制为肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-705",
+      "type": "single",
+      "question": "下列哪项可引起急性肾小管上皮细胞坏死()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高血磷,低血钙"
+        },
+        {
+          "label": "B",
+          "text": "重金属中毒"
+        },
+        {
+          "label": "C",
+          "text": "低钾血症"
+        },
+        {
+          "label": "D",
+          "text": "前列腺肥大"
+        },
+        {
+          "label": "E",
+          "text": "肾结石"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "重金属可直接损伤肾小管上皮细胞，引起急性肾小管坏死。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-706",
+      "type": "single",
+      "question": "下列哪项不是急性肾衰竭少尿期的机能代谢改变()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高血钠症"
+        },
+        {
+          "label": "B",
+          "text": "血中非蛋白氮升高"
+        },
+        {
+          "label": "C",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "D",
+          "text": "高钾血症"
+        },
+        {
+          "label": "E",
+          "text": "尿量<400ml/D"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "少尿期水潴留致稀释性低钠血症，出现低钠而非高钠，故A不是其机能代谢改变。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-707",
+      "type": "single",
+      "question": "慢性肾衰晚期常发生酸中毒的类型为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小管型酸中毒"
+        },
+        {
+          "label": "B",
+          "text": "慢性呼吸性酸中毒"
+        },
+        {
+          "label": "C",
+          "text": "AG正常型代谢性酸中毒"
+        },
+        {
+          "label": "D",
+          "text": "急性呼吸性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "AG增高型代谢性酸中毒"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭晚期固定酸排出障碍、酸性产物蓄积，AG增大，为AG增高型代谢性酸中毒。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-708",
+      "type": "single",
+      "question": "下列不是肾性高血压的发生机制的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "钠水潴留"
+        },
+        {
+          "label": "B",
+          "text": "RAA系统活性增加"
+        },
+        {
+          "label": "C",
+          "text": "肾脏分泌PGA2减少"
+        },
+        {
+          "label": "D",
+          "text": "肾脏分泌PGE2减少"
+        },
+        {
+          "label": "E",
+          "text": "肾脏产生促红细胞生成素增加"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肾性高血压与钠水潴留、RAA激活、减压物质（PGE₂、PGA₂等）减少有关；促红细胞生成素增多不引起高血压。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-709",
+      "type": "single",
+      "question": "急性肾衰竭最常见的临床表现是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "高渗尿"
+        },
+        {
+          "label": "B",
+          "text": "等渗尿"
+        },
+        {
+          "label": "C",
+          "text": "少尿"
+        },
+        {
+          "label": "D",
+          "text": "蛋白尿"
+        },
+        {
+          "label": "E",
+          "text": "糖尿"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "急性肾衰竭最常见的临床表现是少尿（少尿型）。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-710",
+      "type": "single",
+      "question": "肾缺血、肾中毒导致肾性肾衰竭的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小球囊内压增加"
+        },
+        {
+          "label": "B",
+          "text": "肾小球滤过率降低"
+        },
+        {
+          "label": "C",
+          "text": "肾小球滤过膜通透性增加"
+        },
+        {
+          "label": "D",
+          "text": "肾小球内皮细胞损伤"
+        },
+        {
+          "label": "E",
+          "text": "急性肾小管坏死"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "肾缺血、肾中毒主要损伤肾小管上皮细胞，引起急性肾小管坏死而致肾性肾衰竭。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-711",
+      "type": "single",
+      "question": "慢性肾衰竭发病的主要机制是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "健存肾单位进行性减少"
+        },
+        {
+          "label": "B",
+          "text": "肾小管损伤"
+        },
+        {
+          "label": "C",
+          "text": "肾血流量进行性减少"
+        },
+        {
+          "label": "D",
+          "text": "原始病因持续存在"
+        },
+        {
+          "label": "E",
+          "text": "GFR进行性降低"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "慢性肾衰竭发病的主要机制是健存肾单位进行性减少，最终不能维持正常肾功能。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-712",
+      "type": "single",
+      "question": "有关急性肾衰竭的描述,下列错误的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "多尿期尿量增多可迅速纠正少尿期造成的氮质血症"
+        },
+        {
+          "label": "B",
+          "text": "非少尿型ARF以肾小管浓缩功能障碍为"
+        },
+        {
+          "label": "C",
+          "text": "水潴留常超过钠潴留,故易发生水中毒"
+        },
+        {
+          "label": "D",
+          "text": "高钾血症是急性肾功能不全最危险的并发症"
+        },
+        {
+          "label": "E",
+          "text": "功能性肾衰尿钠含量少于器质性肾衰"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "多尿期尿量增多并不能迅速纠正氮质血症，因肾小球滤过功能尚未完全恢复，故A错误。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-713",
+      "type": "single",
+      "question": "下列哪项是尿毒症病人最早和最突出的临床表现()",
+      "options": [
+        {
+          "label": "A",
+          "text": "呼吸系统表现"
+        },
+        {
+          "label": "B",
+          "text": "心血管系统表现"
+        },
+        {
+          "label": "C",
+          "text": "精神神经系统表现"
+        },
+        {
+          "label": "D",
+          "text": "代谢性酸中毒"
+        },
+        {
+          "label": "E",
+          "text": "胃肠道表现"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "尿毒症患者最早、最突出的临床表现是胃肠道症状，如食欲减退、恶心、呕吐。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-714",
+      "type": "single",
+      "question": "急性肾衰竭少尿期产生水中毒是由于()",
+      "options": [
+        {
+          "label": "A",
+          "text": "ADH分泌减少"
+        },
+        {
+          "label": "B",
+          "text": "尿量减少"
+        },
+        {
+          "label": "C",
+          "text": "原尿返漏增多"
+        },
+        {
+          "label": "D",
+          "text": "内生水减少"
+        },
+        {
+          "label": "E",
+          "text": "钠泵失灵"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "少尿期尿量减少、水排出障碍，入水过多则潴留，是水中毒的直接原因。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-715",
+      "type": "single",
+      "question": "急性肾衰竭发病的中心环节是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾素-血管紧张素系统激活"
+        },
+        {
+          "label": "B",
+          "text": "GFR降低"
+        },
+        {
+          "label": "C",
+          "text": "体内儿茶酚胺增加"
+        },
+        {
+          "label": "D",
+          "text": "血浆胶渗压降低"
+        },
+        {
+          "label": "E",
+          "text": "肾小球囊内压增高"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "急性肾衰竭发病的中心环节是GFR降低，导致少尿、氮质血症和水电解质紊乱。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-716",
+      "type": "single",
+      "question": "慢性肾衰患者出现代谢性酸中毒的机制不包括()",
+      "options": [
+        {
+          "label": "A",
+          "text": "肾小球滤过率下降"
+        },
+        {
+          "label": "B",
+          "text": "肾小管上皮产氨减少"
+        },
+        {
+          "label": "C",
+          "text": "酸性代谢产物蓄积"
+        },
+        {
+          "label": "D",
+          "text": "PTH增多"
+        },
+        {
+          "label": "E",
+          "text": "高钾血症"
+        }
+      ],
+      "answer": [
+        "E"
+      ],
+      "explanation": "慢性肾衰竭代谢性酸中毒与GFR下降、酸性产物蓄积、肾小管产氨减少有关；高钾血症是代谢性酸中毒的结果而非机制。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-717",
+      "type": "single",
+      "question": "下述哪项不是肾性贫血的原因()",
+      "options": [
+        {
+          "label": "A",
+          "text": "促红素生成减少"
+        },
+        {
+          "label": "B",
+          "text": "毒性物质导致凝血"
+        },
+        {
+          "label": "C",
+          "text": "毒性物质抑制骨髓造血"
+        },
+        {
+          "label": "D",
+          "text": "消化道铁吸收减少"
+        },
+        {
+          "label": "E",
+          "text": "毒性物质导致溶血"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "肾性贫血与EPO减少、尿毒症毒素抑制骨髓造血和溶血、铁吸收减少有关；毒性物质导致凝血与贫血无关。",
+      "chapter": "肾衰竭"
+    },
+    {
+      "id": "bsq-718",
+      "type": "single",
+      "question": "急性肾小管坏死时,尿钠与尿比重的变化是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "尿钠含量减少,尿比重增加"
+        },
+        {
+          "label": "B",
+          "text": "尿钠含量增加,尿比重增加"
+        },
+        {
+          "label": "C",
+          "text": "尿钠含量减少,尿比重不变"
+        },
+        {
+          "label": "D",
+          "text": "尿钠含量增加,尿比重降低"
+        },
+        {
+          "label": "E",
+          "text": "尿钠含量减少,尿比重降低"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "急性肾小管坏死时肾小管重吸收钠障碍、浓缩功能丧失，故尿钠含量增加、尿比重降低。",
+      "chapter": "肾衰竭"
+    }
+  ]
+}
