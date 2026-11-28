@@ -36,9 +36,9 @@ tiku-app/
 │   ├── views-lib.js        # 错题本 / 收藏夹
 │   ├── views-data.js       # 数据管理 / 使用说明
 │   └── app.js              # 路由与应用启动
-├── question-banks/         # 内置公共题库（维护者在此添加题库）
-│   ├── manifest.json       # 清单（Action 自动生成，详见 question-banks/README.md）
-│   └── 示例科目/示例题集.json  # 演示题库，可删除/替换
+├── question-banks/         # 内置公共题库（维护者在此添加题库，无需清单）
+│   ├── manifest.json       # 清单（可选；Action 自动生成，详见 question-banks/README.md）
+│   └── 病理生理学/病生选择题（前半）.json  # 题库文件（.json/.txt/.csv/.docx）
 ├── .github/workflows/update-banks.yml  # 自动生成清单的 GitHub Action
 ├── tools/generate_manifest.py          # 清单生成脚本（Action 调用，也可本地运行）
 ├── docs/
@@ -107,10 +107,11 @@ npx serve .                      # 需要 Node.js（仅本地测试需要，部�
 
 把题库文件放进仓库的 `question-banks/<科目>/<题集>.json`，部署后**所有访问者**都会在首页下方看到「内置公共题库」：
 
-- **文件夹名 = 科目名，文件名 = 题集名**，支持中文；文件为 UTF-8 编码的 JSON（格式同上文「题库导入说明」）。
-- 提交推送后约 1 分钟，GitHub Action（`.github/workflows/update-banks.yml`）会自动生成 `question-banks/manifest.json`，应用据此展示目录；访问者首次打开题集时才下载文件内容。
-- 演示文件 `question-banks/示例科目/示例题集.json` 可直接删除或替换。
-- 不想用 Actions 也可手动维护清单（详见 `question-banks/README.md`）。
+- **文件夹名 = 科目名，文件名 = 题集名**，支持中文；支持 **.json（推荐）/ .txt / .csv / .docx**（UTF-8，格式同「题库导入说明」）；**文件夹必须至少包含一个题库文件才会显示**（GitHub 不保留空文件夹）。
+- **无需维护任何清单**：没有 `question-banks/manifest.json` 时，应用会自动调用 GitHub 接口扫描仓库目录发现题库（仅 `*.github.io` 部署时自动识别仓库；自定义域名需在 `js/public.js` 顶部 `REPO_OVERRIDE` 填入「用户名/仓库名」）。
+- 网络访问 GitHub 接口不稳定时，可改为清单方式：上传 `manifest.json`（格式见 `question-banks/README.md`，可手动维护或用 `.github/workflows/update-banks.yml` Action 自动生成）。清单存在时优先使用清单。
+- 上传 / 修改文件后等 **1-2 分钟**（GitHub Pages 更新），访问者点首页「刷新」即可看到。
+- 想把 Word 题库发布为公共题库：先在应用内导入（自动转换），再到题集页点「导出题库 JSON」，把导出的文件上传到 `question-banks/` 即可。
 
 ## 数据备份与恢复
 
